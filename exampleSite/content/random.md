@@ -1,4 +1,7 @@
-+++ title = "All things random" slug = "random" +++
++++ 
+title = "All things random"
+slug = "random"
++++
 
 ## Comic of the day
 
