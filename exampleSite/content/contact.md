@@ -3,7 +3,7 @@ title = "Contact"
 slug = "contact"
 +++
 
-You can email me at **mb3863 at columbia.edu**
+You can email me at **mb3863 \[at\] columbia \[dot\] edu**
 
 Or follow me: [@maibennett](https://twitter.com/maibennett). (*Disclaimer: I tweet a lot*).
 
