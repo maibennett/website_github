@@ -3,7 +3,7 @@ title = "Research"
 slug = "research"
 +++
 
-Download my full CV [here](/files/CV_mbennett.pdf)
+You can download my full CV **[here](/files/CV_mbennett.pdf)**
 
 ## PHD RESEARCH 
 
