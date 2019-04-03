@@ -1,9 +1,9 @@
 +++
-title = "About Hugo"
+title = "About Magdalena"
 slug = "about"
 +++
 
-Hugo is a static site engine written in Go.
+I'm a 5th year PhD candidate in Economics of Education, at Teachers College - Columbia University in New York City. My research interests relate to causal inference methodologies, focusing on relevant policy questions in the educational setting, such as socioeconomic segregation and school choice.
 
 
 It makes use of a variety of open source projects including:
