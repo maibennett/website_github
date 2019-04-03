@@ -83,16 +83,10 @@ disqusShortname = "yourdiscussshortname"
         
         [[languages.en.menu.main]]
         name = "All things random"
-        weight = 3
+        weight = 4
         url = "/random/"
 
         [[languages.en.menu.main]]
         name = "Contact me"
         weight = 5
         url = "/contact/"
-
-
-            [[languages.pt-br.menu.main]]
-            name = "Contato"
-            weight = 5
-            url = "/pt-br/contact/"
