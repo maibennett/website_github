@@ -17,7 +17,7 @@ disqusShortname = "yourdiscussshortname"
 
 [params]
     author = "Magdalena Bennett"
-    description = "Magdalena Bennett's personal website"
+    description = "Magdalena Bennett's website"
     keywords = "research, personal"
     info = "PhD candidate and #rstats enthusiast"
     avatarurl = "images/mai.png"
