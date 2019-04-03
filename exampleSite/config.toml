@@ -83,8 +83,13 @@ googleAnalytics = "UA-102578779-3"
         url = "/research/"
         
         [[languages.en.menu.main]]
-        name = "All things random"
+        name = "Resources"
         weight = 3
+        url = "/resources/"
+        
+        [[languages.en.menu.main]]
+        name = "Random Stuff"
+        weight = 4
         url = "/random/"
 
         [[languages.en.menu.main]]
