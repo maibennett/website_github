@@ -3,7 +3,7 @@ title = "About Magdalena"
 slug = "about"
 +++
 
-I'm a 5th year **PhD candidate in Economics of Education**, at Teachers College - Columbia University in New York City. My research interests relate to developing and applying novel **causal inference methodologies** in observational and experimental studies. I also focus on **relevant policy questions in education**, such as socioeconomic segregation and school choice.
+I'm a 5th year **PhD candidate in Economics of Education**, at Teachers College - Columbia University in New York City. My research interests relate to developing and improving **causal inference methodologies** in observational and experimental studies. I also focus on **relevant policy questions in education**, such as socioeconomic segregation and school choice.
 
 
 **Some of the projects I am currently working on:**
