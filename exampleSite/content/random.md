@@ -5,4 +5,5 @@ slug = "random"
 
 ## Comic of the day
 
-![comic](images/pigeon.png)
+<img src="images/pigeon.png" width="800" />
+
