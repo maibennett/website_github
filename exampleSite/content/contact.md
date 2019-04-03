@@ -5,6 +5,6 @@ slug = "contact"
 
 You can email me at mb3863 at columbia.edu
 
-Or follow me: @maibennett.
+Or follow me: [@maibennett](https://twitter.com/maibennett).
 
-(You can also follow some of my playlists for furious coding [here](https://open.spotify.com/user/11120745477/playlist/7d1UxfElRAykPIoBmSTgnW?si=qHRZZycvSD-ou8qQRMichQ))
+(If you want some music for furious coding, you can also check [this](https://open.spotify.com/user/11120745477/playlist/7d1UxfElRAykPIoBmSTgnW?si=qHRZZycvSD-ou8qQRMichQ) out)
