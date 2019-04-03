@@ -6,8 +6,8 @@ slug = "resources"
 Here I compile a list of some helpful resources/tips (created by me or others) that have helped me in the past years. Contributions are more than welcome!
 
 **Topics**:
-* [Code](https://github.com/maibennett/website_github/blob/master/exampleSite/content/resources.md#code)
-* [Design](https://github.com/maibennett/website_github/blob/master/exampleSite/content/resources.md#design)
+* [Code](/#code/)
+* [Design](/#design/)
 
 ## Code
 ##### Stata dofile for LaTeX output
