@@ -19,7 +19,7 @@ If you are like me, and want to fully personalize everything in your LaTeX outpu
 
 Here's a video by Mike Morrison on why you should build a better scientific poster (and how):
 
-![betterposter](https://youtu.be/1RwJbhkCA58)
+[![betterposter](/images/betterposter.png)](https://www.youtube.com/watch?v=1RwJbhkCA58&feature=youtu.be)
 
 (tl;dr See the templates [here](https://osf.io/ef53g/))
 
