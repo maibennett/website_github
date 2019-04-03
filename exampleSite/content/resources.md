@@ -29,7 +29,7 @@ Here's a video by **[Mike Morrison](https://twitter.com/mikemorrison)** on why y
 (tl;dr See the templates [here](https://osf.io/ef53g/))
 
 
-## <a name="code"></a>Apps
+## <a name="apps"></a>Apps
 
 Nothing to do with stats or econ or education, but some apps that are game changers:
 
