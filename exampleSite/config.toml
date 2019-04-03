@@ -15,6 +15,7 @@ pygmentscodefencesguesssyntax = true
 
 disqusShortname = "yourdiscussshortname"
 googleAnalytics = "UA-102578779-3"
+enableEmoji = true
 
 [params]
     author = "Magdalena Bennett"
