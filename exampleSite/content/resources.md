@@ -22,7 +22,7 @@ If you ever needed to go from lat/lon to addresses (or vice versa), then this co
 ## <a name="design"></a>Design
 ##### How to make a better poster!
 
-Here's a video by **[Mike Morrison](https://twitter.com/mikemorrison)** on why you should build a better scientific poster (and how):
+Here's a video by **[Mike Morrison](https://twitter.com/mikemorrison)** on why you should build a better scientific poster (and how to do it):
 
 [![betterposter](/images/betterposter.png?raw=true)](https://www.youtube.com/watch?v=1RwJbhkCA58&feature=youtu.be)
 
