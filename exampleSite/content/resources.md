@@ -8,6 +8,7 @@ Here I compile a list of some helpful resources/tips (created by me or others) t
 **Topics**: 
 :computer: [Code](#code)
 :bar_chart: [Design](#design)
+:space_invader: [Apps](#apps)
 
 ## <a name="code"></a>Code
 ##### Stata dofile for LaTeX output
@@ -27,3 +28,15 @@ Here's a video by **[Mike Morrison](https://twitter.com/mikemorrison)** on why y
 
 (tl;dr See the templates [here](https://osf.io/ef53g/))
 
+
+## <a name="code"></a>Apps
+
+Nothing to do with stats or econ or education, but some apps that are game changers:
+
+* **Chrome remote desktop:** If you use remote desktop to access another computer or even your own laptop (and you should), you should definitely download the app. You can watch your code run from the comfort of your iPhone (or Android, not judging), and overall the it has an awesome interface.
+
+* **Splitwise:** The best way to keep track of shared expenses, either for a trip or if you share a household. It's integrated with Venmo, so you can settle accounts directly from the app.
+
+* **Acorns:** Cool app to save (and invest) some money. If you are a grad student or severely budget constrained (*dat me!*), and have trouble saving money, you can use this app to save round-ups, or even include some small weekly or monthly amount. It then invests your money according to a risk portafolio you select.
+
+* **Strava:** Not much to say here. So far, best tracking app for running.
