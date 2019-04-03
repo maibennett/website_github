@@ -3,6 +3,8 @@ title = "Research"
 slug = "research"
 +++
 
+Download my full CV [here](https://github.com/maibennett/website/blob/master/CV_mbennett.pdf)
+
 ## PHD RESEARCH 
 
 * [Bennett, M. & Bergman, P. (2018). “Better Together? Social Networks in Truancy and the Targeting of Treatment”. Working Paper. IZA Working Paper Series No. 11267.](https://github.com/maibennett/website/blob/master/networks_paper.pdf)
