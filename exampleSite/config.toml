@@ -80,6 +80,11 @@ disqusShortname = "yourdiscussshortname"
         name = "Research"
         weight = 3
         url = "/research/"
+        
+        [[languages.en.menu.main]]
+        name = "All things random"
+        weight = 3
+        url = "/random/"
 
         [[languages.en.menu.main]]
         name = "Contact me"
