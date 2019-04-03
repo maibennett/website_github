@@ -7,7 +7,7 @@ You can download my full CV **[here](/files/CV_mbennett.pdf)**
 
 ## PHD RESEARCH 
 
-* Bennett, M. & Bergman, P. (2018). “Better Together? Social Networks in Truancy and the Targeting of Treatment”. Working Paper. IZA Working Paper Series No. 11267. **<sup><sub>[[Download](https://github.com/maibennett/website/blob/master/networks_paper.pdf)]</sup></sub>**
+* Bennett, M. & Bergman, P. (2018). “Better Together? Social Networks in Truancy and the Targeting of Treatment”. Working Paper. IZA Working Paper Series No. 11267. **<sup><sub>[[Download](/files/networks_paper (1).pdf)]</sup></sub>**
 
 * Bennett, M., J. Vielma, & J. Zubizarreta (2018). “Building Representative Matched Samples with Multi-valued Treatments in Large Observational Studies: Analysis of the Impact of an Earthquake on Educational Attainment”. Working Paper, Columbia University. **<sup><sub>[[Download](https://arxiv.org/pdf/1810.06707.pdf)]</sup></sub>**
 
