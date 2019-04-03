@@ -1,4 +1,4 @@
-baseurl = "http://www.example.com"
+baseurl = "http://www.magdalenabennett.com"
 title = "maibennett"
 
 theme = "hugo-coder"
@@ -23,7 +23,7 @@ disqusShortname = "yourdiscussshortname"
     avatarurl = "images/mai.png"
     footercontent = ""
 
-    dateformat = "January 2, 2006"
+    dateformat = "April 2, 2019"
 
     hideCredits = false
     hideCopyright = false
@@ -78,15 +78,15 @@ disqusShortname = "yourdiscussshortname"
 
         [[languages.en.menu.main]]
         name = "Research"
-        weight = 3
+        weight = 2
         url = "/research/"
         
         [[languages.en.menu.main]]
         name = "All things random"
-        weight = 4
+        weight = 3
         url = "/random/"
 
         [[languages.en.menu.main]]
         name = "Contact me"
-        weight = 5
+        weight = 4
         url = "/contact/"
