@@ -1,5 +1,5 @@
 +++
-title = "Contact" ![plane](/images/paper_plane_sm.png?raw=true&v=1)
+title = "Contact"
 slug = "contact"
 +++
 
