@@ -3,7 +3,7 @@ title = "Contact"
 slug = "contact"
 +++
 
-![comic](/images/paper_plane.png?raw=true?s=0.1)
+![comic](/images/paper_plane_sm.png?raw=true?)
 
 You can email me at **mb3863 \[at\] columbia \[dot\] edu**
 
