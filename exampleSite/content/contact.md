@@ -2,7 +2,9 @@
 title = "Contact"
 slug = "contact"
 +++
+
 ![comic](/images/paper_plane.png?raw=true)
+
 You can email me at **mb3863 \[at\] columbia \[dot\] edu**
 
 Or follow me: [@maibennett](https://twitter.com/maibennett). (*Disclaimer: I tweet a lot*).
