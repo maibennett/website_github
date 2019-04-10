@@ -21,7 +21,7 @@ If you are like me, and want to fully personalize everything in your LaTeX outpu
 
 If you ever needed to go from lat/lon to addresses (or vice versa), then this code might come in handy. The geocode (going from street addresses to latitudes and longitudes) and reverse geocode (the opposite) R script I present here was adapted from the code by **[Kei Saito](https://blog.exploratory.io/reverse-geocoding-part-2-using-google-maps-api-with-r-e676db36fee6)**, and I adapted it to my needs (including geocoding). Be aware that you will need a Google API Key for this (which is easy to get [here](https://developers.google.com/maps/documentation/geocoding/get-api-key)), and you will get charged if you go over the number of requests you are allowed (terms have been changing lately, so keep up to date with that). The code also includes a variable that actually counts how many valid requests you have made, so you can keep that in mind when running this! You can find the code **[here](https://github.com/maibennett/code/tree/master/geocodeAPI)**. 
 
-*PS: You can also easily adapt this code to use Open Street Maps (OSM) instead of the Google API, if you want.*
+*PS: You can also easily adapt this code to use Open Street Map (OSM) instead of the Google API, if you want.*
 
 ## <a name="design"></a>Design
 ##### How to make a better poster!
