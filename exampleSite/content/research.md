@@ -21,7 +21,7 @@ You can download my full CV **[here](/files/CV_mbennett.pdf)**
 
 * Hilliger, I., C. Gelmi, L. Cifuentes, **M. Bennett**,  & J. de la Llera (2018). “Design and Implementation of an Alternative Admission Program to Engineering: Talent and Inclusion”. Studies of Higher Education (CSHE). 43(8) p.1454-1467. [:arrow_down:](https://www.tandfonline.com/doi/abs/10.1080/03075079.2016.1263291?journalCode=cshe20)
 
-* **Bennett, M. (2014)**. “Socioeconomic Diversity within Schools: The Impact of a Preferential Voucher Scheme in Chile”, Master Dissertation, London School of Economics.
+* **Bennett, M.** (2014). “Socioeconomic Diversity within Schools: The Impact of a Preferential Voucher Scheme in Chile”, Master Dissertation, London School of Economics.
 
 * Claro, F., R. Paredes, F. Wilson y **M. Bennett** (2013). “Incentivos a Estudiar Pedagogía: El Caso de la Beca Vocación de Profesor” (“Incentives for studying teaching: The case of the vocational scholarship”), Estudios Publicos N°131, Centro de Estudios Públicos. [:arrow_down:](https://www.cepchile.cl/cep/site/artic/20160304/asocfile/20160304100405/rev131_FClaro-RParedes-MBennett-TWilson.pdf)
 
