@@ -15,7 +15,7 @@ Here I compile a list of some helpful resources/tips (created by me or others) t
 
 Sometimes we need to characterize certain geographic zones (e.g. school districts) with geographic data that is in a different level (e.g. census tract data). How do we do that? **[Here](https://github.com/maibennett/code/tree/master/geographic_characterization)** I have some example code on how to create a csv file using a Python script that can be run in ArcGIS. The idea is that by combining both levels of geographic data, we can later create weights for our areas of interested depending on the overlapping surface of other geographic areas. The code sets an example using Florida school districts and census tracts, and merging tract level income data. The Python code is first run in ArcGIS, and the analysis is later conducted in Stata for simplicity. The example map below shows Collier County School district in FL and the overlapping census tracts:
 
-[![collier_county](/images/map_collier_county.png?raw=true)]
+![collier_county](/images/map_collier_county.png?raw=true)
 
 If we wanted the average household income for the district using the census tract data, we can generate a weighted average of the overlapping census tracts.
 
