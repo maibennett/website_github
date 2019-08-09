@@ -11,6 +11,14 @@ Here I compile a list of some helpful resources/tips (created by me or others) t
 :space_invader: [Apps](#apps)
 
 ## <a name="code"></a>Code
+##### Python script for ArcGIS to characterize geographic zones with census tract data
+
+Sometimes we need to characterize certain geographic zones (e.g. school districts) with geographic data that is in a different level (e.g. census tract data). How do we do that? **[Here](https://github.com/maibennett/code/tree/master/geographic_characterization)** I have some example code on how to create a csv file using a Python script that can be run in ArcGIS. The idea is that by combining both levels of geographic data, we can later create weights for our areas of interested depending on the overlapping surface of other geographic areas. The code sets an example using Florida school districts and census tracts, and merging tract level income data. The Python code is first run in ArcGIS, and the analysis is later conducted in Stata for simplicity. The example map below shows Collier County School district in FL and the overlapping census tracts:
+
+[![collier_county](/images/map_collier_county.png?raw=true)]
+
+If we wanted the average household income for the district using the census tract data, we can generate a weighted average of the overlapping census tracts.
+
 ##### Stata dofile for LaTeX output
 
 If you are like me, and want to fully personalize everything in your LaTeX output, there's nothing better than creating your own table in a dofile instead of using an out-of-the-can package. You can do it by using `texdoc` and writing your table from scratch using macros. Might sound like more work (it is), but it can also be pretty easy for getting that output just as you wanted. You can download a simple example dofile **[here](/files/texdoc_output.do)**.
