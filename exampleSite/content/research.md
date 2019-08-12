@@ -7,7 +7,7 @@ You can download my full CV **[here](/files/CV_mbennett.pdf)**
 
 ## PHD RESEARCH 
 
-* **Bennett, M**. & Bergman, P. (2019). “Better Together? Social Networks in Truancy and the Targeting of Treatment”. Journal of Labor Economics *Forthcoming*. [:arrow_down:](/files/networks_paper.pdf)
+* **Bennett, M**. & Bergman, P. (2019). “Better Together? Social Networks in Truancy and the Targeting of Treatment”. Journal of Labor Economics *Accepted*. [:arrow_down:](/files/networks_paper.pdf)
 
 * **Bennett, M.**, J. Vielma, & J. Zubizarreta (2019). “Building Representative Matched Samples with Multi-valued Treatments in Large Observational Studies”. Working Paper, Columbia University. [:arrow_down:](https://arxiv.org/abs/1810.06707)
 
