@@ -63,11 +63,11 @@ foreach var of varlist x1 x2{
 texdoc init balance_table.tex, replace force
 tex \begin{tabular}{lccc} \toprule \toprule
 tex Variable			& 	Control	& Treatment & Difference \\ 
-tex \addlinespace \hline \\
+tex \midrule \\
 foreach var of varlist x1 x2{
 tex ${lbe_`var'} & ${m`var'_0} & ${m`var'_1} & ${dif_`var'}${star_`var'}\\
 }
-tex \hline \hline
+tex \bottomrule \bottomrule
 tex \end{tabular}
 
 texdoc close
@@ -104,13 +104,13 @@ forvalues spec=0(1)1{
 texdoc init treatment_effect.tex, replace force
 tex \begin{tabular}{lcc} \toprule \toprule
 tex Variable			& 	${lbe_y}	& ${lbe_y} \\ 
-tex \addlinespace \hline \\
+tex \midrule \\
 tex ${lbe_treat} & ${b_0}${star_0} & ${b_1}${star_1}\\
 tex 			& (${se_0}) & (${se_1})\\ \addlinespace
 tex Controls & No & Yes \\
 tex Observations & $N_0 & $N_1 \\
 tex R-square & $r2_0 & $r2_1 \\
-tex \hline \hline
+tex \bottomrule \bottomrule
 tex \end{tabular}
 
 texdoc close
