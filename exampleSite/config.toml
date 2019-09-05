@@ -22,7 +22,7 @@ enableEmoji = true
     description = "Magdalena Bennett's website"
     keywords = "research, personal"
     info = "PhD candidate and #rstats enthusiast"
-    avatarurl = "images/mai_headshot.jpg"
+    avatarurl = "images/13-Mai.jpg"
     footercontent = ""
 
     dateformat = "April 2, 2019"
