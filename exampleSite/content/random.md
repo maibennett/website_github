@@ -5,5 +5,5 @@ slug = "random"
 
 ## Comic of the day
 
-![comic](/images/i_regret_nothing.png?raw=true)
+![comic](/images/data_comic.jpg?raw=true)
 
