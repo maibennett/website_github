@@ -33,7 +33,7 @@ If you ever needed to go from lat/lon to addresses (or vice versa), then this co
 
 ##### Send a text message to your phone when your code is done!
 
-This is some code that [@RichPauloo](https://twitter.com/RichPauloo) created and tweeted about, and you cand find [here](https://richpauloo.github.io/2019-09-11-Using-Twilio-to-text-myself-after-long-running-jobs/). If you have ever been running code that takes forever (e.g. a **lot** of simulations), you might have dreamt of something like this. I implemented it as soon as he tweeted about it: It works great, and its super easy to incorporate to your R code. You will have to set up a Twilio account, but it's no fuzz. For changing the emojis, I found useful to install the `emo` package:
+This is some code that [@RichPauloo](https://twitter.com/RichPauloo) created and tweeted about, and you can find [here](https://richpauloo.github.io/2019-09-11-Using-Twilio-to-text-myself-after-long-running-jobs/). If you have ever been running code that takes forever (e.g. a **lot** of simulations), you might have dreamt of something like this. I implemented it as soon as he tweeted about it: It works great, and its super easy to incorporate to your R code. You will have to set up a Twilio account, but it's no fuzz. For changing the emojis, I found useful to install the `emo` package:
 ```{r}
 # install.packages("devtools")
 devtools::install_github("hadley/emo")
