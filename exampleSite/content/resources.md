@@ -59,7 +59,7 @@ Here's a video by **[Mike Morrison](https://twitter.com/mikemorrison)** on why y
 
 ##### Tips for beamer
 
-From the great [Paul Goldsmith-Pinkham](https://twitter.com/paulgp), some [beamer tips](https://github.com/paulgp/beamer-tips)! (pretty self-explanatory). From palettes that are color-blind friendly, to different features that beamer has and a lot of people (it me!) didn't know. Check them out when building your next beamer presentation. Totally worth it.
+From the great [Paul Goldsmith-Pinkham](https://twitter.com/paulgp), some [beamer tips](https://github.com/paulgp/beamer-tips)! (pretty self-explanatory). From palettes that are color-blind friendly, to different features that beamer has and a lot of people (it me!) didn't know. Check them out when building your next beamer presentation (click the image to see the slides). Totally worth it.
 
 [![beamer_presentation](/images/beamer_presentation.png?raw=true)](https://github.com/paulgp/beamer-tips/blob/master/slides.pdf)
 
