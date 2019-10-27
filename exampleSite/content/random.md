@@ -3,7 +3,7 @@ title = "All things random"
 slug = "random"
 +++
 
-## Comic of the day
+## Comic of the week
 
 ![comic](/images/not_trained_small.jpg?raw=true)
 
