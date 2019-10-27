@@ -4,7 +4,7 @@ slug = "random"
 +++
 
 ## Comic of the day
-
+{{< figure src="/img/mypic.png" width="250px">}}
 ![comic](/images/not_trained.jpg?raw=true)
-{\small (source: [strange planet](https://www.nathanwpyle.art/strangeplanet))}
+(source: [strange planet](https://www.nathanwpyle.art/strangeplanet))
 
