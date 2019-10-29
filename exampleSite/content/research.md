@@ -8,7 +8,7 @@ You can download my full CV **[here](/files/CV_mbennett.pdf)**
 ## PHD RESEARCH 
 
 * **Bennett, M.** (2019). "How Far is Too Far? Generalization of a Regression Discontinuity Design Away from the Cutoff". Working Paper, Teachers College - Columbia University.
-    - ![grd](/images/grd_abstract.png?raw=true)
+    - ![grd](/images/abstract_grd.png?raw=true)
     
 * **Bennett, M**. & Bergman, P. (2019). “Better Together? Social Networks in Truancy and the Targeting of Treatment”. Journal of Labor Economics. *Accepted*. [:arrow_down:](/files/networks_paper.pdf)
     - <sup><sub>ABSTRACT: "There is concern the risky behaviors of teenagers, such as truancy, negatively influence the behaviors of others through their social networks. We develop a strategy to use administrative data of in-class attendance to construct social networks based on students who are truant together. We simulate these networks to document that certain students systematically coordinate their absences. We validate them by showing a parent-information intervention on student absences has spillover effects from treated students onto their peers. Excluding these effects understates the intervention’s cost effectiveness by 43%. We show there is potential to use networks to target interventions more efficiently given a budget constraint."</sup></sub>
