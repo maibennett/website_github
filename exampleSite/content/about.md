@@ -8,6 +8,6 @@ I'm a 5th year **PhD candidate in Economics of Education**, at Teachers College 
 
 **Some of the projects I am currently working on:**
 
-* "How far is too far? Estimation of an Interval for Generalization of a regression discontinuity design away from the cutoff" [:arrow_right:](https://www.magdalenabennett.com/abstracts/#grd/)
+* "How far is too far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff" [:arrow_right:](https://www.magdalenabennett.com/abstracts/#grd/)
 * "Biased Beliefs and the Dynamic Role of Information in College Choice" (*with [Claudia Allende](https://www.claudiaallendesc.com/)*) [:arrow_right:](https://www.magdalenabennett.com/abstracts/#chile-rct/)
 * "Impact of the Inclusion Policies on Socioeconomic Segregation in Chile: A differences-in-difference approach."
