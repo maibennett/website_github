@@ -7,7 +7,7 @@ You can download my full CV **[here](/files/CV_mbennett.pdf)**
 
 # PHD RESEARCH 
 
-* **Bennett, M.** (2019). "How Far is Too Far? Generalization of a Regression Discontinuity Design Away from the Cutoff". Working Paper, Teachers College - Columbia University.[:arrow_right: <sup><sub>Abstract</sub></sup>](http://www.magdalenabennett.com/abstracts#grd/)
+* **Bennett, M.** (2019). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". Working Paper, Teachers College - Columbia University.[:arrow_right: <sup><sub>Abstract</sub></sup>](http://www.magdalenabennett.com/abstracts#grd/)
     
 * **Bennett, M**. & Bergman, P. (2019). “Better Together? Social Networks in Truancy and the Targeting of Treatment”. Journal of Labor Economics. *Accepted*. [:arrow_down:](/files/networks_paper.pdf)
 
