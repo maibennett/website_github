@@ -2,11 +2,6 @@
 title = "Abstracts"
 slug = "abstracts"
 +++
-
-
-#### <a id="grd"></a>**Bennett, M.** (2019). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". Working Paper, Teachers College - Columbia University.
-
-- ABSTRACT: Regression discontinuity designs are a commonly used approach for causal inference in observational studies. Under mild continuity assumptions, the method provides a robust estimate of the average treatment effect for observations directly at the threshold of assignment. However, it has limited external validity for populations away from the cutoff. This article proposes a strategy to overcome this limitation by identifying a wider interval around the cutoff for estimation using a Generalization of a Regression Discontinuity Design (GRD). In this interval, predictive covariates are used to explain away the relationship between the assignment score and the outcome of interest for the pre-intervention period. Under an assumption of conditional time-invariance in absence of the treatment, the generalization bandwidth can be applied to the post-intervention period, allowing for the estimation of average treatment effects for populations away from the cutoff. To illustrate this method, GRD is applied in the context of free higher education in Chile to estimate effects for vulnerable students.
     
 #### <a id="chile-rct"></a>Allende, C. & M. Bennett (2019). “Biased Beliefs and the Dynamic Role of Information in College Choice”.
  
