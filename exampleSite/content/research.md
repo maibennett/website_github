@@ -7,7 +7,7 @@ You can download my full CV **[here](/files/CV_mbennett.pdf)**
 
 # PHD RESEARCH 
 
-* **Bennett, M.** (2019). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". Job Market Paper, Teachers College - Columbia University.[:arrow_down:](/files/sub/MBennett_GRD.pdf)
+* **Bennett, M.** (2019). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". Job Market Paper, Teachers College - Columbia University.[<i class="fas fa-download"></i>](/files/sub/MBennett_GRD.pdf)
     
 * **Bennett, M**. & Bergman, P. (2019). “Better Together? Social Networks in Truancy and the Targeting of Treatment”. *Journal of Labor Economics*. Accepted. [:download:](/files/networks_paper.pdf)
 
