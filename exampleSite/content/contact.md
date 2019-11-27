@@ -1,5 +1,5 @@
 +++
-title = "Contact {{% fontawesome paper-plane-regular40 %}}"
+title = "Contact"{{% fontawesome paper-plane-regular40 %}}
 slug = "contact"
 +++
 
