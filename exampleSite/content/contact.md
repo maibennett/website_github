@@ -1,9 +1,9 @@
 +++
-title = "Contact"{{% fontawesome paper-plane-regular40 %}}
+title = "Contact"
 slug = "contact"
 +++
 
-You can email me at **mb3863 \[at\] tc.columbia \[dot\] edu**
+{{% fontawesome paper-plane-regular32 %}} You can email me at **mb3863 \[at\] tc.columbia \[dot\] edu**
 
 Or follow me at [@maibennett](https://twitter.com/maibennett). (*Disclaimer: I tweet a lot*).
 
