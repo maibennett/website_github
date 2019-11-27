@@ -42,7 +42,7 @@ enableEmoji = true
     maxSeeAlsoItems = 5
 
     # Custom CSS
-    custom_css = []
+    custom_css = [css/css_style.css]
 
 [taxonomies]
   series = "series"
