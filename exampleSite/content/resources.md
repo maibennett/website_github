@@ -42,7 +42,32 @@ library(emo)
 # Dancer emoji (of course)
 dancer <- emo::ji("dancer") 
 ```
-I also randomized different messages you could get, just because I thought it was more fun :)
+I also randomized different messages you could get, just because I thought it was more fun :). Here's a brief example:
+
+```{r}
+textme <- function(){
+  # First you need to set up your accound SID and token as environmental variables
+  Sys.setenv(TWILIO_SID = "YOUR_TWILIO_SID")
+  Sys.setenv(TWILIO_TOKEN = "YOUR_TWILIO_TOKEN")
+  
+  # Then we're just going to store the numbers in some variables
+  my_phone_number <- "YOUR PHONE NUMBER"
+  twilios_phone_number <- "TWILIO'S PHONE NUMBER"
+  
+  #Some messages:
+  msg_list = c(paste(emo::ji("dancer"),"So either your code ran smoothly or you just hit a bump. Either way, go check it out!",emo::ji("celebrate")),
+               paste(emo::ji("flower"),"You smell like flowers",emo::ji("flower"),"Now get to work, because your code is done!",emo::ji("sparkles")))
+  
+  #Choose a random message
+  msg = sample(msg_list,1)
+  
+  # Now we can send away!
+  twilio::tw_send_message(from = twilios_phone_number, 
+                          to = my_phone_number, 
+                          body = msg)
+  
+}
+```
 
 And voilà! (PS: You will get the ugly "free trial" message ahead of your own customized message, but you can get rid of that by, you know, paying money).
 
