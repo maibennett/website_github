@@ -92,7 +92,7 @@ From the great [Paul Goldsmith-Pinkham](https://twitter.com/paulgp), some [beame
 
 Nothing to do with stats or econ or education, but some apps that are game changers:
 
-* **Copilot Money:** Do you know where your money is going? I thought I did, but.. nope. Copilot helps keep track of your finances, stay on budget, and actually has a daily forecast of how you're doing wrt your monthly budget. And everything is automatic! (It even sends you notifications when one of your credit card debts goes over a %, to keep up your credit score). Truly a game changer (hit me up for an invitation code if you want to skip the waitlist, and join [here](https://copilot.money/)). 
+* **Copilot Money:** Do you know where your money is going? I thought I did, but.. nope. Copilot helps keep track of your finances, stay on budget, and actually has a daily forecast of how you're doing wrt your monthly budget. And everything is automatic! (It even sends you notifications when one of your credit card debts goes over a %, to keep up your credit score). Truly a game changer! You can download it from the Apple Store [here](https://copilot.money/). 
 
 * **Chrome remote desktop:** If you use remote desktop to access another computer or even your own laptop (and you should), you should definitely download the app. You can watch your code run from the comfort of your iPhone (or Android, not judging), and overall it has an awesome interface.
 
