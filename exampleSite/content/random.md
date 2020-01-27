@@ -5,7 +5,7 @@ slug = "random"
 
 ## Comic of the week
 
-![comic](/images/not_trained_small.jpg?raw=true)
+![comic](/images/everything-is-great.png?raw=true)
 
-(source: [strange planet](https://www.nathanwpyle.art/strangeplanet))
+(source: [Poorly Drawn Lines](http://www.poorlydrawnlines.com/comic/everything-is-great/))
 
