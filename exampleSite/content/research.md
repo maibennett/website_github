@@ -7,11 +7,11 @@ You can download my full CV **[here](/files/CV_mbennett.pdf)**
 
 # PHD RESEARCH 
 
-* **Bennett, M.** (2019). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". Job Market Paper, Columbia University.[{{% fontawesome download-solid32 %}}](/files/sub/MBennett_GRD.pdf)
-    
-* **Bennett, M**. & Bergman, P. (2019). “Better Together? Social Networks in Truancy and the Targeting of Treatment”. *Journal of Labor Economics*. Accepted. [{{% fontawesome download-solid32 %}}](/files/networks_paper.pdf)
+* **Bennett, M.** (2020). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". Job Market Paper, Columbia University.[{{% fontawesome download-solid32 %}}](/files/sub/MBennett_GRD.pdf)
 
-* **Bennett, M.**, J. Vielma, & J. Zubizarreta (2019). “Building Representative Matched Samples with Multi-valued Treatments in Large Observational Studies”. Accepted, *Journal of Computational and Graphical Statistics*. [{{% fontawesome download-solid32 %}}](https://arxiv.org/abs/1810.06707)
+* **Bennett, M.**, J. Vielma, & J. Zubizarreta (2020). “Building Representative Matched Samples with Multi-valued Treatments in Large Observational Studies”. *Journal of Computational and Graphical Statistics*. Accepted. [{{% fontawesome download-solid32 %}}](https://arxiv.org/abs/1810.06707)
+
+* **Bennett, M**. & Bergman, P. (2019). “Better Together? Social Networks in Truancy and the Targeting of Treatment”. *Journal of Labor Economics*. Accepted. [{{% fontawesome download-solid32 %}}](/files/networks_paper.pdf)
 
 * Allende, C. & **M. Bennett** (2019). "Biased Beliefs and the Dynamic Role of Information in College Choice".[{{% fontawesome download-solid32 %}}](http://www.magdalenabennett.com/abstracts#chile-rct/)(*Abstract*)
 
