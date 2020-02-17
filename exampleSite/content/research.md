@@ -11,7 +11,7 @@ You can download my full CV **[here](/files/CV_mbennett.pdf)**
     
 * **Bennett, M**. & Bergman, P. (2019). “Better Together? Social Networks in Truancy and the Targeting of Treatment”. *Journal of Labor Economics*. Accepted. [{{% fontawesome download-solid32 %}}](/files/networks_paper.pdf)
 
-* **Bennett, M.**, J. Vielma, & J. Zubizarreta (2019). “Building Representative Matched Samples with Multi-valued Treatments in Large Observational Studies”. R&R, *Journal of Computational and Graphical Statistics*. [{{% fontawesome download-solid32 %}}](https://arxiv.org/abs/1810.06707)
+* **Bennett, M.**, J. Vielma, & J. Zubizarreta (2019). “Building Representative Matched Samples with Multi-valued Treatments in Large Observational Studies”. Accepted, *Journal of Computational and Graphical Statistics*. [{{% fontawesome download-solid32 %}}](https://arxiv.org/abs/1810.06707)
 
 * Allende, C. & **M. Bennett** (2019). "Biased Beliefs and the Dynamic Role of Information in College Choice".[{{% fontawesome download-solid32 %}}](http://www.magdalenabennett.com/abstracts#chile-rct/)(*Abstract*)
 
