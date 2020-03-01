@@ -1,6 +1,6 @@
 +++ 
 title = "It's dissertation time!"
-slug = "random"
+slug = "dissertation"
 +++
 
 ## Countdown for Dissertation Defense
