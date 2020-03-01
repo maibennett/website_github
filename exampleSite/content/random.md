@@ -5,7 +5,7 @@ slug = "random"
 
 ## Comic of the week
 
-![comic](/images/everything-is-great.png?raw=true)
+![comic](/images/thesis_defense.png?raw=true)
 
-(source: [Poorly Drawn Lines](http://www.poorlydrawnlines.com/comic/everything-is-great/))
+(source: [xkcd](https://xkcd.com/1403/))
 
