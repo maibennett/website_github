@@ -5,6 +5,6 @@ slug = "dissertation"
 
 ### Countdown for Dissertation Defense
 
-<img src="/images/calendar.png" width="200">
-
-![comic](/images/calendar.png?raw=true)
+<p align="center">
+<img src="/images/calendar.png" width="400">
+</p>
