@@ -5,7 +5,7 @@ slug = "about"
 
 I'm a 5th year **PhD candidate in Economics of Education**, at Teachers College - Columbia University in New York City. My research interests relate to developing and improving **causal inference methodologies** in observational and experimental studies. I also focus on **relevant policy questions in education**, such as socioeconomic segregation and school choice.
 
-I will be an Assistant Professor in the IROM department at McCombs School of Business at the University of Texas at Austin starting July 2020.
+I will be joining the IROM department at McCombs School of Business at the University of Texas at Austin as an Assistant Professor starting July 2020.
 
 
 **Some of the projects I am currently working on:**
