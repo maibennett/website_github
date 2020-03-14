@@ -9,5 +9,5 @@ I scrape data and do plots! Chile is posting its new cases every day, with the l
 
 **How many cases have been tested in Santiago, Chile, by location:**
 <p align="center">
-<img src="/images/covid.gif">
+<img src="/images/covid.gif" width="600">
 </p>
