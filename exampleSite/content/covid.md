@@ -1,6 +1,6 @@
 +++ 
 title = "It's #COVID-19 time!"
-slug = "dissertation"
+slug = "covid"
 +++
 
 <p align="center">
