@@ -11,3 +11,9 @@ I scrape data and do plots! Chile is posting its new cases every day, with the l
 <p align="center">
 <img src="/images/covid.gif" width="600">
 </p>
+
+
+**An also, how many cases have been tested in all of Chile, by location:**
+<p align="center">
+<img src="/images/covid_chile.gif" width="600">
+</p>
