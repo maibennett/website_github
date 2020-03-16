@@ -7,13 +7,13 @@ slug = "covid"
 
 I scrape data and do plots! Chile is posting its new cases every day, with the location of where they are tested. So I'm compiling that information, and putting it [here](/files/data_covid.csv) (full repository [here](https://github.com/maibennett/code/tree/master/covid)). Also, doing some maps, because, why not? It's not like there's a dissertation I need to finish...
 
-**How many cases have been tested in Santiago, Chile, by location:**
+**How many cases have been tested in Santiago, Chile, by testing center location:**
 <p align="center">
 <img src="/images/covid.gif" width="600">
 </p>
 
 
-**An also, how many cases have been tested in all of Chile, by location:**
+**An also, how many cases have been tested in all of Chile, by testing center location:**
 <p align="center">
 <img src="/images/covid_chile.gif" width="600">
 </p>
