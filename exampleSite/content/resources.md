@@ -13,7 +13,7 @@ Here I compile a list of some helpful resources/tips (created by me or others) t
 ## <a name="code"></a>Code
 ##### R script for to do quick maps
 
-This can be used in combination with the geocode code that's down below, but here's a quick way to visualize some locations in R. I illustrate this with the specific case of the spread of #COVID-19 in Chile. I download a map form Google (you will need an API key for this, so check out [this website](https://developers.google.com/maps/documentation/geocoding/get-api-key)), and then plot the locations of the detected cases. In this case, I make the size of the points proportional to the number of cases detected in that center. You can check out the end results [here](https://www.magdalenabennett.com/covid) or the full repository [here](https://github.com/maibennett/code/tree/master/covid), including the code and data.
+This can be used in combination with the geocode code that's down below, but here's a quick way to visualize some locations in R. I illustrate this with the specific case of the spread of #COVID-19 in Chile. I download a map from Google into R (you will need an API key for this, so check out [this website](https://developers.google.com/maps/documentation/geocoding/get-api-key)), and then plot the locations of the detected cases. In this case, I make the size of the points proportional to the number of cases detected in that center. You can check out the end results [here](https://www.magdalenabennett.com/covid) or the full repository [here](https://github.com/maibennett/code/tree/master/covid), including the code and data.
 
 ![covid](/images/example_covid.png?raw=true)
 
