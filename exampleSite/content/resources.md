@@ -11,6 +11,12 @@ Here I compile a list of some helpful resources/tips (created by me or others) t
 :space_invader: [Apps](#apps)
 
 ## <a name="code"></a>Code
+##### R script for to do quick maps
+
+This can be used in combination with the geocode code that's down below, but here's a quick way to visualize some locations in R. I illustrate this with the specific case of the spread of #COVID-19 in Chile. I download a map form Google (you will need an API key for this, so check out [this website](https://developers.google.com/maps/documentation/geocoding/get-api-key)), and then plot the locations of the detected cases. In this case, I make the size of the points proportional to the number of cases detected in that center. You can check out the end results [here](https://www.magdalenabennett.com/covid) or the full repository [here](https://github.com/maibennett/code/tree/master/covid), including the code and data.
+
+![covid](/images/example_covid.png?raw=true)
+
 ##### Python script for ArcGIS to characterize geographic zones with census tract data
 
 Sometimes we need to characterize certain geographic zones (e.g. school districts) with geographic data that is in a different level (e.g. census tract data). How do we do that? **[Here](https://github.com/maibennett/code/tree/master/geographic_characterization)** I have some example code on how to create a csv file using a Python script that can be run in ArcGIS. The idea is that by combining both levels of geographic data, we can later create weights for our areas of interest depending on the overlapping surface of other geographic areas. The code sets an example using Florida school districts and census tracts, and merges tract level income data (you can merge way more census tract data!). The Python code is first run in ArcGIS, and the analysis is later conducted in Stata for simplicity. The example map below shows Collier County School district in FL and the overlapping census tracts:
