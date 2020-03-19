@@ -24,7 +24,7 @@ An also, how many cases have been tested in all of Chile, by testing center loca
 In terms of cummulative cases, Chile has experienced an exponential growth of *confirmed* cases (i.e. does not necessarily reflect the real number of people infected):
 
 <p align="center">
-<img src="/images/cum_all.png" width="600">
+<img src="/images/cum_cases.png" width="600">
 </p>
 
 How does it look by region? Santiago is pretty much driving the growth:
