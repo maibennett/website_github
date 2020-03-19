@@ -9,15 +9,14 @@ I scrape data and do plots! Chile is posting its new cases every day, with the l
 
 Update: Ministerio de Salud stopped sharing disaggregated data in 03/18, so Santiago won't be updated. You can still see how Chile is doing, though!
 
-#### How has this evolved in Chile?
+### How has this evolved in Chile?
 
-**How many cases have been tested in Santiago, Chile, by testing center location:**
+How many cases have been tested in Santiago, Chile, by testing center location:
 <p align="center">
 <img src="/images/covid.gif" width="600">
 </p>
 
-
-**An also, how many cases have been tested in all of Chile, by testing center location:**
+An also, how many cases have been tested in all of Chile, by testing center location:
 <p align="center">
 <img src="/images/covid_chile.gif" width="600">
 </p>
