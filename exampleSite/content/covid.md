@@ -27,7 +27,7 @@ In terms of cummulative cases, Chile has experienced an exponential growth of *c
 <img src="/images/cum_all.png" width="600">
 </p>
 
-How does it look by regio? Santiago is pretty much driving the growth:
+How does it look by region? Santiago is pretty much driving the growth:
 
 <p align="center">
 <img src="/images/cum_regions.png" width="600">
