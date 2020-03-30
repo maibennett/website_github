@@ -22,7 +22,11 @@ An also, how many cases have been tested in all of Chile, by testing center loca
 <img src="/images/covid_chile.gif" width="600">
 </p>
 
-In terms of cummulative cases, Chile has experienced an exponential growth of *confirmed* cases (i.e. does not necessarily reflect the real number of people infected):
+In terms of cummulative cases, Chile has experienced an exponential growth of *confirmed* cases (i.e. does not necessarily reflect the real number of people infected). You can check out the new cases and cumulative cases for the whole country and by region:
+
+<iframe src="https://maibennett.shinyapps.io/corona_app" width="100%" height="1000px"></iframe>
+
+You can also see some static plots here for the evolution of COVID-19:
 
 <p align="center">
 <img src="/images/cum_cases.png" width="600">
@@ -40,5 +44,3 @@ And if we take the Metropolitan Region out, this is how it looks:
 <p align="center">
 <img src="/images/cum_regions_minus_met.png" width="600">
 </p>
-
-<iframe src="https://maibennett.shinyapps.io/corona_app" width="100%" height="400px"></iframe>
