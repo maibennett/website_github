@@ -41,3 +41,4 @@ And if we take the Metropolitan Region out, this is how it looks:
 <img src="/images/cum_regions_minus_met.png" width="600">
 </p>
 
+<iframe src="http://maibennett.shinyapps.io/corona_app" width="100%" height="400px"></iframe>
