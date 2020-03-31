@@ -9,7 +9,7 @@ slug = "covid"
 
 I scrape data and do plots! Chile is posting its new cases every day, with the location of where they are tested. So I'm compiling that information, and putting it [here](/files/data_covid.csv) (full repository [here](https://github.com/maibennett/code/tree/master/covid)). Also, doing some maps, because, why not? It's not like there's a dissertation I need to finish...
 
-**Last update: 03/30/2020** 
+**Last update: 03/31/2020** 
 (Ministerio de Salud stopped sharing disaggregated data in 03/18, so Santiago won't be updated until further notice. You can still see how Chile is doing, though!)
 
 ### How has this evolved in Chile?
