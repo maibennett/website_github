@@ -14,7 +14,7 @@ I scrape data and do plots! Chile is posting its new cases every day, with the l
 
 ### Shiny App
 
-(Direct link in [https://maibennett.shinyapps.io/corona_app])
+(Direct link in https://maibennett.shinyapps.io/corona_app)
 
 <iframe src="https://maibennett.shinyapps.io/corona_app" width="100%" height="1200px"></iframe>
 
