@@ -16,7 +16,7 @@ I scrape data and do plots! Chile is posting its new cases every day, with the l
 
 (Direct link in https://maibennett.shinyapps.io/corona_app)
 
-<iframe src="https://maibennett.shinyapps.io/corona_app" width="100%" height="1200px"></iframe>
+<iframe src="https://maibennett.shinyapps.io/corona_app" width="100%" height="1500px"></iframe>
 
 ### How has this evolved in Chile?
 
