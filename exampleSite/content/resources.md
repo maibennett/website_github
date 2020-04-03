@@ -17,20 +17,24 @@ Here I compile a list of some helpful resources/tips (created by me or others) t
 This code was posted by [Sue Marquez](https://github.com/Suemarquez/covid_nys) for scraping some COVID-19 data, and I found it super useful. I am fairly new at scraping data, and this made it very easy and intuitive. The main advantage is that using Inspect on your browser, you can see exactly the different classes for the data you want to scrape and download. I slightly adapted Sue's code for scraping data from the Chilean Ministry of Health, and commented it so you know how to adapt it for your own needs. Check it out [here](https://github.com/maibennett/code/blob/master/covid/scrape_daily_data.R)
 
 <p align="center">
-<img src="/images/example_html.png" width="600">
+<img src="/images/example_html.png" width="700">
 </p>
 
 ##### R script for doing quick maps
 
 This can be used in combination with the geocode Rscript that's down below, but here's a quick way to visualize some locations in R. I illustrate this with the specific case of the spread of #COVID-19 in Chile. I download a map from Google into R (you will need an API key for this, so check out [this website](https://developers.google.com/maps/documentation/geocoding/get-api-key)), and then plot the locations of the detected cases. In this case, I make the size of the points proportional to the number of cases detected in that center. You can check out the end results [here](https://www.magdalenabennett.com/covid) or the full repository [here](https://github.com/maibennett/code/tree/master/covid), including the code and data.
 
-![covid](/images/example_covid.png?raw=true)
+<p align="center">
+<img src="/images/example_covid.png" width="500">
+</p>
 
 ##### Python script for ArcGIS to characterize geographic zones with census tract data
 
 Sometimes we need to characterize certain geographic zones (e.g. school districts) with geographic data that is in a different level (e.g. census tract data). How do we do that? **[Here](https://github.com/maibennett/code/tree/master/geographic_characterization)** I have some example code on how to create a csv file using a Python script that can be run in ArcGIS. The idea is that by combining both levels of geographic data, we can later create weights for our areas of interest depending on the overlapping surface of other geographic areas. The code sets an example using Florida school districts and census tracts, and merges tract level income data (you can merge way more census tract data!). The Python code is first run in ArcGIS, and the analysis is later conducted in Stata for simplicity. The example map below shows Collier County School district in FL and the overlapping census tracts:
 
-![collier_county](/images/map_collier_county.png?raw=true)
+<p align="center">
+<img src="/images/map_collier_county.png" width="600">
+</p>
 
 If we wanted the average household income for the district using the census tract data, we can generate a weighted average of the overlapping census tracts.
 
@@ -86,7 +90,9 @@ textme <- function(){
 
 And voilà! (PS: You will get the ugly "free trial" message ahead of your own customized message, but you can get rid of that by, you know, paying money).
 
-![text_message](/images/text_message.jpg?raw=true)
+<p align="center">
+<img src="/images/text_message.jpg" width="400">
+</p>
 
 ## <a name="design"></a>Design
 ##### How to make a better poster!
