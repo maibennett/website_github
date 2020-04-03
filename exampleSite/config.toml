@@ -94,11 +94,11 @@ enableEmoji = true
         url = "/random/"
         
         [[languages.en.menu.main]]
-        name = "#COVID-19 Stuff"
-        weight = 4
+        name = "#COVID-19"
+        weight = 5
         url = "/covid/"
 
         [[languages.en.menu.main]]
         name = "Contact me"
-        weight = 5
+        weight = 6
         url = "/contact/"
