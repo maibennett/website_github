@@ -16,7 +16,9 @@ Here I compile a list of some helpful resources/tips (created by me or others) t
 
 This code was posted by [Sue Marquez](https://github.com/Suemarquez/covid_nys) for scraping some COVID-19 data, and I found it super useful. I am fairly new at scraping data, and this made it very easy and intuitive. The main advantage is that using Inspect on your browser, you can see exactly the different classes for the data you want to scrape and download. I slightly adapted Sue's code for scraping data from the Chilean Ministry of Health, and commented it so you know how to adapt it for your own needs. Check it out [here](https://github.com/maibennett/code/blob/master/covid/scrape_daily_data.R)
 
-![html](/images/example_html.png?raw=true)
+<p align="center">
+<img src="/images/example_html.png" width="600">
+</p>
 
 ##### R script for doing quick maps
 
