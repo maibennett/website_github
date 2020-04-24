@@ -19,12 +19,12 @@ I scrape data and do plots! Chile is posting its new cases every day, with the l
 
 ### How has this evolved in Chile?
 
-How many cases have been confirmed in Santiago, Chile, by testing center location:
+How many cases have been confirmed in Santiago, Chile, by comuna:
 <p align="center">
-<img src="/images/covid.gif" width="600">
+<img src="/images/covid_stgo.gif" width="600">
 </p>
 
-An also, how many cases have been confirmed in all of Chile, by region:
+An also, how many cases have been confirmed in all of Chile, by comuna:
 <p align="center">
 <img src="/images/covid_chile.gif" width="600">
 </p>
