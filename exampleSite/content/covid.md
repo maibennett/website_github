@@ -7,7 +7,7 @@ slug = "covid"
 
 ### What do you do in self-isolation?
 
-I scrape data and do plots! Chile is posting its new cases every day, with the location of where they are tested (until 3/17) and where confirmed cases reside (since 3/29). So I'm compiling that information, and putting it in this repository [here](https://github.com/maibennett/code/tree/master/covid). The repository includes daily updated data and code to do all of this. I'm also doing some maps, because, why not? It's not like there's a dissertation I need to finish...
+I scrape data and do plots! Chile is posting its new cases every day, with the location of where they are tested (until 3/17) and where confirmed cases reside (since 3/29). So I'm compiling that information, and putting it in this repository [here](https://github.com/maibennett/code/tree/master/covid). The repository includes daily updated data and code to do all of this. The main source of information will be the Shiny app linked below.
 
 **Last update: 04/24/2020** 
 
