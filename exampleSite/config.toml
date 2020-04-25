@@ -1,5 +1,4 @@
-#baseurl = "http://www.magdalenabennett.com"
-baseurl = "https://maibennett.netlify.app/"
+baseurl = "http://www.magdalenabennett.com"
 title = "maibennett"
 
 theme = "hugo-coder"
