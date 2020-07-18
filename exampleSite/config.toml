@@ -21,7 +21,7 @@ enableEmoji = true
     author = "Magdalena Bennett"
     description = "Magdalena Bennett's website"
     keywords = "research, personal"
-    info = "Assistant Professor @UTAustin, PhD @Columbia and #rstats enthusiast"
+    info = "Assistant Professor @UTAustin and #rstats enthusiast"
     avatarurl = "images/mai_bw.jpg"
     footercontent = ""
 
