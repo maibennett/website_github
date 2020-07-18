@@ -3,7 +3,7 @@ title = "Contact"
 slug = "contact"
 +++
 
-{{% fontawesome paper-plane-regular32 %}} You can email me at **magdalena.bennett \[at\] utexas \[dot\] edu**
+{{% fontawesome paper-plane-regular32 %}} You can email me at **m.bennett \[at\] austin \[dot\] utexas \[dot\] edu**
 
 {{% fontawesome twitter-square-brands25 %}} Or follow me at [@maibennett](https://twitter.com/maibennett). (*Disclaimer: I tweet a lot*).
 
