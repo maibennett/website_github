@@ -9,7 +9,7 @@ We're on self-isolation, and we're bored. Stop **[here](http://www.magdalenabenn
 
 ## Comic of the week
 
-![comic](/images/thesis_defense.png?raw=true)
+![comic](/images/so-many-ideas.png?raw=true)
 
-(source: [xkcd](https://xkcd.com/1403/))
+(source: [Poorly Drawn Lines](http://www.poorlydrawnlines.com/comic/so-many-ideas/))
 
