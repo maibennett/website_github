@@ -1,0 +1,410 @@
+---
+title: "A Difference-in-Differences Approach<br/>using Mixed-Integer Programming Matching"
+subtitle: "Magdalena Bennett"
+author: "SDS Seminar Series, UT Austin<br/>Oct 16, 2020"
+output:
+  xaringan::moon_reader:
+    css: [xaringan-themer.css]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+    includes:
+      in_header: header.html
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  #base_color = "#bf5700",
+  base_color = "#333f48",
+  header_font_google = google_font("Yanone Kaffeesatz","200","300","400","500","600","700"),
+  text_font_google   = google_font("Roboto", "300", "300i","400","500"),
+  code_font_google   = google_font("Fira Mono"),
+  text_bold_color = "#333f48",
+  text_font_size = "110%",
+  extra_css = list(
+    ".remark-slide-number" = list("display" = "none"),
+    ".strong" = list("font-weight" = "400"),
+    ".big" = list("font-size" = "350%",
+                     "font-family" = "Yanone Kaffeesatz",
+                     "font-weight"="400"),
+    ".highlight" = list("color" = "#900DA4",
+                         "font-weight" = "500"),
+    ".source" = list("color" = "#8c8c8c",
+                     "font-size" = "80%"),
+    ".title-slide h1" = list("font-weight" = "500"),
+    ".title-slide h2" = list("font-weight" = "400",
+                             "font-size" =  "170%"),
+    ".title-slide h3" = list("font-family" = "Roboto",
+                             "font-size" = "100%",
+                             "font-weight" = "200"),
+    ".center2" = list("margin" = "0",
+                      "position" = "absolute",
+                      "top" = "50%",
+                      "left" = "50%",
+                      "-ms-transform" = "translate(-50%, -50%)",
+                      "transform" = "translate(-50%, -50%)"),
+    ".section-title h1" = list("color" = "#FFFFFF",
+                               "font-size" = "2.3em",
+                               "line-height" = "1.3"),
+    ".medium" = list("font-size" = "1.4em"),
+    ".sp-after-half" = list("margin-bottom" = "0.7em !important"),
+    ".box-1,.section-title-1" = list("background-color" = "#0D0887"),
+    ".box-2,.section-title-2" = list("background-color" = "#5601A4"),
+    ".box-3,.section-title-3" = list("background-color" = "#900DA4"),
+    ".box-4,.section-title-4" = list("background-color" = "#BF3984"),
+    ".box-5,.section-title-5" = list("background-color" = "#E16462"),
+    ".box-6,.section-title-6" = list("background-color" = "#F89441"),
+    ".box-7,.section-title-7" = list("background-color" = "#FCCE25"),
+    ".box-7, .box-6, .box-5, .box-4, .box-3, .box-2, .box-1" = list("color" = "#FFFFFF",
+                                                                    "margin" = "0em auto",
+                                                                    "overflow" = "hidden",
+                                                                    "padding" = "0.4em 0.4em",
+                                                                    "font-weight" = "600",
+                                                                    "font-size" = "31px",
+                                                                    "display" = "table",
+                                                                    "text-align" = "center",
+                                                                    "font-family" = "Fira Sans")
+  )
+)
+
+#,"li" = list("font-size" = "150%")
+#    "li" = list("font-size" = "110%"),
+#    "ul" = list("font-size" = "110%"),
+#color palette
+#5601A4
+#900DA4
+#F89441
+#FCCE25
+```
+
+# Diff-in-Diff as an identification strategy
+
+```{r dd, fig.height=5, fig.align='center', dev='svg', echo=FALSE, warning=FALSE}
+library(ggplot2)
+library(ggpubr)
+library(hrbrthemes)
+library(firasans)
+#hrbrthemes::update_geom_font_defaults(family=font_rc)
+
+
+#Traditional diff in diff:
+
+Y1 = c(2,4)
+Y0 = c(1,2)
+Y1c = c(2,3)
+
+d = data.frame(cbind(c(0,1,0,1),c(Y0,Y1),c(0,0,1,1)))
+names(d) = c("t","Y","Z")
+
+ggplot(d, aes(x = t, y = Y, group=factor(Z), color=factor(Z)), fill="white") +
+  geom_line(lwd=1.1) +
+  geom_point(size=3)+
+  geom_vline(xintercept = 0.5,lty=2,col="dark grey",lwd=1)+
+  scale_color_manual(values=c("#F89441","#900DA4")) +
+  
+  annotate("text",x=0.4,y=4.7,label = "Pre-Intervention", size=6, colour="dark grey",hjust=1, family=font_rc)+
+  annotate("text",x=0.6,y=4.7,label = "Post-Intervention", size=6, colour="dark grey",hjust=0, family=font_rc)+
+  
+    annotate("rect",xmin=-1, xmax=-0.4,ymin=0,ymax=1,alpha=1, color="dark grey", fill="white")+
+    annotate("segment",x=-0.95,y=0.3,xend=-0.8,yend=0.3,lty=1,col="#F89441",lwd=1) +
+    annotate("text",x=-0.77,y=0.3,label = "Control", size=4, colour="black",hjust=0, family=font_rc)+
+    annotate("segment",x=-0.95,y=0.7,xend=-0.8,yend=0.7,lty=1,col="#900DA4",lwd=1) +
+    annotate("text",x=-0.77,y=0.7,label = "Treat", size=4, colour="black",hjust=0, family=font_rc)+
+  
+  theme_bw()+
+  theme_ipsum_rc(plot_title_face = "bold") + #plain 
+  xlab("Time") + ylab("Outcome")+
+  xlim(-1,2) + ylim(0,5)+
+  theme(plot.margin=unit(c(1,1,1.5,1.2),"cm"),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.y = element_blank(),
+        panel.grid.minor.y = element_blank(),
+        axis.line = element_line(colour = "dark grey"))+
+  theme(axis.title.x = element_text(size=16),#margin = margin(t = 10, r = 0, b = 0, l = 0)),
+        axis.text.x = element_text(size=10),
+        axis.title.y = element_text(size=16),#margin = margin(t = 0, r = 10, b = 0, l = 0)),
+        axis.text.y = element_text(size=10),legend.position="none",
+        legend.title = element_blank(),
+        legend.text = element_text(size=15),
+        legend.background = element_rect(fill="white",colour ="white"),
+        title = element_text(size=14))
+
+```
+---
+# Diff-in-Diff as an identification strategy
+
+```{r dd2, fig.height=5, fig.align='center', dev='svg', echo=FALSE, warning=FALSE}
+#Traditional diff in diff:
+
+Y1 = c(2,4)
+Y0 = c(1,2)
+Y1c = c(2,3)
+
+d = data.frame(cbind(c(0,1,0,1),c(Y0,Y1),c(0,0,1,1)))
+names(d) = c("t","Y","Z")
+
+ggplot(d, aes(x = t, y = Y, group=factor(Z), color=factor(Z)), fill="white") +
+  geom_line(lwd=1.1) +
+  geom_point(size=3)+
+  geom_vline(xintercept = 0.5,lty=2,col="dark grey",lwd=1)+
+  geom_segment(aes(x = 0, y = Y1[1], xend = 1, yend = Y1c[2]), lty=3,lwd=1,col="#900DA4") +
+  geom_point(aes(x=1,y=Y1c[2]),pch=1,col="#900DA4", size=3) +
+  scale_color_manual(values=c("#F89441","#900DA4")) +
+  
+  annotate("text",x=0.4,y=4.7,label = "Pre-Intervention", size=6, colour="dark grey",hjust=1, family=font_rc)+
+  annotate("text",x=0.6,y=4.7,label = "Post-Intervention", size=6, colour="dark grey",hjust=0, family=font_rc)+
+  
+    annotate("rect",xmin=-1, xmax=-0.4,ymin=0,ymax=1,alpha=1, color="dark grey", fill="white")+
+    annotate("segment",x=-0.95,y=0.3,xend=-0.8,yend=0.3,lty=1,col="#F89441",lwd=1) +
+    annotate("text",x=-0.77,y=0.3,label = "Control", size=4, colour="black",hjust=0, family=font_rc)+
+    annotate("segment",x=-0.95,y=0.7,xend=-0.8,yend=0.7,lty=1,col="#900DA4",lwd=1) +
+    annotate("text",x=-0.77,y=0.7,label = "Treat", size=4, colour="black",hjust=0, family=font_rc)+
+  
+  theme_bw()+
+  theme_ipsum_rc(plot_title_face = "bold") + #plain 
+  xlab("Time") + ylab("Outcome")+
+  xlim(-1,2) + ylim(0,5)+
+  theme(plot.margin=unit(c(1,1,1.5,1.2),"cm"),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.y = element_blank(),
+        panel.grid.minor.y = element_blank(),
+        axis.line = element_line(colour = "dark grey"))+
+  theme(axis.title.x = element_text(size=16),#margin = margin(t = 10, r = 0, b = 0, l = 0)),
+        axis.text.x = element_text(size=10),
+        axis.title.y = element_text(size=16),#margin = margin(t = 0, r = 10, b = 0, l = 0)),
+        axis.text.y = element_text(size=10),legend.position="none",
+        legend.title = element_blank(),
+        legend.text = element_text(size=15),
+        legend.background = element_rect(fill="white",colour ="white"),
+        title = element_text(size=14))
+
+```
+
+---
+# Diff-in-Diff as an identification strategy
+
+```{r dd3, fig.height=5, fig.align='center', dev='svg', echo=FALSE, warning=FALSE}
+#Traditional diff in diff:
+
+Y1 = c(2,4)
+Y0 = c(1,2)
+Y1c = c(2,3)
+
+d = data.frame(cbind(c(0,1,0,1),c(Y0,Y1),c(0,0,1,1)))
+names(d) = c("t","Y","Z")
+
+ggplot(d, aes(x = t, y = Y, group=factor(Z), color=factor(Z)), fill="white") +
+  geom_line(lwd=1.1) +
+  geom_point(size=3)+
+  geom_vline(xintercept = 0.5,lty=2,col="dark grey",lwd=1)+
+  geom_segment(aes(x = 0, y = Y1[1], xend = 1, yend = Y1c[2]), lty=3,lwd=1,col="#900DA4") +
+  geom_point(aes(x=1,y=Y1c[2]),pch=1,col="#900DA4", size=3) +
+  geom_segment(aes(x=1+0.05,y=Y1c[2],xend=1+0.05,yend=Y1[2]),lwd=0.8,lty=1,
+               arrow=arrow(length = unit(0.03, "npc"),type="closed"),arrow.fill="#FCCE25",col="#FCCE25") +
+  scale_color_manual(values=c("#F89441","#900DA4")) +
+  
+  annotate("text",x=0.4,y=4.7,label = "Pre-Intervention", size=6, colour="dark grey",hjust=1, family=font_rc)+
+  annotate("text",x=0.6,y=4.7,label = "Post-Intervention", size=6, colour="dark grey",hjust=0, family=font_rc)+
+  annotate("text", x=1.1,y=3.5,label = bquote(""~tau),col="#FCCE25",size=10) + 
+  
+    annotate("rect",xmin=-1, xmax=-0.4,ymin=0,ymax=1,alpha=1, color="dark grey", fill="white")+
+    annotate("segment",x=-0.95,y=0.3,xend=-0.8,yend=0.3,lty=1,col="#F89441",lwd=1) +
+    annotate("text",x=-0.77,y=0.3,label = "Control", size=4, colour="black",hjust=0, family=font_rc)+
+    annotate("segment",x=-0.95,y=0.7,xend=-0.8,yend=0.7,lty=1,col="#900DA4",lwd=1) +
+    annotate("text",x=-0.77,y=0.7,label = "Treat", size=4, colour="black",hjust=0, family=font_rc)+
+  
+  theme_bw()+
+  theme_ipsum_rc(plot_title_face = "bold") + #plain 
+  xlab("Time") + ylab("Outcome")+
+  xlim(-1,2) + ylim(0,5)+
+  theme(plot.margin=unit(c(1,1,1.5,1.2),"cm"),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.y = element_blank(),
+        panel.grid.minor.y = element_blank(),
+        axis.line = element_line(colour = "dark grey"))+
+  theme(axis.title.x = element_text(size=16),#margin = margin(t = 10, r = 0, b = 0, l = 0)),
+        axis.text.x = element_text(size=10),
+        axis.title.y = element_text(size=16),#margin = margin(t = 0, r = 10, b = 0, l = 0)),
+        axis.text.y = element_text(size=10),legend.position="none",
+        legend.title = element_blank(),
+        legend.text = element_text(size=15),
+        legend.background = element_rect(fill="white",colour ="white"),
+        title = element_text(size=14))
+
+```
+
+---
+# Very popular for policy evaluation
+
+```{r gg, fig.height=5, fig.align='center', dev='svg', echo=FALSE, warning=FALSE}
+#Data for publications
+d = data.frame(cbind(as.numeric(seq(2020,2000,-1)),c(2143,
+	1826,
+	1406,
+	1165,
+	923,
+	700,
+	599,
+	485,
+	379,
+	301,
+	224,
+	174,
+	147,
+	96,
+	74,
+	57,
+	44,
+	26,
+	10,
+	17,
+	10)))
+names(d) = c("Year","Pub")
+
+ggplot(d, aes(x = Year, y = Pub), fill="white") +
+  geom_line(lwd=1.1, color = "#900DA4") +
+  geom_point(size=3, color = "#900DA4") +
+  theme_bw()+
+  theme_ipsum_rc(plot_title_face = "bold") + #plain 
+  xlab("Year") + ylab("Num. Publications")+
+  xlim(2000,2020) +
+  
+  theme(plot.margin=unit(c(1,1,1.5,1.2),"cm"),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.y = element_blank(),
+        panel.grid.minor.y = element_blank(),
+        axis.line = element_line(colour = "dark grey"))+
+  theme(axis.title.x = element_text(size=16),#margin = margin(t = 10, r = 0, b = 0, l = 0)),
+        axis.text.x = element_text(size=10),
+        axis.title.y = element_text(size=16),#margin = margin(t = 0, r = 10, b = 0, l = 0)),
+        axis.text.y = element_text(size=10),legend.position="none",
+        legend.title = element_blank(),
+        legend.text = element_text(size=15),
+        legend.background = element_rect(fill="white",colour ="white"),
+        title = element_text(size=14))
+
+```
+.source[Source: Google Scholar]
+---
+
+# What about parallel trends?
+
+.center2[
+![](https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/images/data_comic.jpg)]
+
+---
+
+# This paper
+
+- Identify contexts when matching can recover causal estimates under **violations in the parallel trend assumption**.
+
+- Use **mixed-integer programming matching (MIP)** to balance covariates directly.
+
+- Matching for **panel** and **repeated cross-sectional** data.
+
+--
+<br/>
+.pull-left[
+.box-3.medium.sp-after-half[Simulations:<br/>Different DGP scenarios]
+]
+
+.pull-right[
+.box-6.medium.sp-after-half[Application:<br/>School segregation & vouchers]
+]
+
+
+---
+background-position: 50% 50%
+class: left, bottom, inverse
+.big[
+Let's get started
+]
+---
+
+# DD Setup
+
+- Let $Y^z_i(t)$ be the potential outcome for unit $i$ in period $t$ under treatment $z$.
+
+- Intervention implemented in $T_0$ $\rightarrow$ No units are treated in $t\leq T_0$
+
+- Difference-in-Differences (DD) focuses on ATT for $t>T_0$:
+$$ATT = E[Y_i^1(t) - Y_i^0(t)|Z=1]$$
+- .highlight[Assumptions for DD]:
+  - Parallel-trend assumption (PTA)
+  
+  - Common shocks
+  
+  $$E[Y_i^0(1) - Y_i^0(1) | Z=1] = E[Y_i^0(1) - Y_i^0(1) | Z=0]$$
+---
+# DD Setup (cont.)
+
+- Under these assumptions:
+$$
+\begin{align}
+\hat{\tau}^{DD} = &E[Y(1)|Z=1] - E[Y(1)|Z=0] - \\
+&(E[Y(0)|Z=1] - E[Y(0)|Z=0])
+\end{align}
+$$
+  - Where $t=0$ and $t=1$ are the pre- and post-intervention periods, respectively.
+  
+  - $Y(t) = Y^1(t)\cdot Z + (1-Z)\cdot Y^0(t)$ is the observed outcome.
+
+
+---
+
+# Violations to the PTA
+
+.pull-left[
+- Under PTA, $g_1(t) = g_0(t) + h(t)$, where:
+
+  - $g_z(t) = E[Y^z_i(t) | Z=z, T=t]$
+  - $h(t) = \alpha$
+  
+- Bias in a DD setting depends on the structure of $h(t)$.
+
+- Confounding in DD affect .highlight[trends] and not .highlight[levels].
+]
+
+.pull-right[
+![](https://media.giphy.com/media/L8yQ0RQBItqso/giphy.gif)
+]
+
+---
+background-position: 50% 50%
+class: left, bottom, inverse
+.big[
+Simulations
+]
+
+---
+
+# Different scenarios
+
+
+.box-1.medium.sp-after-half[S1: Time-invariant covariate effect]
+
+.box-2.medium.sp-after-half[S2: Time-varying covariate effect]
+
+.box-3.medium.sp-after-half[S3: Treatment-independent covariate]
+
+.box-4.medium.sp-after-half[S4: Parallel evolution]
+
+.box-6.medium.sp-after-half[S5: Evolution differs by group]
+
+.box-7.medium.sp-after-half[S6: Evolution diverges in post]
+  
+.source[Following Zeldow & Hatfield (2019)]
+---
+

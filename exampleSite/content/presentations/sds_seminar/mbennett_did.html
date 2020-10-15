@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>A Difference-in-Differences Approach using Mixed-Integer Programming Matching</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="SDS Seminar Series, UT Austin Oct 16, 2020" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# A Difference-in-Differences Approach<br/>using Mixed-Integer Programming Matching
+## Magdalena Bennett
+### SDS Seminar Series, UT Austin<br/>Oct 16, 2020
+
+---
+
+
+
+
+
+
+# Diff-in-Diff as an identification strategy
+
+&lt;img src="mbennett_did_files/figure-html/dd-1.svg" style="display: block; margin: auto;" /&gt;
+---
+# Diff-in-Diff as an identification strategy
+
+&lt;img src="mbennett_did_files/figure-html/dd2-1.svg" style="display: block; margin: auto;" /&gt;
+
+---
+# Diff-in-Diff as an identification strategy
+
+&lt;img src="mbennett_did_files/figure-html/dd3-1.svg" style="display: block; margin: auto;" /&gt;
+
+---
+# Very popular for policy evaluation
+
+&lt;img src="mbennett_did_files/figure-html/gg-1.svg" style="display: block; margin: auto;" /&gt;
+.source[Source: Google Scholar]
+---
+
+# What about parallel trends?
+
+.center2[
+![](https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/images/data_comic.jpg)]
+
+---
+
+# This paper
+
+- Identify contexts when matching can recover causal estimates under **violations in the parallel trend assumption**.
+
+- Use **mixed-integer programming matching (MIP)** to balance covariates directly.
+
+- Matching for **panel** and **repeated cross-sectional** data.
+
+--
+&lt;br/&gt;
+.pull-left[
+.box-3.medium.sp-after-half[Simulations:&lt;br/&gt;Different DGP scenarios]
+]
+
+.pull-right[
+.box-6.medium.sp-after-half[Application:&lt;br/&gt;School segregation &amp; vouchers]
+]
+
+
+---
+background-position: 50% 50%
+class: left, bottom, inverse
+.big[
+Let's get started
+]
+---
+
+# DD Setup
+
+- Let `\(Y^z_i(t)\)` be the potential outcome for unit `\(i\)` in period `\(t\)` under treatment `\(z\)`.
+
+- Intervention implemented in `\(T_0\)` `\(\rightarrow\)` No units are treated in `\(t\leq T_0\)`
+
+- Difference-in-Differences (DD) focuses on ATT for `\(t&gt;T_0\)`:
+`$$ATT = E[Y_i^1(t) - Y_i^0(t)|Z=1]$$`
+- .highlight[Assumptions for DD]:
+  - Parallel-trend assumption (PTA)
+  
+  - Common shocks
+  
+  `$$E[Y_i^0(1) - Y_i^0(1) | Z=1] = E[Y_i^0(1) - Y_i^0(1) | Z=0]$$`
+---
+# DD Setup (cont.)
+
+- Under these assumptions:
+$$
+`\begin{align}
+\hat{\tau}^{DD} = &amp;E[Y(1)|Z=1] - E[Y(1)|Z=0] - \\
+&amp;(E[Y(0)|Z=1] - E[Y(0)|Z=0])
+\end{align}`
+$$
+  - Where `\(t=0\)` and `\(t=1\)` are the pre- and post-intervention periods, respectively.
+  
+  - `\(Y(t) = Y^1(t)\cdot Z + (1-Z)\cdot Y^0(t)\)` is the observed outcome.
+
+
+---
+
+# Violations to the PTA
+
+.pull-left[
+- Under PTA, `\(g_1(t) = g_0(t) + h(t)\)`, where:
+
+  - `\(g_z(t) = E[Y^z_i(t) | Z=z, T=t]\)`
+  - `\(h(t) = \alpha\)`
+  
+- Bias in a DD setting depends on the structure of `\(h(t)\)`.
+
+- Confounding in DD affect .highlight[trends] and not .highlight[levels].
+]
+
+.pull-right[
+![](https://media.giphy.com/media/L8yQ0RQBItqso/giphy.gif)
+]
+
+---
+background-position: 50% 50%
+class: left, bottom, inverse
+.big[
+Simulations
+]
+
+---
+
+# Different scenarios
+
+
+.box-1.medium.sp-after-half[S1: Time-invariant covariate effect]
+
+.box-2.medium.sp-after-half[S2: Time-varying covariate effect]
+
+.box-3.medium.sp-after-half[S3: Treatment-independent covariate]
+
+.box-4.medium.sp-after-half[S4: Parallel evolution]
+
+.box-6.medium.sp-after-half[S5: Evolution differs by group]
+
+.box-7.medium.sp-after-half[S6: Evolution diverges in post]
+  
+.source[Following Zeldow &amp; Hatfield (2019)]
+---
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
