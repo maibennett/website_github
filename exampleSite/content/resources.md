@@ -103,6 +103,15 @@ Here's a video by **[Mike Morrison](https://twitter.com/mikemorrison)** on why y
 
 (tl;dr See the templates [here](https://osf.io/ef53g/))
 
+#### Xaringan \#FTW
+
+Lately, I've fully moved to Rmarkdown presentations, especifically with **`Xaringan`**. These are not only beautiful, but also fully flexible, and way more convenient in the way you can host them. I started a repository of my presentations **[here](https://maibennett.github.io/presentations/)**, which include both slides and code. I'll right a longer post about certain resources, but some game changers:
+
+- **[`Xaringanthemer`](https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html)** has worked amazing for customizing my slides.
+- Check out some of [Andrew Heiss' slides](https://www.andrewheiss.com/teaching/). They are **#GOALS**, and I picked up a bunch of tricks from his available code.
+- Shoutout to [Allison Horst](https://github.com/allisonhorst/stats-illustrations) as well. She posts the most wonderful stats/`R` artwork. 
+
+
 ##### Tips for beamer
 
 From the great [Paul Goldsmith-Pinkham](https://twitter.com/paulgp), some [beamer tips](https://github.com/paulgp/beamer-tips)! (pretty self-explanatory). From palettes that are color-blind friendly, to different features that beamer has and a lot of people (it me!) didn't know. Check them out when building your next beamer presentation (click the image to see the slides). Totally worth it.
