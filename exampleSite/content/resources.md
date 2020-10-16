@@ -103,7 +103,7 @@ Here's a video by **[Mike Morrison](https://twitter.com/mikemorrison)** on why y
 
 (tl;dr See the templates [here](https://osf.io/ef53g/))
 
-#### Xaringan \#FTW
+##### Xaringan \#FTW
 
 Lately, I've fully moved to Rmarkdown presentations, especifically with **`Xaringan`**. These are not only beautiful, but also fully flexible, and way more convenient in the way you can host them. I started a repository of my presentations **[here](https://maibennett.github.io/presentations/)**, which include both slides and code. I'll right a longer post about certain resources, but some game changers:
 
@@ -111,6 +111,7 @@ Lately, I've fully moved to Rmarkdown presentations, especifically with **`Xarin
 - Check out some of [Andrew Heiss' slides](https://www.andrewheiss.com/teaching/). They are **#GOALS**, and I picked up a bunch of tricks from his available code.
 - Shoutout to [Allison Horst](https://github.com/allisonhorst/stats-illustrations) as well. She posts the most wonderful stats/`R` artwork. 
 
+[![ggplot](https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/ggplot2_masterpiece.png)
 
 ##### Tips for beamer
 
