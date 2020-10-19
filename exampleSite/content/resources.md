@@ -10,8 +10,6 @@ Here I compile a list of some helpful resources/tips (created by me or others) t
 :bar_chart: [Design](#design)
 :space_invader: [Apps](#apps)
 
-Test for [@wytham88](#random_name)
-
 ## <a name="code"></a>Code
 
 ##### Easy way to scrape some data in R
@@ -34,11 +32,9 @@ This can be used in combination with the geocode Rscript that's down below, but 
 
 Sometimes we need to characterize certain geographic zones (e.g. school districts) with geographic data that is in a different level (e.g. census tract data). How do we do that? **[Here](https://github.com/maibennett/code/tree/master/geographic_characterization)** I have some example code on how to create a csv file using a Python script that can be run in ArcGIS. The idea is that by combining both levels of geographic data, we can later create weights for our areas of interest depending on the overlapping surface of other geographic areas. The code sets an example using Florida school districts and census tracts, and merges tract level income data (you can merge way more census tract data!). The Python code is first run in ArcGIS, and the analysis is later conducted in Stata for simplicity. The example map below shows Collier County School district in FL and the overlapping census tracts:
 
-<a name="random_name">
 <p align="center">
 <img src="/images/map_collier_county.png" width="600">
 </p>
- </a>
 
 If we wanted the average household income for the district using the census tract data, we can generate a weighted average of the overlapping census tracts.
 
