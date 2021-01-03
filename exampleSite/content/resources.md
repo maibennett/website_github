@@ -129,6 +129,6 @@ Nothing to do with stats or econ or education, but some apps that are game chang
 
 * **Splitwise:** The best way to keep track of shared expenses, either for a trip or if you share a household. It's integrated with Venmo, so you can settle accounts directly from the app.
 
-* **Acorns:** Cool app to save (and invest) some money. If you are a grad student or severely budget constrained (*dat me!*), and have trouble saving money, you can use this app to save round-ups, or even include some small weekly or monthly amount. It then invests your money according to a risk portafolio you select. PS: You can use [my code](https://acorns.com/invite/53JKTQ) to get $5!
+* **Acorns:** Cool app to save (and invest) some money. If you are a grad student and have trouble saving money, you can use this app to save round-ups, or even include some small weekly or monthly amount. It then invests your money according to a risk portafolio you select. PS: You can use [my code](https://acorns.com/invite/53JKTQ) to get $5!
 
 * **Strava:** Not much to say here. So far, best tracking app for running.
