@@ -22,11 +22,16 @@ output:
 
 ---
 
-## Exploratory analysis
+# Stable Balancing Weighting
 
 What is the relationship between charges and age? This plot shows some initial trends:
 
-```{r plot-age-charges}
+```{r echo = FALSE}
+library(htmltools)
+library(paletteer)
+library(reactable)
+library(tidyverse)
+
 ggplot(data = insurance, 
        aes(x = age, y = charges)) +
   geom_point(color = "dark orange", fill = alpha("dark orange", 0.5), size = 3, pch = 21) +
