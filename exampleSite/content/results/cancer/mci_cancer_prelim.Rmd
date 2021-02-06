@@ -21,6 +21,20 @@ output:
 }
 </style>
 
+<style>
+  @media screen and (min-width: 480px) {
+    body {
+      width: 90vw;
+      height: 90vh;
+    }
+
+  div#main {
+    font-size: 3vw;
+    }
+  }
+</style>
+
+
 # Introduction
 
 - **Objective**: Compare Mild Cognitive Impairment (MCI) test score results over time between groups affected by cancer, either before or after their MCI diagnosis.
