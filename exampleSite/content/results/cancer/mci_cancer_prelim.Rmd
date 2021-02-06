@@ -2,10 +2,12 @@
 title: "MCI + Cancer: Preliminary Results"
 author: "Magdalena Bennett"
 date: "February 5th, 2021"
+customjs: "macros.js"
 output: 
   html_document:
     css: style.css 
     toc: no
+    beforeInit: "macros.js"
   pdf_document: 
     latex_engine: xelatex
     css: style.css
@@ -109,20 +111,53 @@ after %>%
 
 Analyzing the MoCA and MoCA-MIS results grouped by year:
 
-.pull-left[
-![](https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/results/cancer/mocat_cancer.svg)
-]
-.pull-right[
-![](https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/results/cancer/mocamis_cancer.svg)
-]
+::: {.col data-latex="{0.47\textwidth}"}
+
+```{r mocat_cancer, echo=FALSE, warning=FALSE, message = FALSE}
+knitr::include_graphics("https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/results/cancer/mocat_cancer.svg")
+
+```
+:::
+
+::: {.col data-latex="{0.06\textwidth}"}
+\ 
+<!-- an empty Div (with a white space), serving as
+a column separator -->
+:::
+
+::: {.col data-latex="{0.47\textwidth}"}
+
+```{r mocamis_cancer, echo=FALSE, warning=FALSE, message = FALSE}
+knitr::include_graphics("https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/results/cancer/mocamis_cancer.svg")
+
+```
+:::
+::::::
 
 
 ## MCI vs MCI + Cancer Before vs MCI + Cancer After
 
 Analyzing the MoCA and MoCA-MIS results grouped by year:
 
-.pull-left[
-![](https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/results/cancer/mocat_cancer2.svg)
-]
-.pull-right[
-![](https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/results/cancer/mocamis_cancer2.svg)
+::: {.col data-latex="{0.47\textwidth}"}
+
+```{r mocat_cancer2, echo=FALSE, warning=FALSE, message = FALSE}
+knitr::include_graphics("https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/results/cancer/mocat_cancer2.svg")
+
+```
+:::
+
+::: {.col data-latex="{0.06\textwidth}"}
+\ 
+<!-- an empty Div (with a white space), serving as
+a column separator -->
+:::
+
+::: {.col data-latex="{0.47\textwidth}"}
+
+```{r mocamis_cancer2, echo=FALSE, warning=FALSE, message = FALSE}
+knitr::include_graphics("https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/results/cancer/mocamis_cancer2.svg")
+
+```
+:::
+::::::
