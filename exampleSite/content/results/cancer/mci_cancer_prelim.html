@@ -2116,18 +2116,16 @@ summary {
   margin-left: auto;
   margin-right: auto;
 }
-</style>
-<style>
-  @media screen and (min-width: 480px) {
-    body {
-      width: 90vw;
-      height: 90vh;
-    }
 
-  div#main {
-    font-size: 3vw;
-    }
-  }
+@media only screen and (max-width: 700px) {
+   body {
+      margin: 0;
+      padding: 0;
+   }
+   .sample {
+      width: 100%;
+   }
+}
 </style>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
@@ -2154,8 +2152,8 @@ summary {
 <div class="title">
 <h3>Average covariates by group before SBW</h3>
 </div>
-<div id="htmlwidget-a24b879a41313a04acdd" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-a24b879a41313a04acdd">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["69-71 years","72-75 years","76-79 years","80 years or older","Female","High school","Some college","College","Post-college"],"MCI + Cancer (All)":[0.23,0.16,0.23,0.22,0.69,0.25,0.23,0.15,0.16],"MCI + Cancer (Before Diag.)":[0.23,0.17,0.2,0.22,0.7,0.24,0.22,0.16,0.16],"MCI + Cancer (After Diag.)":[0.23,0.16,0.23,0.19,0.75,0.25,0.24,0.16,0.14],"MCI":[0.25,0.18,0.19,0.19,0.77,0.24,0.25,0.18,0.15]},"columns":[{"accessor":".rownames","name":"","type":"character","align":"center","sortable":false,"filterable":false},{"accessor":"MCI + Cancer (All)","name":"MCI + Cancer (All)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (Before Diag.)","name":"MCI + Cancer (Before Diag.)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (After Diag.)","name":"MCI + Cancer (After Diag.)","type":"numeric","align":"center"},{"accessor":"MCI","name":"MCI","type":"numeric","align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"500816c71fba3a8cef294476a03727fb","key":"500816c71fba3a8cef294476a03727fb"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-593a983c4443e44c612b" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-593a983c4443e44c612b">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["69-71 years","72-75 years","76-79 years","80 years or older","Female","High school","Some college","College","Post-college"],"MCI + Cancer (All)":[0.23,0.16,0.23,0.22,0.69,0.25,0.23,0.15,0.16],"MCI + Cancer (Before Diag.)":[0.23,0.17,0.2,0.22,0.7,0.24,0.22,0.16,0.16],"MCI + Cancer (After Diag.)":[0.23,0.16,0.23,0.19,0.75,0.25,0.24,0.16,0.14],"MCI":[0.25,0.18,0.19,0.19,0.77,0.24,0.25,0.18,0.15]},"columns":[{"accessor":".rownames","name":"","type":"character","align":"center","sortable":false,"filterable":false},{"accessor":"MCI + Cancer (All)","name":"MCI + Cancer (All)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (Before Diag.)","name":"MCI + Cancer (Before Diag.)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (After Diag.)","name":"MCI + Cancer (After Diag.)","type":"numeric","align":"center"},{"accessor":"MCI","name":"MCI","type":"numeric","align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"500816c71fba3a8cef294476a03727fb","key":"500816c71fba3a8cef294476a03727fb"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 <span style="color:#C8C8C8">TABLE: @maibennett</span>
 </div>
 <p><br> <br> - After re-weighting using SBW, <strong>groups are now balanced with respect to the MCI group</strong>:</p>
@@ -2164,8 +2162,8 @@ summary {
 <div class="title">
 <h3>Average covariates by group after SBW</h3>
 </div>
-<div id="htmlwidget-66ef667e939fdbbcf762" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-66ef667e939fdbbcf762">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["69-71 years","72-75 years","76-79 years","80 years or older","Female","High school","Some college","College","Post-college"],"MCI + Cancer (All)":[0.25,0.18,0.19,0.19,0.77,0.24,0.25,0.17,0.15],"MCI + Cancer (Before Diag.)":[0.25,0.18,0.19,0.19,0.77,0.24,0.24,0.17,0.15],"MCI + Cancer (After Diag.)":[0.24,0.18,0.19,0.19,0.77,0.24,0.24,0.17,0.15],"MCI":[0.25,0.18,0.19,0.19,0.77,0.24,0.25,0.18,0.15]},"columns":[{"accessor":".rownames","name":"","type":"character","align":"center","sortable":false,"filterable":false},{"accessor":"MCI + Cancer (All)","name":"MCI + Cancer (All)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (Before Diag.)","name":"MCI + Cancer (Before Diag.)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (After Diag.)","name":"MCI + Cancer (After Diag.)","type":"numeric","align":"center"},{"accessor":"MCI","name":"MCI","type":"numeric","align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"007694b9df4ecd0b054984a9a32b12d6","key":"007694b9df4ecd0b054984a9a32b12d6"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a098a41a7ee82c0b65c6" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-a098a41a7ee82c0b65c6">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["69-71 years","72-75 years","76-79 years","80 years or older","Female","High school","Some college","College","Post-college"],"MCI + Cancer (All)":[0.25,0.18,0.19,0.19,0.77,0.24,0.25,0.17,0.15],"MCI + Cancer (Before Diag.)":[0.25,0.18,0.19,0.19,0.77,0.24,0.24,0.17,0.15],"MCI + Cancer (After Diag.)":[0.24,0.18,0.19,0.19,0.77,0.24,0.24,0.17,0.15],"MCI":[0.25,0.18,0.19,0.19,0.77,0.24,0.25,0.18,0.15]},"columns":[{"accessor":".rownames","name":"","type":"character","align":"center","sortable":false,"filterable":false},{"accessor":"MCI + Cancer (All)","name":"MCI + Cancer (All)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (Before Diag.)","name":"MCI + Cancer (Before Diag.)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (After Diag.)","name":"MCI + Cancer (After Diag.)","type":"numeric","align":"center"},{"accessor":"MCI","name":"MCI","type":"numeric","align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"007694b9df4ecd0b054984a9a32b12d6","key":"007694b9df4ecd0b054984a9a32b12d6"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 <span style="color:#C8C8C8">TABLE: @maibennett</span>
 </div>
 </div>
@@ -2211,8 +2209,8 @@ a column separator --></p>
 <div class="title">
 <h3>Number of deaths to date by group</h3>
 </div>
-<div id="htmlwidget-a352985a11c4a82398c6" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-a352985a11c4a82398c6">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Deaths":["No","Yes"],"MCI":["124","19"],"MCI + Cancer (Before)":["43","13"],"MCI + Cancer (After)":["16","9"]},"columns":[{"accessor":"Deaths","name":"Deaths","type":"character","align":"center"},{"accessor":"MCI","name":"MCI","type":"character","align":"center"},{"accessor":"MCI + Cancer (Before)","name":"MCI + Cancer (Before)","type":"character","align":"center"},{"accessor":"MCI + Cancer (After)","name":"MCI + Cancer (After)","type":"character","align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"f01e11a1ab3afd8c1bc26c17b5aeb25d","key":"f01e11a1ab3afd8c1bc26c17b5aeb25d"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e29785dfaf6b18dac0e8" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-e29785dfaf6b18dac0e8">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Deaths":["No","Yes"],"MCI":["124","19"],"MCI + Cancer (Before)":["43","13"],"MCI + Cancer (After)":["16","9"]},"columns":[{"accessor":"Deaths","name":"Deaths","type":"character","align":"center"},{"accessor":"MCI","name":"MCI","type":"character","align":"center"},{"accessor":"MCI + Cancer (Before)","name":"MCI + Cancer (Before)","type":"character","align":"center"},{"accessor":"MCI + Cancer (After)","name":"MCI + Cancer (After)","type":"character","align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"f01e11a1ab3afd8c1bc26c17b5aeb25d","key":"f01e11a1ab3afd8c1bc26c17b5aeb25d"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 <span style="color:#C8C8C8">TABLE: @maibennett</span>
 </div>
 <p><br> <br> - While only <strong>13% of the control MCI group</strong> has died, over <strong>23% of the group with MCI + Cancer before</strong> the diagnosis passed away, and <strong>36%</strong> of the group who got a <strong>cancer diagnosis after</strong> MCI detection.</p>

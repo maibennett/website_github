@@ -19,19 +19,16 @@ output:
   margin-left: auto;
   margin-right: auto;
 }
-</style>
 
-<style>
-  @media screen and (min-width: 480px) {
-    body {
-      width: 90vw;
-      height: 90vh;
-    }
-
-  div#main {
-    font-size: 3vw;
-    }
-  }
+@media only screen and (max-width: 700px) {
+   body {
+      margin: 0;
+      padding: 0;
+   }
+   .sample {
+      width: 100%;
+   }
+}
 </style>
 
 
