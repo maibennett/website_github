@@ -5,12 +5,12 @@ date: "February 5th, 2021"
 customjs: "macros.js"
 output: 
   html_document:
-    css: style.css 
+    css: "style.css"
     toc: no
     beforeInit: "macros.js"
   pdf_document: 
     latex_engine: xelatex
-    css: style.css
+    css: "style.css"
     toc: no
 ---
 
