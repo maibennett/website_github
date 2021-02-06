@@ -35,10 +35,9 @@ output:
   
 - This means that the baseline or control group will be the **MCI group**.
 
+- All groups are **unbalanced** a priori:
 
 ---
-
-- All groups are **unbalanced** a priori:
 
 ```{r echo = FALSE, message=FALSE}
 library(htmltools)
@@ -49,20 +48,19 @@ library(tidyverse)
 tab1 <- read.csv("https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/results/cancer/balance_cancer.csv")
 tab2 <- read.csv("https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/results/cancer/balance.csv")
 
-rownames(tab1) <- c("69-71 years","72-75 years","76-79 years","80 years or older","Female", "High school","Some college",
-                              "College","Post-college")
-rownames(tab2) <- c("69-71 years","72-75 years","76-79 years","80 years or older","Female", "High school","Some college",
-                              "College","Post-college")
-
-
 before <- cbind(tab1$Cancer...MCI...Before, tab2$Cancer.Before...MCI, tab2$Cancer.After...MCI, tab1$MCI)
+
+rownames(before) <- c("69-71 years","72-75 years","76-79 years","80 years or older","Female", "High school","Some college",
+                              "College","Post-college")
+
 
 colnames(before) <- c("MCI + Cancer (All)", "MCI + Cancer (Before Diag.)", "MCI + Cancer (After Diag.)", "MCI")
 
-before %>%
+tbl <- before %>%
   reactable(
       # ALL one page (no scrolling or page swapping)
     pagination = TRUE,
+    rownames = TRUE,
     # compact for an overall smaller table width wise
     compact = FALSE,
     # borderless - TRUE or FALSE
@@ -76,19 +74,42 @@ before %>%
     defaultColDef = colDef(
       align = "center")
   )
+
+div(
+  # this class can be called with CSS now via .salary
+  class = "before",
+  div(
+    # this can be called with CSS now via .title
+    class = "title",
+    h3("Average covariates by group before SBW")
+  ),
+  # The actual table
+  tbl,
+  # I use a span here so I can assigna  color to this text
+  tags$span(style = "color:#C8C8C8", "TABLE: @maibennett")
+)
   
 ```
+
+<br>
+<br>
 - After re-weighting using SBW, **groups are now balanced with respect to the MCI group**:
+
+---
 
 ```{r echo = FALSE, message=FALSE}
 after <- cbind(tab1$Cancer...MCI...After, tab2$Cancer.Before...MCI.1, tab2$Cancer.After...MCI.1, tab1$MCI)
 
 colnames(after) <- c("MCI + Cancer (All)", "MCI + Cancer (Before Diag.)", "MCI + Cancer (After Diag.)", "MCI")
 
-after %>%
+rownames(after) <- c("69-71 years","72-75 years","76-79 years","80 years or older","Female", "High school","Some college",
+                              "College","Post-college")
+
+tbl <- after %>%
   reactable(
       # ALL one page (no scrolling or page swapping)
     pagination = TRUE,
+    rownames = TRUE,
     # compact for an overall smaller table width wise
     compact = FALSE,
     # borderless - TRUE or FALSE
@@ -102,6 +123,20 @@ after %>%
     defaultColDef = colDef(
       align = "center")
   )
+
+div(
+  # this class can be called with CSS now via .salary
+  class = "after",
+  div(
+    # this can be called with CSS now via .title
+    class = "title",
+    h3("Average covariates by group after SBW")
+  ),
+  # The actual table
+  tbl,
+  # I use a span here so I can assigna  color to this text
+  tags$span(style = "color:#C8C8C8", "TABLE: @maibennett")
+)
   
 ```
 

@@ -2128,18 +2128,27 @@ summary {
 <li><p>MCI vs MCI + Cancer (before) vs MCI + Cancer (after)</p></li>
 </ol></li>
 <li><p>This means that the baseline or control group will be the <strong>MCI group</strong>.</p></li>
+<li><p>All groups are <strong>unbalanced</strong> a priori:</p></li>
 </ul>
 <hr />
-<ul>
-<li>All groups are <strong>unbalanced</strong> a priori:</li>
-</ul>
-<div id="htmlwidget-6ae637d7c6ce5eabd044" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-6ae637d7c6ce5eabd044">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"MCI + Cancer (All)":[0.23,0.16,0.23,0.22,0.69,0.25,0.23,0.15,0.16],"MCI + Cancer (Before Diag.)":[0.23,0.17,0.2,0.22,0.7,0.24,0.22,0.16,0.16],"MCI + Cancer (After Diag.)":[0.23,0.16,0.23,0.19,0.75,0.25,0.24,0.16,0.14],"MCI":[0.25,0.18,0.19,0.19,0.77,0.24,0.25,0.18,0.15]},"columns":[{"accessor":"MCI + Cancer (All)","name":"MCI + Cancer (All)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (Before Diag.)","name":"MCI + Cancer (Before Diag.)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (After Diag.)","name":"MCI + Cancer (After Diag.)","type":"numeric","align":"center"},{"accessor":"MCI","name":"MCI","type":"numeric","align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"2baa62ed793a73da0c32eaae944a62da","key":"2baa62ed793a73da0c32eaae944a62da"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
-<ul>
-<li>After re-weighting using SBW, <strong>groups are now balanced with respect to the MCI group</strong>:</li>
-</ul>
-<div id="htmlwidget-889bb1993c92c78854be" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-889bb1993c92c78854be">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"MCI + Cancer (All)":[0.25,0.18,0.19,0.19,0.77,0.24,0.25,0.17,0.15],"MCI + Cancer (Before Diag.)":[0.25,0.18,0.19,0.19,0.77,0.24,0.24,0.17,0.15],"MCI + Cancer (After Diag.)":[0.24,0.18,0.19,0.19,0.77,0.24,0.24,0.17,0.15],"MCI":[0.25,0.18,0.19,0.19,0.77,0.24,0.25,0.18,0.15]},"columns":[{"accessor":"MCI + Cancer (All)","name":"MCI + Cancer (All)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (Before Diag.)","name":"MCI + Cancer (Before Diag.)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (After Diag.)","name":"MCI + Cancer (After Diag.)","type":"numeric","align":"center"},{"accessor":"MCI","name":"MCI","type":"numeric","align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"96b15863facf9c74edfe5f765d624ae7","key":"96b15863facf9c74edfe5f765d624ae7"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div class="before">
+<div class="title">
+<h3>Average covariates by group before SBW</h3>
+</div>
+<div id="htmlwidget-efe3f8b1523e55980dd5" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-efe3f8b1523e55980dd5">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["69-71 years","72-75 years","76-79 years","80 years or older","Female","High school","Some college","College","Post-college"],"MCI + Cancer (All)":[0.23,0.16,0.23,0.22,0.69,0.25,0.23,0.15,0.16],"MCI + Cancer (Before Diag.)":[0.23,0.17,0.2,0.22,0.7,0.24,0.22,0.16,0.16],"MCI + Cancer (After Diag.)":[0.23,0.16,0.23,0.19,0.75,0.25,0.24,0.16,0.14],"MCI":[0.25,0.18,0.19,0.19,0.77,0.24,0.25,0.18,0.15]},"columns":[{"accessor":".rownames","name":"","type":"character","align":"center","sortable":false,"filterable":false},{"accessor":"MCI + Cancer (All)","name":"MCI + Cancer (All)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (Before Diag.)","name":"MCI + Cancer (Before Diag.)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (After Diag.)","name":"MCI + Cancer (After Diag.)","type":"numeric","align":"center"},{"accessor":"MCI","name":"MCI","type":"numeric","align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"500816c71fba3a8cef294476a03727fb","key":"500816c71fba3a8cef294476a03727fb"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<span style="color:#C8C8C8">TABLE: @maibennett</span>
+</div>
+<p><br> <br> - After re-weighting using SBW, <strong>groups are now balanced with respect to the MCI group</strong>:</p>
+<hr />
+<div class="after">
+<div class="title">
+<h3>Average covariates by group after SBW</h3>
+</div>
+<div id="htmlwidget-a5e694943611e380e7ef" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-a5e694943611e380e7ef">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["69-71 years","72-75 years","76-79 years","80 years or older","Female","High school","Some college","College","Post-college"],"MCI + Cancer (All)":[0.25,0.18,0.19,0.19,0.77,0.24,0.25,0.17,0.15],"MCI + Cancer (Before Diag.)":[0.25,0.18,0.19,0.19,0.77,0.24,0.24,0.17,0.15],"MCI + Cancer (After Diag.)":[0.24,0.18,0.19,0.19,0.77,0.24,0.24,0.17,0.15],"MCI":[0.25,0.18,0.19,0.19,0.77,0.24,0.25,0.18,0.15]},"columns":[{"accessor":".rownames","name":"","type":"character","align":"center","sortable":false,"filterable":false},{"accessor":"MCI + Cancer (All)","name":"MCI + Cancer (All)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (Before Diag.)","name":"MCI + Cancer (Before Diag.)","type":"numeric","align":"center"},{"accessor":"MCI + Cancer (After Diag.)","name":"MCI + Cancer (After Diag.)","type":"numeric","align":"center"},{"accessor":"MCI","name":"MCI","type":"numeric","align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"007694b9df4ecd0b054984a9a32b12d6","key":"007694b9df4ecd0b054984a9a32b12d6"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<span style="color:#C8C8C8">TABLE: @maibennett</span>
+</div>
 </div>
 <div id="preliminary-results" class="section level1">
 <h1>Preliminary Results</h1>
