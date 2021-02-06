@@ -73,7 +73,7 @@ tbl <- before %>%
     # 100 px and align to center of column
     defaultColDef = colDef(
       align = "center")
-  )
+    )
 
 div(
   # this class can be called with CSS now via .salary
