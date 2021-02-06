@@ -19,3 +19,33 @@ h1,h2,h3,h4,h5,h6{
 .main-container {
   max-width: 1280px;
 }
+
+
+/* Two-column layout */
+.left-column {
+  width: 20%;
+  height: 92%;
+  float: left;
+}
+.left-column h2, .left-column h3 {
+  color: #333f4899;
+}
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: #333f48;
+}
+.right-column {
+  width: 75%;
+  float: right;
+  padding-top: 1em;
+}
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
+.pull-right ~ * {
+  clear: both;
+}

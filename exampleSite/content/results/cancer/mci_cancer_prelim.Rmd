@@ -105,7 +105,24 @@ after %>%
 
 # Preliminary Results
 
-<div style="width:1770px">
-  <svg width="880" height="160" id="mocat_cancer"></svg>
-  <svg width="880" height="160" id="mocamis_cancer">></svg>
-</div>
+## MCI vs MCI + Cancer
+
+Analyzing the MoCA and MoCA-MIS results grouped by year:
+
+.pull-left[
+![](https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/results/cancer/mocat_cancer.svg)
+]
+.pull-right[
+![](https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/results/cancer/mocamis_cancer.svg)
+]
+
+
+## MCI vs MCI + Cancer Before vs MCI + Cancer After
+
+Analyzing the MoCA and MoCA-MIS results grouped by year:
+
+.pull-left[
+![](https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/results/cancer/mocat_cancer2.svg)
+]
+.pull-right[
+![](https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/results/cancer/mocamis_cancer2.svg)
