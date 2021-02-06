@@ -196,3 +196,53 @@ knitr::include_graphics("https://raw.githubusercontent.com/maibennett/website_gi
 ```
 :::
 ::::::
+
+
+# Survival Bias
+
+- There is potential survival bias between the groups, given probabilities of death:
+
+```{r echo = FALSE, message=FALSE}
+deaths <- rbind(c("No",124,43,16),c("Yes",19,13,9))
+
+colnames(deaths) <- c("Deaths","MCI","MCI + Cancer (Before)","MCI + Cancer (After)")
+
+
+tbl <- deaths %>%
+  reactable(
+      # ALL one page (no scrolling or page swapping)
+    pagination = TRUE,
+    rownames = FALSE,
+    # compact for an overall smaller table width wise
+    compact = FALSE,
+    # borderless - TRUE or FALSE
+    borderless = FALSE,
+    # Stripes - TRUE or FALSE
+    striped = FALSE,
+    # fullWidth - either fit to width or not
+    fullWidth = TRUE,
+    # apply defaults
+    # 100 px and align to center of column
+    defaultColDef = colDef(
+      align = "center")
+  )
+
+div(
+  # this class can be called with CSS now via .salary
+  class = "deaths",
+  div(
+    # this can be called with CSS now via .title
+    class = "title",
+    h3("Number of deaths to date by group")
+  ),
+  # The actual table
+  tbl,
+  # I use a span here so I can assigna  color to this text
+  tags$span(style = "color:#C8C8C8", "TABLE: @maibennett")
+)
+  
+```
+
+<br>
+<br>
+- While only **13% of the control MCI group** has died, over **23% of the group with MCI + Cancer before** the diagnosis passed away, and **36%** of the group who got a **cancer diagnosis after** MCI detection.
