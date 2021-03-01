@@ -21,7 +21,7 @@ You can download my full CV **[here](/files/CV_mbennett.pdf)**
 
 # ON-GOING PROJECTS AND WORKING PAPERS
 
-* Allende, C. & **M. Bennett** (2019). "Biased Beliefs and the Dynamic Role of Information in College Choice".[{{% fontawesome download-solid32 %}}](http://www.magdalenabennett.com/abstracts#chile-rct/)(*Abstract*)
+* Allende, C. & **M. Bennett** (2021). "Biased Beliefs and the Dynamic Role of Information in College Choice".[{{% fontawesome download-solid32 %}}](http://www.magdalenabennett.com/abstracts#chile-rct/)(*Abstract*)
 
 * **Bennett, M.** (2020). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". Job Market Paper, Columbia University.[{{% fontawesome download-solid32 %}}](/files/sub/MBennett_GRD.pdf)
 
