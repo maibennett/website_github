@@ -77,11 +77,6 @@
     <main class="wrapper">
       {{ partial "header.html" . }}
 
-      <div class="header">
-      <h1>{{ .Site.Title }}</h1>
-      <img style="position: absolute; top:24px; right: 32px" src="/images/logo.PNG"/>
-      </div>
-
       <div class="content">
         {{ block "content" . }}{{ end }}
       </div>
