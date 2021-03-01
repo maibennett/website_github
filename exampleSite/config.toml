@@ -16,7 +16,6 @@ pygmentscodefencesguesssyntax = true
 disqusShortname = "maibennett"
 googleAnalytics = "UA-102578779-3"
 enableEmoji = true
-favicon_32 = "/img/favicon-32x32.png"
 
 [params]
     author = "Magdalena Bennett"
