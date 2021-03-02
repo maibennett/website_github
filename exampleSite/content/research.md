@@ -3,7 +3,7 @@ title = "Research"
 slug = "research"
 +++
 
-You can download my full CV **[here](/files/CV_mbennett.pdf)**
+Full CV: {{% button href="https://www.magdalenabennett.com/files/CV_mbennett.pdf" icon="fas fa-file-pdf" icon-position="right" %}}Download{{% /button %}} 
 
 # PUBLICATIONS
 
