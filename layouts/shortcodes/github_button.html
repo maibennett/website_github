@@ -40,7 +40,7 @@
     {{ $button_text = "Issue" }}
 {{else if eq $button "download"}}
     {{ $href = printf (.Get "href")}}
-    {{ $data_icon = (.Get "icon") }}
+    {{ $data_icon = "download" }}
     {{ $button_text = "Download" }}
 {{end}}
 

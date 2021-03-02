@@ -5,7 +5,7 @@ slug = "research"
 
 {{% button href="https://www.magdalenabennett.com/files/CV_mbennett.pdf" icon="fas fa-file-pdf" icon-position="right" %}}Download{{% /button %}} my full CV
 
-{{< github_button button="download" href="https://www.magdalenabennett.com/files/CV_mbennett.pdf" icon="fas fa-file-pdf" >}}
+{{< github_button button="download" href="https://www.magdalenabennett.com/files/CV_mbennett.pdf" >}}
 
 # PUBLICATIONS
 
