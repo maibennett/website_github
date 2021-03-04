@@ -105,7 +105,7 @@ Here's a video by **[Mike Morrison](https://twitter.com/mikemorrison)** on why y
 
 ##### Xaringan \#FTW
 
-Lately, I've fully moved to Rmarkdown presentations, especifically with **[`Xaringan`](https://github.com/yihui/xaringan)**. These are not only beautiful, but also fully flexible, and way more convenient in the way you can host them. I started a repository of my presentations **[here](https://maibennett.github.io/presentations/)**, which include both slides and code. I'll right a longer post about certain resources, but some game changers:
+Lately, I've fully moved to Rmarkdown presentations, especifically with **[`Xaringan`](https://github.com/yihui/xaringan)**. These are not only beautiful, but also fully flexible, and way more convenient in the way you can host them. I started a repository of my presentations **[here](https://maibennettslides.netlify.app)**, which include both slides and code. I'll right a longer post about certain resources, but some game changers:
 
 - **[`Xaringanthemer`](https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html)** has worked amazing for customizing my slides.
 - Check out some of [Andrew Heiss' slides](https://www.andrewheiss.com/teaching/). They are **#GOALS**, and I picked up a bunch of tricks from his available code.
