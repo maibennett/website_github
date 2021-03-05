@@ -1,6 +1,6 @@
-<details {{ if or (.Get "open") (in .Params "open") }}open{{ end }} ><i class="fas fa-bars"></i>
-  <p>{{ cond .IsNamedParams (.Get "title") (.Get 0) }}</p>
+<i class="fas fa-bars"></i><p {{ if or (.Get "open") (in .Params "open") }}open{{ end }} >
+  <summary>{{ cond .IsNamedParams (.Get "title") (.Get 0) }}</summary>
   <div class="markdown-inner">
     {{ .Inner | markdownify }}
   </div>
-</details>
+</p>
