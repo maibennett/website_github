@@ -1,6 +1,37 @@
-<i class="fas fa-bars"></i><p {{ if or (.Get "open") (in .Params "open") }}open{{ end }} >
+<style>
+details > summary {
+  padding: 4px;
+  width: 200px;
+  background-color: #eeeeee;
+  border: none;
+  box-shadow: 1px 1px 2px #bbbbbb;
+  cursor: pointer;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details > p {
+  background-color: #eeeeee;
+  padding: 4px;
+  margin: 0;
+  box-shadow: 1px 1px 2px #bbbbbb;
+}
+
+details > summary::before {
+	@include fa-icon();
+    content: $fa-bars;
+}
+
+details[open] > summary::before {
+    content: '🔽';
+}
+</style>
+
+<details {{ if or (.Get "open") (in .Params "open") }}open{{ end }} >
   <summary>{{ cond .IsNamedParams (.Get "title") (.Get 0) }}</summary>
   <div class="markdown-inner">
     {{ .Inner | markdownify }}
   </div>
-</p>
+</details>
