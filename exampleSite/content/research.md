@@ -7,7 +7,7 @@ slug = "research"
 
 # PRESENTATIONS
 
-Access my {{% button href="https://maibennettslides.netlify.app" icon="fas fa-line-chart" icon-position="right" %}}repository of presentations{{% /button %}} 
+Access my {{% button href="https://slides.magdalenabennett.com" icon="fas fa-line-chart" icon-position="right" %}}repository of presentations{{% /button %}} 
 
 # PUBLICATIONS
 
