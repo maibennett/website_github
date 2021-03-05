@@ -1,31 +1,21 @@
 <style>
-details > summary {
-  padding: 4px;
-  width: 200px;
-  background-color: #eeeeee;
-  border: none;
-  box-shadow: 1px 1px 2px #bbbbbb;
-  cursor: pointer;
+summary::-webkit-details-marker {
+  display: none
+}
+summary::before {
+	content: "\f196";
+    font-family: FontAwesome;
+    left:0;
+    position:absolute;
+    top:0;
 }
 
-details > summary::-webkit-details-marker {
-    display: none;
-}
-
-details > p {
-  background-color: #eeeeee;
-  padding: 4px;
-  margin: 0;
-  box-shadow: 1px 1px 2px #bbbbbb;
-}
-
-details > summary::before {
-	@include fa-icon();
-    content: $fa-bars;
-}
-
-details[open] > summary::before {
-    content: '🔽';
+details[open] summary::before {
+    content: "\f147";
+    font-family: FontAwesome;
+    left:0;
+    position:absolute;
+    top:0;
 }
 </style>
 
