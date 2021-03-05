@@ -1,24 +1,3 @@
-<style>
-summary::-webkit-details-marker {
-  display: none
-}
-summary::before {
-	content: "\f196";
-    font-family: FontAwesome;
-    left:0;
-    position:absolute;
-    top:0;
-}
-
-details[open] summary::before {
-    content: "\f147";
-    font-family: FontAwesome;
-    left:0;
-    position:absolute;
-    top:0;
-}
-</style>
-
 <details {{ if or (.Get "open") (in .Params "open") }}open{{ end }} >
   <summary>{{ cond .IsNamedParams (.Get "title") (.Get 0) }}</summary>
   <div class="markdown-inner">
