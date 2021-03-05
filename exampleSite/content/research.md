@@ -11,7 +11,7 @@ Access my {{% button href="https://maibennettslides.netlify.app" icon="fas fa-li
 
 # PUBLICATIONS
 
-* **Bennett, M.** (2021). "All Things Equal? Heterogeneity in Policy Effectiveness against COVID-19 Spread in Chile". *World Development*. Volume 137. 105208.[{{% fontawesome download-solid32 %}}](/files/sub/mbennett_covid.pdf)[{{% fontawesome database-solid32 %}}](https://github.com/maibennett/covid_augsynth) {{%expand "Abstract" %}} Hello .{{% /expand%}}
+* **Bennett, M.** (2021). "All Things Equal? Heterogeneity in Policy Effectiveness against COVID-19 Spread in Chile". *World Development*. Volume 137. 105208.[{{% fontawesome download-solid32 %}}](/files/sub/mbennett_covid.pdf)[{{% fontawesome database-solid32 %}}](https://github.com/maibennett/covid_augsynth) {{< expand "Abstract" "...">}} Hello {{< /expand >}}
 
 * **Bennett, M**. & Bergman, P. (2021). “Better Together? Social Networks in Truancy and the Targeting of Treatment”. *Journal of Labor Economics*. Volume 39 (1). [{{% fontawesome download-solid32 %}}](/files/networks_paper.pdf)
 
