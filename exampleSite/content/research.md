@@ -3,27 +3,6 @@ title = "Research"
 slug = "research"
 +++
 
-<style>
-summary::-webkit-details-marker {
-  display: none
-}
-summary::before {
-	content: "\f196";
-    font-family: FontAwesome;
-    left:0;
-    position:absolute;
-    top:0;
-}
-
-details[open] summary::before {
-    content: "\f147";
-    font-family: FontAwesome;
-    left:0;
-    position:absolute;
-    top:0;
-}
-</style>
-
 {{% button href="https://www.magdalenabennett.com/files/CV_mbennett.pdf" icon="fas fa-file-pdf" icon-position="right" %}}Download{{% /button %}}  my full CV
 
 # PRESENTATIONS
