@@ -24,11 +24,11 @@ Access my {{% button href="https://slides.magdalenabennett.com" icon="fas fa-lin
 
 # ON-GOING PROJECTS AND WORKING PAPERS
 
-* **M. Bennett** (2021). "Differences-in-Differences using a Mixed-Integer Programming Matching Approach". Working Paper. (*Available soon*)
+* **M. Bennett** (2021). "Differences-in-Differences using a Mixed-Integer Programming Matching Approach". Working Paper. (*Draft vailable soon*)
 
 * Allende, C. & **M. Bennett** (2021). "Biased Beliefs and the Dynamic Role of Information in College Choice".[{{% fontawesome download-solid32 %}}](http://www.magdalenabennett.com/abstracts#chile-rct/)(*Abstract*)
 
-* **Bennett, M.**, C. Neilson, & N. Rojas (2021). "Beyond Exclusion: The Role of the Causal Effect of Testing on Attendance on the Day of the Test". Working Paper. (*Available soon*)
+* **Bennett, M.**, C. Neilson, & N. Rojas (2021). "Beyond Exclusion: The Role of the Causal Effect of Testing on Attendance on the Day of the Test". Working Paper. (*Draft available soon*)
 
 * **Bennett, M.** (2020). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". Job Market Paper, Columbia University.[{{% fontawesome download-solid32 %}}](/files/sub/MBennett_GRD.pdf)
 
