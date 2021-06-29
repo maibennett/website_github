@@ -5,7 +5,7 @@ slug = "random"
 
 ## Comic of the week
 
-![comic](/images/get-serious.png?raw=true)
+![comic](/images/start-trying_web.png?raw=true)
 
-(source: [Poorly Drawn Lines](http://www.poorlydrawnlines.com/comic/get-serious/))
+(source: [Poorly Drawn Lines](https://poorlydrawnlines.com/comic/start-trying/))
 
