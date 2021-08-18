@@ -173,26 +173,9 @@ ggplot(data = cars, aes(x = dist, y = speed)) +
 
 ---
 
-# Come to the dark [HTML] side...
+# Share HTML files
 
-If you want to see how this would look as HTML, just change your YAML (i.e. the header of this document, between --- and ---) for the following:
-
-```
----
-title: "RMarkdown Template" # You can put the title of your document here
-author: 
-  - Nina West  # You can include names here
-  - Trixie Mattel
-  - Chi Chi Devayne
-date: "August 16th, 2021"
-output: 
-  html_document:
-    css: style.css 
-    toc: no
----
-```
-
-I've included a separate [R markdown file]() with this^[Note that if you want to use CSS styles, you'll need to include the style.css file in the same directory as your .Rmd file], that you can knit and see how the HTML file looks. I've also uploaded it [here](https://www.magdalenabennett.com/files/Rmarkdown_template.html) just for fun `r emo::ji("partying_face")`.
+One of the issues with HTML files is that they are not that easy to share. This means that if you send me your knitted .html file, I won't be able to see the same as you! That's why we can just share a single file. An easy way to bypass this is by using Github (this is a whole other world, but an amazing one to get into!).
 
 If you want to share your HTML files, a super quick way is [Grant McDermottt's](https://twitter.com/grant_mcdermott) suggestion using Github:
 
