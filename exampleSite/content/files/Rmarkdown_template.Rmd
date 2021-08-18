@@ -179,7 +179,7 @@ output:
 ---
 ```
 
-I've included a separate [R markdown file](https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/files/Rmarkdown_template.Rmd) with this^[Note that if you want to use CSS styles, you'll need to include the [style.css](https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/files/style.css) file in the same directory as your .Rmd file], that you can knit and see how the HTML file looks. I've also uploaded it [here](https://www.magdalenabennett.com/files/Rmarkdown_template.html) just for fun.
+I've included a separate [R markdown file](https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/files/Rmarkdown_template_HTML.Rmd) with this^[Note that if you want to use CSS styles, you'll need to include the [style.css](https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/files/style.css) file in the same directory as your .Rmd file], that you can knit and see how the HTML file looks. I've also uploaded it [here](https://www.magdalenabennett.com/files/Rmarkdown_template_HTML.html) just for fun.
 
 If you want to share your HTML files, a super quick way is [Grant McDermottt's](https://twitter.com/grant_mcdermott) suggestion using Github:
 
