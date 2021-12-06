@@ -11,10 +11,10 @@ lvrat
 Loan to value ratio.
 
 chist
-Factor. Credit history: consumer payments.
+Factor. Credit history: consumer payments. (1: no "slow pay" account; 2: One or two "slow pay" accounts; 3: More than two "slow pay" accounts, 4: Insufficient credit history for determination; 5: delinquent credit history with 60 days past due; 6: serious delinquencies with 90 days past due)
 
 mhist
-Factor. Credit history: mortgage payments.
+Factor. Credit history: mortgage payments (1: No late payments; 2: No payment history; 3: One or two late payments; 4: More than two late payments).
 
 phist
 Factor. Public bad credit record?
