@@ -17,7 +17,7 @@ Here I compile a list of some helpful resources/tips (created by me or others) t
 I created a simple shinyapp to play around with different scenarios for the second round of the presidential election in Chile 2021 (website in Spanish). You can see the live app [here](https://maibennett.shinyapps.io/2daVuelta/), and check out the code in my repository.
 
 <p align="center">
-<img src="/images/example_html.png" width="700">
+<img src="/images/2daVuelta.png" width="700">
 </p>
 
 ##### Easy way to scrape some data in R
