@@ -11,7 +11,7 @@ Access my {{% button href="https://slides.magdalenabennett.com" icon="fas fa-lin
 
 # PUBLICATIONS
 
-* **Bennett, M.** (2021). "All Things Equal? Heterogeneity in Policy Effectiveness against COVID-19 Spread in Chile". *World Development*. Volume 137. 105208.[{{% fontawesome download-solid32 %}}](/files/sub/mbennett_covid.pdf)[{{% fontawesome database-solid32 %}}](https://github.com/maibennett/covid_augsynth) 
+* **Bennett, M.** (2021). "All Things Equal? Heterogeneity in Policy Effectiveness against COVID-19 Spread in Chile". *World Development*. Volume 137. 105208.[{{% fontawesome download-solid32 %}}](/files/sub/mbennett_covid.pdf)[{{% fontawesome database-solid32 %}}](https://github.com/maibennett/covid_augsynth) [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/covid/uchile_20200914/) 
 
 * **Bennett, M**. & Bergman, P. (2021). “Better Together? Social Networks in Truancy and the Targeting of Treatment”. *Journal of Labor Economics*. Volume 39 (1). [{{% fontawesome download-solid32 %}}](/files/networks_paper.pdf)
 
@@ -30,7 +30,7 @@ Access my {{% button href="https://slides.magdalenabennett.com" icon="fas fa-lin
 
 * **Bennett, M.**, C. Neilson, & N. Rojas (2021). "Beyond Exclusion: The Role of the Causal Effect of Testing on Attendance on the Day of the Test". Working Paper. [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/attendance/attendance_20220405/) (*Draft available soon*)
 
-* **Bennett, M.** (2020). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". Job Market Paper, Columbia University.[{{% fontawesome download-solid32 %}}](/files/sub/MBennett_GRD.pdf)
+* **Bennett, M.** (2020). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". Job Market Paper, Columbia University.[{{% fontawesome download-solid32 %}}](/files/sub/MBennett_GRD.pdf) [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/rd/rd_20210420/) 
 
 * Tapia, J., J. Fabres, **M. Bennett**, G. Marshall, P. Mena, M. Escalante, D. Sabatelli, N. Dinerstein, D. Masoli, & J. Zubizarreta (2019). "Breastmilk and its effects in Bronchopulmonary Dysplasia and other major morbidities in Very Low Birthweight Infants". Working Paper.
 
