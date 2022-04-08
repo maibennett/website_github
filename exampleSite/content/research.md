@@ -11,6 +11,8 @@ Access my {{% button href="https://slides.magdalenabennett.com" icon="fas fa-lin
 
 # PUBLICATIONS
 
+* Behrens, M. I., **M. Bennett**, R. Castillo, D. Ponce, N. Rogers, & R. Vergara (2022). "Cancer History is Associated with Slower Speed of Cognitive Decline in Patients with Amnestic Cognitive Impairment". *Journal of Alzheimer's Disease. Forthcoming.*
+
 * **Bennett, M.** (2021). "All Things Equal? Heterogeneity in Policy Effectiveness against COVID-19 Spread in Chile". *World Development*. Volume 137. 105208.[{{% fontawesome file-arrow-down-solid32 %}}](/files/sub/mbennett_covid.pdf)[{{% fontawesome code-solid32 %}}](https://github.com/maibennett/covid_augsynth) [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/covid/uchile_20200914/) 
 
 * **Bennett, M**. & Bergman, P. (2021). “Better Together? Social Networks in Truancy and the Targeting of Treatment”. *Journal of Labor Economics*. Volume 39 (1). [{{% fontawesome file-arrow-down-solid32 %}}](/files/networks_paper.pdf)
