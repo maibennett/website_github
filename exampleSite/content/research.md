@@ -28,7 +28,7 @@ Access my {{% button href="https://slides.magdalenabennett.com" icon="fas fa-lin
 
 * Allende, C. & **M. Bennett** (2022). "Biased Beliefs and the Dynamic Role of Information in College Choice".[{{% fontawesome download-solid32 %}}](http://www.magdalenabennett.com/abstracts#chile-rct/)(*Abstract*)
 
-* **Bennett, M.**, C. Neilson, & N. Rojas (2021). "Beyond Exclusion: The Role of the Causal Effect of Testing on Attendance on the Day of the Test". Working Paper. [{{% fontawesome person-chalkboard-solid %}}](https://slides.magdalenabennett.com/docs/attendance/attendance_20220405/) (*Draft available soon*)
+* **Bennett, M.**, C. Neilson, & N. Rojas (2021). "Beyond Exclusion: The Role of the Causal Effect of Testing on Attendance on the Day of the Test". Working Paper. [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/attendance/attendance_20220405/) (*Draft available soon*)
 
 * **Bennett, M.** (2020). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". Job Market Paper, Columbia University.[{{% fontawesome download-solid32 %}}](/files/sub/MBennett_GRD.pdf)
 
