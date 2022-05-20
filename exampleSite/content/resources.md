@@ -22,7 +22,7 @@ I created a simple shinyapp to play around with different scenarios for the seco
 
 ##### Easy way to scrape some data in R
 
-This code was posted by [Sue Marquez](https://github.com/Suemarquez/covid_nys) for scraping some COVID-19 data, and I found it super useful. I am fairly new at scraping data, and this made it very easy and intuitive. The main advantage is that by using Inspect on your browser, you can see exactly the different content you want to scrape and download. I slightly adapted Sue's code for scraping data from the Chilean Ministry of Health, and commented it so you know how to adapt it for your own needs. Check it out [here](https://github.com/maibennett/code/blob/master/covid/scrape_daily_data.R).
+This code was posted by [Sue Marquez](https://github.com/Suemarquez/covid_nys) for scraping some COVID-19 data, and I found it super useful. I am fairly new at scraping data, and this made it very easy and intuitive. The main advantage is that by using Inspect on your browser, you can see exactly the different content you want to scrape and download. I slightly adapted Sue's code for scraping data from the Chilean Ministry of Health, and commented it so you know how to adapt it for your own needs. Check it out [here](https://github.com/maibennett/code/blob/master/covid/code/scrape_daily_data.R).
 
 <p align="center">
 <img src="/images/example_html.png" width="700">
