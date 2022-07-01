@@ -14,12 +14,15 @@ Here I compile a list of some helpful resources/tips (created by me or others) t
 
 ##### Who cites me?
 
-Mirya Holman posted the following tweet, and I thought it was a super interesting question. Who do I cite and who cites me?
+Mirya Holman posted the following tweet, and I thought it was a super interesting question. Who do *I* cite and who cites *me*?
 
 <p align="center">
 <img src="/images/mirya_tweet.png" width="700">
 </p>
 
+For that reason, I started looking around whether there was something that did this at the researcher level and not the article level. I wasn't able to find anything that did exactly this, so I thought it was a good opportunity to try to code this. Using **[SerpAPI](https://serpapi.com/google-scholar-api)**, I wrote the [following Python code](https://github.com/maibennett/code/tree/master/WhoCitesMe) to scrape Google Scholar and find who is citing my (or other author's) paper. *You will need to get an API key from SerpAPI, but they have a free plan*.
+
+So far, I only have one side of the network.  **I will update this then to find who an author cites, creating the full network of reciprocity.**  
 
 
 ##### How is the 2nd ballot going to turn out in the Chilean presidential election?
