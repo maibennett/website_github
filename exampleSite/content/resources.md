@@ -12,6 +12,16 @@ Here I compile a list of some helpful resources/tips (created by me or others) t
 
 ## <a name="code"></a>Code
 
+##### Who cites me?
+
+Mirya Holman posted the following tweet, and I thought it was a super interesting question. Who do I cite and who cites me?
+
+<p align="center">
+<img src="/images/mirya_tweet.png" width="700">
+</p>
+
+
+
 ##### How is the 2nd ballot going to turn out in the Chilean presidential election?
 
 I created a simple shinyapp to play around with different scenarios for the second round of the presidential election in Chile 2021 (website in Spanish). You can see the live app [here](https://maibennett.shinyapps.io/2daVuelta/), and check out the code in my repository.
