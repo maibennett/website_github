@@ -25,6 +25,9 @@ enableEmoji = true
     avatarurl = "images/mai_bw.jpg"
     footercontent = ""
 
+    # Google Analytics 4
+    googleAnalyticsID = "G-NG7M9GM96S"
+
     dateformat = "April 2, 2019"
 
     hideCredits = false
