@@ -159,6 +159,11 @@ From the great [Paul Goldsmith-Pinkham](https://twitter.com/paulgp), some [beame
 
 [![beamer_presentation](/images/beamer_presentation.png?raw=true)](https://github.com/paulgp/beamer-tips/blob/master/slides.pdf)
 
+##### How I do it
+
+Not that I'm a pro or anything like that, but I think my presentations do look pretty. Feel free to check out mi slides on my [presentation repository](https://slides.magdalenabennett.com), which include also the code to everything (though I will admit I need to do a better job at cleaning up the design part of the code).
+
+
 ## <a name="apps"></a>Apps
 
 Nothing to do with stats or econ or education, but some apps that are game changers:
