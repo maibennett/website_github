@@ -12,6 +12,16 @@ Here I compile a list of some helpful resources/tips (created by me or others) t
 
 ## <a name="code"></a>Code
 
+##### Who doesn't like stickers?
+
+Not me. I love stickers. Specially nerdy ones ([RedBubble](https://www.redbubble.com/) can attest to that). So, I decided to create some to keep my students motivated. I thought they were cool, so I am [putting them out in the world](https://github.com/maibennett/website_github/tree/master/exampleSite/content/files/Stickers). *Disclaimer: The jokes are not mine (I'm not that funny in English)*
+
+Here's an example of these cool stickers (I'll be uploading more during the semester):
+
+<p align="center">
+<img src="/images/pvalue.png" width="200">  <img src="/images/no_limits.png" width="250">  <img src="/images/confidence.png" width="200">
+</p>
+
 ##### Who cites me?
 
 Mirya Holman posted the following tweet, and I thought it was a super interesting question. *Who do I cite and who cites me?*
