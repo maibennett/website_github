@@ -139,9 +139,8 @@ Here's a video by **[Mike Morrison](https://twitter.com/mikemorrison)** on why y
 I have also found that [**posterdown**](https://github.com/brentthorne/posterdown) works really great to create this type of posters with a beautiful Xaringan feel (see below). If anyone is interested, I created [my first poster](https://github.com/maibennett/presentations/tree/main/content/presentations/Attendance/ACIC_20220524) using that package and adapting the CSS to my needs.
 
 
-<p align="center">
-<img src="/images/acic_poster.png" width="500">
-</p>
+[![acic_poster](/images/acic_poster.png?raw=true)](https://raw.githack.com/maibennett/presentations/main/content/presentations/Attendance/ACIC_20220524/mbennett_attendance_poster.html)
+
 
 ##### Xaringan \#FTW
 
