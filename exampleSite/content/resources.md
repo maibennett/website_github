@@ -136,6 +136,13 @@ Here's a video by **[Mike Morrison](https://twitter.com/mikemorrison)** on why y
 
 (tl;dr See the templates [here](https://osf.io/ef53g/))
 
+I have also found that [**posterdown**](https://github.com/brentthorne/posterdown) works really great to create this type of posters with a beautiful Xaringan feel (see below). If anyone is interested, I created [my first poster](https://github.com/maibennett/presentations/tree/main/content/presentations/Attendance/ACIC_20220524) using that package and adapting the CSS to my needs.
+
+
+<p align="center">
+<img src="/images/acic_poster.png" width="500">
+</p>
+
 ##### Xaringan \#FTW
 
 Lately, I've fully moved to Rmarkdown presentations, especifically with **[`Xaringan`](https://github.com/yihui/xaringan)**. These are not only beautiful, but also fully flexible, and way more convenient in the way you can host them. I started a repository of my presentations **[here](https://maibennettslides.netlify.app)**, which include both slides and code. I'll right a longer post about certain resources, but some game changers:
