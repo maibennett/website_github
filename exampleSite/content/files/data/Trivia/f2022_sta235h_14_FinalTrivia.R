@@ -18,7 +18,7 @@ library(rattle)
 library(rsample)
 library(ranger)
 
-candy <- read.csv("C:/Users/mc72574/Dropbox/UT/Teaching/2022Fall_STA235H/Trivia/data/candy.csv")
+candy <- read.csv("https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/files/data/candy.csv")
 
 # We will use a seed of 100 and a cross-validation of 10-fold.
 set.seed(100)
