@@ -13,7 +13,7 @@ The hypothesis for this project stems from the fact that the quarterback is usua
 
 ## Research Assistant
 
-A research assistant is needed to spearhead the data collection portion of this project and participate in the data analysis.
+A research assistant is needed to spearhead the data collection portion of this project and participate in the data analysis. There is some centralized data availability for high school statistics, but a large portion of it will have to be scraped. 
 
 Expected skills and characteristics:
 
