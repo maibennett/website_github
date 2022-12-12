@@ -1,7 +1,6 @@
-+++ 
+---
 title = "NFL Project" 
-slug = "nfl" 
-+++
+---
 
 # NFL and Quaterback's Race: Tracking on the Field
 
