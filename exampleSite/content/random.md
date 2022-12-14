@@ -5,7 +5,7 @@ slug = "random"
 
 ## Comic of the week
 
-![comic](/images/void_cartoon.jpg?raw=true)
+![comic](/images/get-to-work.png?raw=true)
 
 (source: [Poorly Drawn Lines](https://poorlydrawnlines.com/comic/sometimes/))
 
