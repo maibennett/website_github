@@ -1,0 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+ 
+legend, p, li {
+    font-family: Jost, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Yanone Kaffeesatz";
+    font-size: "150%";
+}
