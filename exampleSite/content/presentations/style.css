@@ -1,0 +1,297 @@
+@import url(https://fonts.googleapis.com/css?family=Jost&display=swap);
+
+.remark-slide-number {
+  position: inherit;
+}
+
+/*.remark-slide-number .progress-bar-container {
+  position: absolute;
+  top: 0;
+  height: 5px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #FCCE25;
+}*/
+
+p {
+    margin: 1em 0px;
+    margin-top: 0.2em;
+    margin-right: 0px;
+    margin-bottom: 0em;
+    margin-left: 0px;
+}
+
+ul li { 
+	margin: 1em 0px;
+    margin-top: 0.2em;
+    margin-right: 0px;
+    margin-bottom: 0.2em;
+    margin-left: 0px;
+}
+
+ul li ul { 
+	font-size: 80%;
+}
+
+.nonum .remark-slide-number{
+	display: none;
+} 
+
+.MathJax{
+  font-size: 110% !important;
+  font-family: 'Jost' !important;
+}
+
+/*.mjx-chtml.MJXc-display {
+	font-size: 110 !important;
+	font-family: 'Jost' !important;
+}*/
+
+/*<span class="mjx-chtml MJXc-display">*/
+
+
+/*.Large { font-size: 144% }
+.large { font-size: 120% }
+.small { font-size: 90% }
+.footnotesize { font-size: 80% }
+.scriptsize { font-size: 70% }
+.tiny { font-size: 60% }*/
+
+.black { color: black; }
+.red { color: red; }
+.blue { color: blue; }
+.green { color: green; }
+.yellow { color: yellow; }
+.orange { color: orange; }
+.purple { color: purple; }
+.gray { color: gray; }
+.grey { color: gray; }
+
+.bold { font-weight: bold; }
+.bolder { font-weight: bolder; }
+
+
+/******************
+ * 
+ * Coloured content boxes
+ *
+ ****************/
+
+
+.content-box { 
+    box-sizing: content-box;
+    	background-color: #e2e2e2;
+  /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px
+     Total height: 80px + (2 * 20px) + (2 * 8px) = 136px
+     Content box width: 160px
+     Content box height: 80px */
+}
+
+
+.content-box-blue,
+.content-box-gray,
+.content-box-grey,
+.content-box-army,
+.content-box-green,
+.content-box-purple,
+.content-box-red,
+.content-box-yellow {
+    border-radius: 15px;
+    margin: 0 0 25px;
+    overflow: hidden;
+    padding: 20px;
+    width: 100%;
+}
+
+.content-box-blue {
+    background-color: #F0F8FF;
+
+}
+
+.content-box-gray {
+    background-color: #e2e2e2;
+}
+
+.content-box-grey {
+	background-color: #F5F5F5;
+}
+
+.content-box-army {
+	background-color: #737a36;
+}
+
+.content-box-green {
+	background-color: #d9edc2;
+}
+
+.content-box-purple {
+	background-color: #e2e2f9;
+}
+
+.content-box-red {
+	background-color: #E16462;
+	font-family: 'Yanone Kaffeesatz';
+}
+
+.content-box-red-large {
+	background-color: #E16462;
+	font-family: 'Yanone Kaffeesatz';
+	font-size: 120%;
+}
+
+.content-box-red-inv {
+	background-color: rgba(225, 100, 98,0.3);
+	color: #E16462;
+	font-family: 'Yanone Kaffeesatz';
+}
+
+.content-box-yellow {
+	background-color: #fef5c4;
+}
+
+
+.full-width {
+    display: flex;
+    width: 100%;
+    flex: 1 1 auto;
+}
+
+
+
+/***********
+ *
+ * Changed CSS
+ *
+ **************/
+
+.opacity{
+    opacity: 0.5;
+}
+
+
+
+.blur {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+
+.grayscale img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+
+
+
+
+
+/**************
+ *
+ * Fancy stuff
+ *
+ **************/
+
+
+.rotate-left {
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    transform: rotate(-2deg); 
+}
+
+.rotate-right {
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    transform: rotate(2deg);     
+}
+
+
+
+/********** 
+ * 
+ * Image stuff
+ *
+ ************/
+
+
+.polaroid img {
+    border: 10px solid #fff;
+    border-bottom: 45px solid #fff;
+    -webkit-box-shadow: 3px 3px 3px #111;
+    -moz-box-shadow: 3px 3px 3px #111;
+    box-shadow: 3px 3px 3px #111;
+}
+
+
+
+.shadow {
+    -moz-border-radius: 5px;
+    -moz-box-shadow: 5px 5px 5px #aaa;
+    -webkit-box-shadow: 5px 5px 5px #aaa;
+    box-shadow: 5px 5px 5px #aaa;
+    border-radius: 2px;  
+}
+
+h1.title-own {
+  font-family: var(--header-font-family);
+  font-weight: 400;
+  color: var(--header-color);
+  color: white;
+  font-size: 210%;
+}
+
+h2.title-own {
+  font-family: var(--header-font-family);
+  font-weight: 400;
+  color: var(--header-color);
+  color: white;
+}
+
+/*table, td, th {
+  border: 1px solid black;
+}*/
+
+.remark-slide table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  font-family: Jost; 
+}
+.remark-slide table thead th {
+  border-bottom: 1px solid #ddd;
+}
+th, td {
+  padding: 5px;
+}
+
+.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {
+  background: #ffffff;
+}
+
+table.dataTable tbody {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+table.dataTable.display tbody tr.even {
+  background-color: var(--background-color);
+}
+table.dataTable.display tbody tr.odd {
+  background-color: #e8eaed;
+}
+table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+  color: var(--text-color);
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: var(--text-color) !important;
+}
