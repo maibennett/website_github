@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>mbennett_az.knit</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+
+
+
+
+
+class: inverse, center, middle
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;h1 class="title-own"&gt;Zoned-In and Zoned-Out:&lt;br/&gt;Changes in School Attendance Zones over Time&lt;/h1&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+.small[Magdalena Bennett&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;br&gt;*McCombs School of Business, The University of Texas at Austin*&amp;nbsp;&amp;nbsp;&amp;nbsp;]
+
+&lt;br&gt;
+
+.small[AEFP Conference&lt;br&gt;March 24th, 2023]
+
+
+---
+# Attendance zones, new schools, and segregation
+
+- Schools can either **.darkorange[attract]** or **.darkorange[push away]** residents depending on socioeconomic characteristics .small[(Hasan &amp; Kumar, 2019; Gibbons, Machin, &amp; Silva 2013; Figlio &amp; Lucas, 2004)]
+
+--
+&lt;br&gt;
+&lt;br&gt;
+
+- Neighborhoods have important effects on **.darkorange[long-term outcomes]** .small[(Chetty et al. 2020)]
+
+--
+&lt;br&gt;
+&lt;br&gt;
+
+- **.darkorange[Racial and socioeconomic disparities]** in the school system also have long-term effects on students .small[(Reardon, 2016; Billings et al., 2014)]
+
+--
+
+.box-7Trans[New public schools opening &amp;rarr; Changes in attendance zones]
+
+
+---
+# This paper
+
+.pull-left[
+
+- How do **.darkorange[changes in attendance zones (AZ)]** affect:
+
+  - Zoned-in areas (i.e. neighborhoods)?
+  
+  - Zoned-out areas (i.e. neighborhoods and schools)?
+  
+]
+
+.pull-right[
+.center[
+![:scale 90%](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/map_TX.png)
+]
+]
+
+---
+# This paper
+
+.pull-left[
+
+- How do **.darkorange[changes in attendance zones (AZ)]** affect:
+
+  - Zoned-in areas (i.e. neighborhoods)?
+  
+  - Zoned-out areas (i.e. neighborhoods and schools)?
+
+- **.darkorange[New high schools]** in Texas that changed AZ `\(\rightarrow\)` mostly gentrified areas
+
+]
+
+.pull-right[
+.center[
+![:scale 90%](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/map_TX.png)
+]
+]
+
+---
+# This paper
+
+.pull-left[
+
+- How do **.darkorange[changes in attendance zones (AZ)]** affect:
+
+  - Zoned-in areas (i.e. neighborhoods)?
+  
+  - Zoned-out areas (i.e. neighborhoods and schools)?
+
+- **.darkorange[New high schools]** in Texas that changed AZ `\(\rightarrow\)` mostly gentrified areas
+
+- **.darkorange[Outcomes of interest]**:
+
+  - Differences in scores and score gaps between race/ethnicity
+
+  - Differences in school composition
+
+  - Differences in neighborhood composition 
+]
+
+.pull-right[
+.center[
+![:scale 90%](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/map_TX.png)
+]
+]
+---
+# What do we mean by zoned-in and zoned-out areas?
+
+--
+.pull-left[
+**Zoned-in area**: Attendance zone for a new school *S'*
+
+.center[
+![:scale 100%](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/map1.png)]
+]
+
+--
+
+.pull-right[
+**Zoned-out area**: New attendance zone for school *S* after the opening of schools *S'*.
+
+.center[
+![:scale 100%](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/map2.png)]
+
+]
+
+---
+# What do we mean by zoned-in and zoned-out areas?
+
+.pull-left[
+**Zoned-in area**: Attendance zone for a new school *S'*
+
+.center[
+![:scale 100%](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/map1.png)]
+]
+
+.pull-right[
+**Spillover school**: School which had a part of their catchment area zoned-in to S'.
+
+.center[
+![:scale 100%](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/map2.png)]
+
+]
+
+---
+# Data
+
+- **.darkorange[Common Core Data (CCD) [2005-2019]]**: Administrative data from NCES, including demographic and socioeconomic characteristics of schools.
+
+--
+&lt;br&gt;
+&lt;br&gt;
+
+- **.darkorange[Texas Educacion Agency (TEA) data [2005-2019]]**: Performance data for schools over time.
+
+--
+&lt;br&gt;
+&lt;br&gt;
+
+- **.darkorange[Attendance zones maps [2009-2017]]**: Geographic data for school boundaries over time from SABS, SABINS, and Maponics.
+
+--
+&lt;br&gt;
+&lt;br&gt;
+
+- **.darkorange[Census and American Community Survey (ACS) data [2010-2019]]**: Demographic information at the census tract level
+
+--
+&lt;br&gt;
+&lt;br&gt;
+
+- **.darkorange[Housing Prices data [2005-2019]]**: Information about housing prices over time from CoreLogic and Zillow *(coming soon)*.
+
+---
+# Identification Strategy: An Augmented Synthetic Control Method
+
+- Use a **.darkorange[weighted average]** of similar districts/schools/AZ/neighborhoods to create a comparison group for affected areas.
+
+--
+
+- Under **.darkorange[Augmented Synthetic Control Method]** (ASCM) (Ben-Michael et al., 2020) there is a correction for poor fit:
+
+`$$\hat{Y}^{aug}_{1T}(0) = \sum_{W_i=0}\gamma_iY_{iT}+\color{#db5f12}{(\hat{m}_{iT}(\mathbf{X_i})-\sum_{W_i=0}\gamma_i\hat{m}_{iT}(\mathbf{X_i}))}$$`
+.small[
+- `\(m_{iT}\)`: Estimator for `\(Y_{iT}(0)\)`
+- Extrapolation for "bias correction".
+- If ridge regression is used `\(\rightarrow\)` penalization for extrapolation.]
+
+--
+
+- Proposal of **.darkorange[sensitivity analysis to hidden bias]** .small[(Rosenbaum, 2002; Keele et al., 2019)]:
+
+  - *How much should an unobserved confounder affect the probability of treatment (i.e. new school opening there vs in a control area) to explain away the results we find?*
+
+---
+# Broader picture: What happens to districts?
+
+.pull-left[
+- Compare districts with a new school between 2012 and 2016 vs districts with no new schools.
+
+- ASCM for different characteristics, adjusting for other baseline covariates (e.g. number of schools, enrollment, %FRPL, % race/ethnicity)
+]
+
+.pull-right[
+.center[
+![](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/map0_districts.png)]
+]
+---
+# Districts with new schools increase gap in Math
+
+&lt;br&gt;
+.center[
+![:scale 85%](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/districts_gap_math.png)]
+
+---
+# ... no significant change in Reading
+
+&lt;br&gt;
+.center[
+![:scale 85%](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/districts_gap_read.png)]
+
+---
+# What happens within districts?
+
+.pull-left[
+- Identify **.darkorange[6 new high schools]** between 2012-2016 that change AZ.
+
+- Compare attendance zones *within districts* to create a counterfactual.
+
+]
+
+.pull-right[
+.center[
+![](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/map_zoned_in_out.png)]
+]
+
+---
+# What happens within districts?
+
+.pull-left[
+- Identify **.darkorange[6 new high schools]** between 2012-2016 that change AZ.
+
+- Compare attendance zones *within districts* to create a counterfactual.
+
+&lt;br&gt;
+
+- **.darkorange[Important caveat]**:
+
+  - Limited sample size `\(\rightarrow\)` under-powered.
+  
+  - Trends are suggestive.
+]
+
+.pull-right[
+.center[
+![](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/map_zoned_in_out.png)]
+]
+
+---
+# Zoned-in Areas: How do neighborhoods change?
+
+- No major changes in % white population (left) or % African American population (right)
+
+.pull-left[
+.center[
+![](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/zones_in_white.png)]
+]
+
+.pull-right[
+.center[
+![](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/zones_in_black.png)]
+]
+
+---
+# Zoned-in Areas: How do neighborhoods change?
+
+- Suggestive increase in % of college educated population
+
+.center[
+![:scale 60%](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/zones_in_college.png)]
+
+---
+# Zoned-out Areas: How are schools affected?
+
+- **.darkorange[Demographics]**: Decreasing trend in white students enrollment (left) vs increasing trend in African American enrollment (right).
+
+.pull-left[
+.center[
+![](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/zones_out_white_students.png)]
+]
+
+.pull-right[
+.center[
+![](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/zones_out_black_students.png)]
+]
+
+---
+# Zoned-out Areas: How are schools affected?
+
+- **.darkorange[Performance]**: Decreasing trend % of proficiency (sharper for African American students).
+
+.center[
+![:scale 60%](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/zones_out_scores.png)]
+
+---
+# Zoned-out Areas: What about neighborhoods?
+
+- Increasing trend in % of African-American population (left) and decreasing trend in % college-educated population (right).
+
+.pull-left[
+.center[
+![](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/zones_out_black.png)]
+]
+
+.pull-right[
+.center[
+![](https://raw.githubusercontent.com/maibennett/presentations/main/content/presentations/AttendanceZones/AEFP_20230324/images/zones_out_college.png)]
+]
+
+---
+# Wrapping up
+
+- Attendance zones have a huge role in **.darkorange[shaping neighborhoods]** and nearby areas.
+
+--
+&lt;br&gt;
+&lt;br&gt;
+
+- Importance of understanding the effects of **.darkorange[new schools]** and their location and boundaries.
+
+--
+&lt;br&gt;
+&lt;br&gt;
+
+- Effects of housing prices? Long-run outcomes?
+
+--
+&lt;br&gt;
+&lt;br&gt;
+
+- **.darkorange[Next steps]**:
+  
+  - Include other states (e.g. CA)
+  - Analyze housing prices over time.
+  - Heterogeneity in effect for gentrified neighborhoods?
+
+
+---
+class: inverse, center, middle
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;h1 class="title-own"&gt;Zoned-In and Zoned-Out:&lt;br/&gt;Changes in School Attendance Zones over Time&lt;/h1&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+.small[Magdalena Bennett&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;br&gt;*McCombs School of Business, The University of Texas at Austin*&amp;nbsp;&amp;nbsp;&amp;nbsp;]
+
+&lt;br&gt;
+
+.small[AEFP Conference&lt;br&gt;March 24th, 2023]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
