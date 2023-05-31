@@ -1,0 +1,2137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.306">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Magdalena Bennett">
+<meta name="dcterms.date" content="2023-05-31">
+
+<title>Biased Beliefs and the Dynamic Role of Information in College Choice</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="00_randomization_files/libs/clipboard/clipboard.min.js"></script>
+<script src="00_randomization_files/libs/quarto-html/quarto.js"></script>
+<script src="00_randomization_files/libs/quarto-html/popper.min.js"></script>
+<script src="00_randomization_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="00_randomization_files/libs/quarto-html/anchor.min.js"></script>
+<link href="00_randomization_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="00_randomization_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="00_randomization_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="00_randomization_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="00_randomization_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+<script src="00_randomization_files/libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="00_randomization_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="custom.css">
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#population" id="toc-population" class="nav-link active" data-scroll-target="#population">Population</a></li>
+  <li><a href="#randomization" id="toc-randomization" class="nav-link" data-scroll-target="#randomization">Randomization</a>
+  <ul class="collapse">
+  <li><a href="#randomization-procedure" id="toc-randomization-procedure" class="nav-link" data-scroll-target="#randomization-procedure">Randomization procedure</a>
+  <ul class="collapse">
+  <li><a href="#applicants-with-recorded-preferences" id="toc-applicants-with-recorded-preferences" class="nav-link" data-scroll-target="#applicants-with-recorded-preferences">Applicants with recorded preferences</a></li>
+  <li><a href="#applicants-without-recorded-preferences" id="toc-applicants-without-recorded-preferences" class="nav-link" data-scroll-target="#applicants-without-recorded-preferences">Applicants without recorded preferences</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Biased Beliefs and the Dynamic Role of Information in College Choice</h1>
+<p class="subtitle lead">Randomization Code and Results</p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Magdalena Bennett </p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            The University of Texas at Austin
+          </p>
+      </div>
+    </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 31, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="abstract-title">Abstract</div>
+    Summary of randomization code and results for students not enrolled in Higher Education.
+  </div>
+</div>
+
+</header>
+
+<section id="population" class="level1">
+<h1>Population</h1>
+<p>For this study, we will send information to all applicants that have valid scores (either took the Transition Test PDT 2022 or the Access to Higher Education Test PAES 2022) but that are not currently enrolled in any higher education institution (until XX May 2023). We include the following groups for un-enrolled students:</p>
+<ol type="1">
+<li><strong>Applicants with preferences</strong> (either from the survey or through their applications):
+<ul>
+<li><strong><em>S1.1 Complete survey</em></strong>: Applicants who completed the survey and selected they were interested in taking the PAES 2023 (N = 2854).</li>
+<li><strong><em>S1.2 In-progress survey</em></strong>: Applicants who started (but not completed) the survey and either selected that they were interested in taking the PAES 2023 or left that question blank (N = 2591).</li>
+<li><strong><em>S1.3 Non-respondent</em></strong>: Applicants who didn’t respond to the survey, but have preferences through their 2023 application (N = 56153).</li>
+</ul></li>
+<li><strong>Applicants without preferences</strong> (neither from the survey or through their applications):
+<ul>
+<li><strong><em>S2.1 In-progress survey</em></strong>: Applicants who started (but not completed) the survey and either selected that they were interested in taking the PAES 2023 or left that question blank, but didn’t respond to preferences on the survey or applied to programs in 2023 (N = 2184).</li>
+<li><strong><em>S2.2 Non-respondent</em></strong>: Applicants who didn’t respond to the survey and didn’t apply to any programs in 2023 (N = 69418).</li>
+</ul></li>
+</ol>
+<p>From the original population described above, we only exclude respondents that explicitly declared they were not interested in taking the PAES 2023. We will also exclude applicants that declared not wanting to participate in studies when they enrolled in the PDT 2022 or PAES 2022<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+</section>
+<section id="randomization" class="level1">
+<h1>Randomization</h1>
+<p>Considering the previous groups, we will randomize each group in a 40%-60% split for treatment and control. We consider a slightly higher share of control students because the original control group will be divided in a later stage into pure control and static information.</p>
+<p>In this case, only applicants with recorded preferences can be randomized into the full treatment (personalized information), but we will also randomize applicants without recorded preferences into getting a portion of the treatment.</p>
+<section id="randomization-procedure" class="level2">
+<h2 class="anchored" data-anchor-id="randomization-procedure">Randomization procedure</h2>
+<ul>
+<li><p>We sort applicants by their year of high school graduation, their average maximum score in math and language (deciles), and the difference between their actual score and the cutoff score for their first preference (20 groups by percentiles).</p></li>
+<li><p>We create groups of 5 applicants according to their sorting order (group 1: 1-5, group 2: 6-10, etc.), and within those groups we randomize a variable from 1 to 5 (without replacement).</p>
+<ul>
+<li>In case that there is a group smaller than 5, the variable is still randomized from 1 to 5 (and some random values are not used).</li>
+</ul></li>
+<li><p>If the random order assignment is 1 or 2, the applicant is assigned to treatment. If the random order assignment is 3, 4, or 5, the applicant is assigned to the control group.</p></li>
+</ul>
+<section id="applicants-with-recorded-preferences" class="level3">
+<h3 class="anchored" data-anchor-id="applicants-with-recorded-preferences">Applicants with recorded preferences</h3>
+<p>In this case, we have three groups with recorded preferences: (i) Applicants that completed the survey (S1.1), (ii) applicants that started the survey but did not finish (S1.2), and (iii) applicants that did not start the survey (S1.3)</p>
+<div id="tbl-balance-1" class="cell tbl-parent quarto-layout-panel anchored">
+<div class="panel-caption table-caption">
+<p>Table&nbsp;1: Balance tables after randomization for groups with recorded preferences</p>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="tbl-balance-1-1" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-balance-1" style="flex-basis: 100.0%;justify-content: center;">
+<table class="table table-hover lightable-paper table-sm table-striped small" data-quarto-postprocess="true">
+<caption>(a) S1.1 Survey completed</caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Control (N=1713)
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Treated (N=1141)
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: right; empty-cells: hide; border-bottom: hidden;"></th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" style="text-align: left; background-color: white !important;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Mean</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Std. Dev.</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Mean</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Std. Dev.</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Diff. in Means</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Grad. year</td>
+<td style="text-align: right;">2021.429</td>
+<td style="text-align: right;">2.686</td>
+<td style="text-align: right;">2021.437</td>
+<td style="text-align: right;">2.811</td>
+<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">0.937</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">N Classmates (grade)</td>
+<td style="text-align: right;">48.754</td>
+<td style="text-align: right;">44.877</td>
+<td style="text-align: right;">46.985</td>
+<td style="text-align: right;">44.139</td>
+<td style="text-align: right;">-1.769</td>
+<td style="text-align: right;">0.298</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Classmates (grade) miss</td>
+<td style="text-align: right;">0.058</td>
+<td style="text-align: right;">0.233</td>
+<td style="text-align: right;">0.057</td>
+<td style="text-align: right;">0.232</td>
+<td style="text-align: right;">-0.001</td>
+<td style="text-align: right;">0.926</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">N Classmates (class)</td>
+<td style="text-align: right;">14.445</td>
+<td style="text-align: right;">8.866</td>
+<td style="text-align: right;">14.380</td>
+<td style="text-align: right;">9.046</td>
+<td style="text-align: right;">-0.065</td>
+<td style="text-align: right;">0.850</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Classmates (class) miss</td>
+<td style="text-align: right;">0.058</td>
+<td style="text-align: right;">0.233</td>
+<td style="text-align: right;">0.057</td>
+<td style="text-align: right;">0.232</td>
+<td style="text-align: right;">-0.001</td>
+<td style="text-align: right;">0.926</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Family income (decile)</td>
+<td style="text-align: right;">23.563</td>
+<td style="text-align: right;">38.259</td>
+<td style="text-align: right;">23.840</td>
+<td style="text-align: right;">38.389</td>
+<td style="text-align: right;">0.277</td>
+<td style="text-align: right;">0.850</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Family income (decile) miss</td>
+<td style="text-align: right;">0.204</td>
+<td style="text-align: right;">0.403</td>
+<td style="text-align: right;">0.206</td>
+<td style="text-align: right;">0.405</td>
+<td style="text-align: right;">0.002</td>
+<td style="text-align: right;">0.885</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Age</td>
+<td style="text-align: right;">18.490</td>
+<td style="text-align: right;">3.029</td>
+<td style="text-align: right;">18.535</td>
+<td style="text-align: right;">3.317</td>
+<td style="text-align: right;">0.045</td>
+<td style="text-align: right;">0.714</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Public school</td>
+<td style="text-align: right;">0.092</td>
+<td style="text-align: right;">0.289</td>
+<td style="text-align: right;">0.100</td>
+<td style="text-align: right;">0.300</td>
+<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">0.465</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Voucher school</td>
+<td style="text-align: right;">0.619</td>
+<td style="text-align: right;">0.486</td>
+<td style="text-align: right;">0.619</td>
+<td style="text-align: right;">0.486</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0.998</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Private school</td>
+<td style="text-align: right;">0.273</td>
+<td style="text-align: right;">0.445</td>
+<td style="text-align: right;">0.271</td>
+<td style="text-align: right;">0.445</td>
+<td style="text-align: right;">-0.002</td>
+<td style="text-align: right;">0.915</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Humanist school</td>
+<td style="text-align: right;">0.790</td>
+<td style="text-align: right;">0.408</td>
+<td style="text-align: right;">0.796</td>
+<td style="text-align: right;">0.403</td>
+<td style="text-align: right;">0.006</td>
+<td style="text-align: right;">0.701</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Vocational school</td>
+<td style="text-align: right;">0.208</td>
+<td style="text-align: right;">0.406</td>
+<td style="text-align: right;">0.202</td>
+<td style="text-align: right;">0.401</td>
+<td style="text-align: right;">-0.007</td>
+<td style="text-align: right;">0.658</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BEA</td>
+<td style="text-align: right;">0.062</td>
+<td style="text-align: right;">0.242</td>
+<td style="text-align: right;">0.059</td>
+<td style="text-align: right;">0.235</td>
+<td style="text-align: right;">-0.004</td>
+<td style="text-align: right;">0.681</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PACE</td>
+<td style="text-align: right;">0.110</td>
+<td style="text-align: right;">0.313</td>
+<td style="text-align: right;">0.103</td>
+<td style="text-align: right;">0.305</td>
+<td style="text-align: right;">-0.006</td>
+<td style="text-align: right;">0.591</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Applied HE 2022</td>
+<td style="text-align: right;">0.744</td>
+<td style="text-align: right;">0.436</td>
+<td style="text-align: right;">0.734</td>
+<td style="text-align: right;">0.442</td>
+<td style="text-align: right;">-0.010</td>
+<td style="text-align: right;">0.557</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Took PDT 2022</td>
+<td style="text-align: right;">0.074</td>
+<td style="text-align: right;">0.261</td>
+<td style="text-align: right;">0.074</td>
+<td style="text-align: right;">0.263</td>
+<td style="text-align: right;">0.001</td>
+<td style="text-align: right;">0.925</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Took PAES 2022</td>
+<td style="text-align: right;">1.097</td>
+<td style="text-align: right;">0.410</td>
+<td style="text-align: right;">1.094</td>
+<td style="text-align: right;">0.401</td>
+<td style="text-align: right;">-0.003</td>
+<td style="text-align: right;">0.840</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Diff 1st pref cutoff and actual score</td>
+<td style="text-align: right;">121.718</td>
+<td style="text-align: right;">82.098</td>
+<td style="text-align: right;">120.855</td>
+<td style="text-align: right;">84.265</td>
+<td style="text-align: right;">-0.862</td>
+<td style="text-align: right;">0.787</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GPA score</td>
+<td style="text-align: right;">717.460</td>
+<td style="text-align: right;">162.537</td>
+<td style="text-align: right;">714.925</td>
+<td style="text-align: right;">163.637</td>
+<td style="text-align: right;">-2.535</td>
+<td style="text-align: right;">0.684</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ranking score</td>
+<td style="text-align: right;">739.278</td>
+<td style="text-align: right;">177.177</td>
+<td style="text-align: right;">737.036</td>
+<td style="text-align: right;">178.298</td>
+<td style="text-align: right;">-2.243</td>
+<td style="text-align: right;">0.741</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Language score (max)</td>
+<td style="text-align: right;">644.036</td>
+<td style="text-align: right;">140.368</td>
+<td style="text-align: right;">639.794</td>
+<td style="text-align: right;">147.469</td>
+<td style="text-align: right;">-4.242</td>
+<td style="text-align: right;">0.443</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Math I score (max)</td>
+<td style="text-align: right;">535.464</td>
+<td style="text-align: right;">167.160</td>
+<td style="text-align: right;">529.411</td>
+<td style="text-align: right;">174.961</td>
+<td style="text-align: right;">-6.052</td>
+<td style="text-align: right;">0.357</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Math II score (max)</td>
+<td style="text-align: right;">223.032</td>
+<td style="text-align: right;">226.336</td>
+<td style="text-align: right;">213.922</td>
+<td style="text-align: right;">223.956</td>
+<td style="text-align: right;">-9.110</td>
+<td style="text-align: right;">0.289</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Soc. Sciences score (max)</td>
+<td style="text-align: right;">226.586</td>
+<td style="text-align: right;">259.997</td>
+<td style="text-align: right;">218.456</td>
+<td style="text-align: right;">261.317</td>
+<td style="text-align: right;">-8.130</td>
+<td style="text-align: right;">0.415</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Science score (max)</td>
+<td style="text-align: right;">392.789</td>
+<td style="text-align: right;">236.347</td>
+<td style="text-align: right;">397.607</td>
+<td style="text-align: right;">232.296</td>
+<td style="text-align: right;">4.818</td>
+<td style="text-align: right;">0.590</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Applied financial aid</td>
+<td style="text-align: right;">0.812</td>
+<td style="text-align: right;">0.391</td>
+<td style="text-align: right;">0.808</td>
+<td style="text-align: right;">0.394</td>
+<td style="text-align: right;">-0.004</td>
+<td style="text-align: right;">0.792</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Eligible for financial aid</td>
+<td style="text-align: right;">0.739</td>
+<td style="text-align: right;">0.439</td>
+<td style="text-align: right;">0.718</td>
+<td style="text-align: right;">0.450</td>
+<td style="text-align: right;">-0.021</td>
+<td style="text-align: right;">0.212</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Enrolled if selected</td>
+<td style="text-align: right;">0.597</td>
+<td style="text-align: right;">0.491</td>
+<td style="text-align: right;">0.580</td>
+<td style="text-align: right;">0.494</td>
+<td style="text-align: right;">-0.017</td>
+<td style="text-align: right;">0.366</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Expected prob of acceptance (1st preference)</td>
+<td style="text-align: right;">65.739</td>
+<td style="text-align: right;">23.284</td>
+<td style="text-align: right;">65.861</td>
+<td style="text-align: right;">23.511</td>
+<td style="text-align: right;">0.122</td>
+<td style="text-align: right;">0.892</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Math score - greater than expected</td>
+<td style="text-align: right;">0.211</td>
+<td style="text-align: right;">0.408</td>
+<td style="text-align: right;">0.201</td>
+<td style="text-align: right;">0.401</td>
+<td style="text-align: right;">-0.011</td>
+<td style="text-align: right;">0.491</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Math score - lower than expected</td>
+<td style="text-align: right;">0.417</td>
+<td style="text-align: right;">0.493</td>
+<td style="text-align: right;">0.411</td>
+<td style="text-align: right;">0.492</td>
+<td style="text-align: right;">-0.006</td>
+<td style="text-align: right;">0.736</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Math score - same as expected</td>
+<td style="text-align: right;">0.336</td>
+<td style="text-align: right;">0.472</td>
+<td style="text-align: right;">0.341</td>
+<td style="text-align: right;">0.474</td>
+<td style="text-align: right;">0.005</td>
+<td style="text-align: right;">0.771</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lang score - greater than expected</td>
+<td style="text-align: right;">0.278</td>
+<td style="text-align: right;">0.448</td>
+<td style="text-align: right;">0.251</td>
+<td style="text-align: right;">0.434</td>
+<td style="text-align: right;">-0.027</td>
+<td style="text-align: right;">0.105</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lang score - lower than expected</td>
+<td style="text-align: right;">0.381</td>
+<td style="text-align: right;">0.486</td>
+<td style="text-align: right;">0.394</td>
+<td style="text-align: right;">0.489</td>
+<td style="text-align: right;">0.013</td>
+<td style="text-align: right;">0.489</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lang score - same as expected</td>
+<td style="text-align: right;">0.329</td>
+<td style="text-align: right;">0.470</td>
+<td style="text-align: right;">0.340</td>
+<td style="text-align: right;">0.474</td>
+<td style="text-align: right;">0.011</td>
+<td style="text-align: right;">0.528</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Would apply to technical HE</td>
+<td style="text-align: right;">0.158</td>
+<td style="text-align: right;">0.364</td>
+<td style="text-align: right;">0.155</td>
+<td style="text-align: right;">0.362</td>
+<td style="text-align: right;">-0.002</td>
+<td style="text-align: right;">0.858</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Math I - Expected score</td>
+<td style="text-align: right;">741.780</td>
+<td style="text-align: right;">150.646</td>
+<td style="text-align: right;">736.084</td>
+<td style="text-align: right;">151.707</td>
+<td style="text-align: right;">-5.697</td>
+<td style="text-align: right;">0.329</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lang - Expected score</td>
+<td style="text-align: right;">795.617</td>
+<td style="text-align: right;">128.680</td>
+<td style="text-align: right;">788.616</td>
+<td style="text-align: right;">136.296</td>
+<td style="text-align: right;">-7.001</td>
+<td style="text-align: right;">0.176</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Expected salary</td>
+<td style="text-align: right;">1614617.450</td>
+<td style="text-align: right;">915214.048</td>
+<td style="text-align: right;">1674519.360</td>
+<td style="text-align: right;">949023.778</td>
+<td style="text-align: right;">59901.910+</td>
+<td style="text-align: right;">0.094</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+
+
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="tbl-balance-1-2" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-balance-1" style="flex-basis: 100.0%;justify-content: center;">
+<table class="table table-hover lightable-paper table-sm table-striped small" data-quarto-postprocess="true">
+<caption>(b) S1.2 Survey in progress</caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Control (N=1555)
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Treated (N=1036)
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: right; empty-cells: hide; border-bottom: hidden;"></th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" style="text-align: left; background-color: white !important;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Mean</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Std. Dev.</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Mean</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Std. Dev.</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Diff. in Means</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Grad. year</td>
+<td style="text-align: right;">2021.322</td>
+<td style="text-align: right;">2.576</td>
+<td style="text-align: right;">2021.431</td>
+<td style="text-align: right;">2.249</td>
+<td style="text-align: right;">0.110</td>
+<td style="text-align: right;">0.251</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">N Classmates (grade)</td>
+<td style="text-align: right;">45.759</td>
+<td style="text-align: right;">43.456</td>
+<td style="text-align: right;">49.602</td>
+<td style="text-align: right;">47.504</td>
+<td style="text-align: right;">3.843*</td>
+<td style="text-align: right;">0.037</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Classmates (grade) miss</td>
+<td style="text-align: right;">0.066</td>
+<td style="text-align: right;">0.249</td>
+<td style="text-align: right;">0.055</td>
+<td style="text-align: right;">0.228</td>
+<td style="text-align: right;">-0.011</td>
+<td style="text-align: right;">0.237</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">N Classmates (class)</td>
+<td style="text-align: right;">13.650</td>
+<td style="text-align: right;">8.786</td>
+<td style="text-align: right;">13.849</td>
+<td style="text-align: right;">8.778</td>
+<td style="text-align: right;">0.199</td>
+<td style="text-align: right;">0.572</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Classmates (class) miss</td>
+<td style="text-align: right;">0.066</td>
+<td style="text-align: right;">0.249</td>
+<td style="text-align: right;">0.055</td>
+<td style="text-align: right;">0.228</td>
+<td style="text-align: right;">-0.011</td>
+<td style="text-align: right;">0.237</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Family income (decile)</td>
+<td style="text-align: right;">24.311</td>
+<td style="text-align: right;">38.867</td>
+<td style="text-align: right;">26.273</td>
+<td style="text-align: right;">40.141</td>
+<td style="text-align: right;">1.963</td>
+<td style="text-align: right;">0.217</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Family income (decile) miss</td>
+<td style="text-align: right;">0.212</td>
+<td style="text-align: right;">0.409</td>
+<td style="text-align: right;">0.233</td>
+<td style="text-align: right;">0.423</td>
+<td style="text-align: right;">0.020</td>
+<td style="text-align: right;">0.223</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Age</td>
+<td style="text-align: right;">18.691</td>
+<td style="text-align: right;">2.984</td>
+<td style="text-align: right;">18.608</td>
+<td style="text-align: right;">2.889</td>
+<td style="text-align: right;">-0.083</td>
+<td style="text-align: right;">0.482</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Public school</td>
+<td style="text-align: right;">0.089</td>
+<td style="text-align: right;">0.285</td>
+<td style="text-align: right;">0.088</td>
+<td style="text-align: right;">0.283</td>
+<td style="text-align: right;">-0.002</td>
+<td style="text-align: right;">0.892</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Voucher school</td>
+<td style="text-align: right;">0.605</td>
+<td style="text-align: right;">0.489</td>
+<td style="text-align: right;">0.599</td>
+<td style="text-align: right;">0.490</td>
+<td style="text-align: right;">-0.005</td>
+<td style="text-align: right;">0.796</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Private school</td>
+<td style="text-align: right;">0.288</td>
+<td style="text-align: right;">0.453</td>
+<td style="text-align: right;">0.295</td>
+<td style="text-align: right;">0.456</td>
+<td style="text-align: right;">0.007</td>
+<td style="text-align: right;">0.691</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Humanist school</td>
+<td style="text-align: right;">0.759</td>
+<td style="text-align: right;">0.428</td>
+<td style="text-align: right;">0.765</td>
+<td style="text-align: right;">0.424</td>
+<td style="text-align: right;">0.007</td>
+<td style="text-align: right;">0.699</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Vocational school</td>
+<td style="text-align: right;">0.241</td>
+<td style="text-align: right;">0.428</td>
+<td style="text-align: right;">0.235</td>
+<td style="text-align: right;">0.424</td>
+<td style="text-align: right;">-0.007</td>
+<td style="text-align: right;">0.699</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BEA</td>
+<td style="text-align: right;">0.042</td>
+<td style="text-align: right;">0.200</td>
+<td style="text-align: right;">0.053</td>
+<td style="text-align: right;">0.224</td>
+<td style="text-align: right;">0.011</td>
+<td style="text-align: right;">0.191</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PACE</td>
+<td style="text-align: right;">0.125</td>
+<td style="text-align: right;">0.331</td>
+<td style="text-align: right;">0.121</td>
+<td style="text-align: right;">0.326</td>
+<td style="text-align: right;">-0.004</td>
+<td style="text-align: right;">0.755</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Applied HE 2022</td>
+<td style="text-align: right;">0.926</td>
+<td style="text-align: right;">0.262</td>
+<td style="text-align: right;">0.926</td>
+<td style="text-align: right;">0.262</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0.972</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Took PDT 2022</td>
+<td style="text-align: right;">0.111</td>
+<td style="text-align: right;">0.315</td>
+<td style="text-align: right;">0.116</td>
+<td style="text-align: right;">0.320</td>
+<td style="text-align: right;">0.005</td>
+<td style="text-align: right;">0.720</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Took PAES 2022</td>
+<td style="text-align: right;">1.117</td>
+<td style="text-align: right;">0.440</td>
+<td style="text-align: right;">1.090</td>
+<td style="text-align: right;">0.389</td>
+<td style="text-align: right;">-0.027+</td>
+<td style="text-align: right;">0.097</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Diff 1st pref cutoff and actual score</td>
+<td style="text-align: right;">111.037</td>
+<td style="text-align: right;">73.193</td>
+<td style="text-align: right;">111.107</td>
+<td style="text-align: right;">67.184</td>
+<td style="text-align: right;">0.070</td>
+<td style="text-align: right;">0.980</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GPA score</td>
+<td style="text-align: right;">685.675</td>
+<td style="text-align: right;">163.182</td>
+<td style="text-align: right;">692.550</td>
+<td style="text-align: right;">159.673</td>
+<td style="text-align: right;">6.876</td>
+<td style="text-align: right;">0.287</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ranking score</td>
+<td style="text-align: right;">704.059</td>
+<td style="text-align: right;">176.934</td>
+<td style="text-align: right;">712.280</td>
+<td style="text-align: right;">173.843</td>
+<td style="text-align: right;">8.221</td>
+<td style="text-align: right;">0.242</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Language score (max)</td>
+<td style="text-align: right;">624.830</td>
+<td style="text-align: right;">126.341</td>
+<td style="text-align: right;">624.229</td>
+<td style="text-align: right;">126.662</td>
+<td style="text-align: right;">-0.601</td>
+<td style="text-align: right;">0.906</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Math I score (max)</td>
+<td style="text-align: right;">533.398</td>
+<td style="text-align: right;">140.784</td>
+<td style="text-align: right;">532.849</td>
+<td style="text-align: right;">147.751</td>
+<td style="text-align: right;">-0.549</td>
+<td style="text-align: right;">0.925</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Math II score (max)</td>
+<td style="text-align: right;">232.039</td>
+<td style="text-align: right;">220.505</td>
+<td style="text-align: right;">219.184</td>
+<td style="text-align: right;">220.856</td>
+<td style="text-align: right;">-12.854</td>
+<td style="text-align: right;">0.147</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Soc. Sciences score (max)</td>
+<td style="text-align: right;">230.878</td>
+<td style="text-align: right;">251.523</td>
+<td style="text-align: right;">229.121</td>
+<td style="text-align: right;">251.555</td>
+<td style="text-align: right;">-1.757</td>
+<td style="text-align: right;">0.862</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Science score (max)</td>
+<td style="text-align: right;">377.805</td>
+<td style="text-align: right;">230.349</td>
+<td style="text-align: right;">388.310</td>
+<td style="text-align: right;">224.684</td>
+<td style="text-align: right;">10.505</td>
+<td style="text-align: right;">0.249</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Applied financial aid</td>
+<td style="text-align: right;">0.250</td>
+<td style="text-align: right;">0.433</td>
+<td style="text-align: right;">0.221</td>
+<td style="text-align: right;">0.415</td>
+<td style="text-align: right;">-0.028+</td>
+<td style="text-align: right;">0.093</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Eligible for financial aid</td>
+<td style="text-align: right;">0.212</td>
+<td style="text-align: right;">0.409</td>
+<td style="text-align: right;">0.206</td>
+<td style="text-align: right;">0.404</td>
+<td style="text-align: right;">-0.006</td>
+<td style="text-align: right;">0.714</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Enrolled if selected</td>
+<td style="text-align: right;">0.168</td>
+<td style="text-align: right;">0.374</td>
+<td style="text-align: right;">0.162</td>
+<td style="text-align: right;">0.369</td>
+<td style="text-align: right;">-0.006</td>
+<td style="text-align: right;">0.671</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Expected prob of acceptance (1st preference)</td>
+<td style="text-align: right;">64.677</td>
+<td style="text-align: right;">10.196</td>
+<td style="text-align: right;">64.886</td>
+<td style="text-align: right;">10.287</td>
+<td style="text-align: right;">0.209</td>
+<td style="text-align: right;">0.612</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Math score - greater than expected</td>
+<td style="text-align: right;">0.067</td>
+<td style="text-align: right;">0.250</td>
+<td style="text-align: right;">0.061</td>
+<td style="text-align: right;">0.239</td>
+<td style="text-align: right;">-0.006</td>
+<td style="text-align: right;">0.534</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Math score - lower than expected</td>
+<td style="text-align: right;">0.146</td>
+<td style="text-align: right;">0.353</td>
+<td style="text-align: right;">0.149</td>
+<td style="text-align: right;">0.356</td>
+<td style="text-align: right;">0.003</td>
+<td style="text-align: right;">0.851</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Math score - same as expected</td>
+<td style="text-align: right;">0.107</td>
+<td style="text-align: right;">0.309</td>
+<td style="text-align: right;">0.111</td>
+<td style="text-align: right;">0.314</td>
+<td style="text-align: right;">0.004</td>
+<td style="text-align: right;">0.734</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lang score - greater than expected</td>
+<td style="text-align: right;">0.090</td>
+<td style="text-align: right;">0.286</td>
+<td style="text-align: right;">0.094</td>
+<td style="text-align: right;">0.291</td>
+<td style="text-align: right;">0.004</td>
+<td style="text-align: right;">0.757</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lang score - lower than expected</td>
+<td style="text-align: right;">0.141</td>
+<td style="text-align: right;">0.348</td>
+<td style="text-align: right;">0.124</td>
+<td style="text-align: right;">0.329</td>
+<td style="text-align: right;">-0.017</td>
+<td style="text-align: right;">0.201</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lang score - same as expected</td>
+<td style="text-align: right;">0.093</td>
+<td style="text-align: right;">0.291</td>
+<td style="text-align: right;">0.109</td>
+<td style="text-align: right;">0.312</td>
+<td style="text-align: right;">0.016</td>
+<td style="text-align: right;">0.194</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Would apply to technical HE</td>
+<td style="text-align: right;">0.052</td>
+<td style="text-align: right;">0.222</td>
+<td style="text-align: right;">0.061</td>
+<td style="text-align: right;">0.239</td>
+<td style="text-align: right;">0.009</td>
+<td style="text-align: right;">0.350</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Math I - Expected score</td>
+<td style="text-align: right;">717.921</td>
+<td style="text-align: right;">154.387</td>
+<td style="text-align: right;">725.474</td>
+<td style="text-align: right;">148.624</td>
+<td style="text-align: right;">7.553</td>
+<td style="text-align: right;">0.538</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lang - Expected score</td>
+<td style="text-align: right;">779.140</td>
+<td style="text-align: right;">132.697</td>
+<td style="text-align: right;">781.511</td>
+<td style="text-align: right;">133.994</td>
+<td style="text-align: right;">2.370</td>
+<td style="text-align: right;">0.830</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Expected salary</td>
+<td style="text-align: right;">1604384.285</td>
+<td style="text-align: right;">388065.201</td>
+<td style="text-align: right;">1635351.657</td>
+<td style="text-align: right;">409270.618</td>
+<td style="text-align: right;">30967.372+</td>
+<td style="text-align: right;">0.054</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+
+
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="tbl-balance-1-3" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-balance-1" style="flex-basis: 100.0%;justify-content: center;">
+<table class="table table-hover lightable-paper table-sm table-striped small" data-quarto-postprocess="true">
+<caption>(c) S1.3 Survey not answered</caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Control (N=33692)
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Treated (N=22461)
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: right; empty-cells: hide; border-bottom: hidden;"></th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" style="text-align: left; background-color: white !important;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Mean</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Std. Dev.</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Mean</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Std. Dev.</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Diff. in Means</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Grad. year</td>
+<td style="text-align: right;">2020.973</td>
+<td style="text-align: right;">2.739</td>
+<td style="text-align: right;">2020.964</td>
+<td style="text-align: right;">2.820</td>
+<td style="text-align: right;">-0.010</td>
+<td style="text-align: right;">0.685</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">N Classmates (grade)</td>
+<td style="text-align: right;">38.900</td>
+<td style="text-align: right;">43.150</td>
+<td style="text-align: right;">38.070</td>
+<td style="text-align: right;">42.504</td>
+<td style="text-align: right;">-0.830*</td>
+<td style="text-align: right;">0.024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Classmates (grade) miss</td>
+<td style="text-align: right;">0.093</td>
+<td style="text-align: right;">0.291</td>
+<td style="text-align: right;">0.092</td>
+<td style="text-align: right;">0.289</td>
+<td style="text-align: right;">-0.002</td>
+<td style="text-align: right;">0.536</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">N Classmates (class)</td>
+<td style="text-align: right;">11.457</td>
+<td style="text-align: right;">9.135</td>
+<td style="text-align: right;">11.352</td>
+<td style="text-align: right;">9.045</td>
+<td style="text-align: right;">-0.105</td>
+<td style="text-align: right;">0.180</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Classmates (class) miss</td>
+<td style="text-align: right;">0.093</td>
+<td style="text-align: right;">0.291</td>
+<td style="text-align: right;">0.092</td>
+<td style="text-align: right;">0.289</td>
+<td style="text-align: right;">-0.002</td>
+<td style="text-align: right;">0.536</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Family income (decile)</td>
+<td style="text-align: right;">23.492</td>
+<td style="text-align: right;">38.295</td>
+<td style="text-align: right;">24.096</td>
+<td style="text-align: right;">38.773</td>
+<td style="text-align: right;">0.604+</td>
+<td style="text-align: right;">0.069</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Family income (decile) miss</td>
+<td style="text-align: right;">0.204</td>
+<td style="text-align: right;">0.403</td>
+<td style="text-align: right;">0.211</td>
+<td style="text-align: right;">0.408</td>
+<td style="text-align: right;">0.007+</td>
+<td style="text-align: right;">0.054</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Age</td>
+<td style="text-align: right;">19.097</td>
+<td style="text-align: right;">3.327</td>
+<td style="text-align: right;">19.096</td>
+<td style="text-align: right;">3.357</td>
+<td style="text-align: right;">-0.001</td>
+<td style="text-align: right;">0.967</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Public school</td>
+<td style="text-align: right;">0.083</td>
+<td style="text-align: right;">0.275</td>
+<td style="text-align: right;">0.086</td>
+<td style="text-align: right;">0.281</td>
+<td style="text-align: right;">0.004</td>
+<td style="text-align: right;">0.115</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Voucher school</td>
+<td style="text-align: right;">0.604</td>
+<td style="text-align: right;">0.489</td>
+<td style="text-align: right;">0.607</td>
+<td style="text-align: right;">0.488</td>
+<td style="text-align: right;">0.003</td>
+<td style="text-align: right;">0.408</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Private school</td>
+<td style="text-align: right;">0.304</td>
+<td style="text-align: right;">0.460</td>
+<td style="text-align: right;">0.298</td>
+<td style="text-align: right;">0.457</td>
+<td style="text-align: right;">-0.006</td>
+<td style="text-align: right;">0.100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Humanist school</td>
+<td style="text-align: right;">0.770</td>
+<td style="text-align: right;">0.421</td>
+<td style="text-align: right;">0.765</td>
+<td style="text-align: right;">0.424</td>
+<td style="text-align: right;">-0.005</td>
+<td style="text-align: right;">0.172</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Vocational school</td>
+<td style="text-align: right;">0.229</td>
+<td style="text-align: right;">0.420</td>
+<td style="text-align: right;">0.234</td>
+<td style="text-align: right;">0.423</td>
+<td style="text-align: right;">0.005</td>
+<td style="text-align: right;">0.137</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BEA</td>
+<td style="text-align: right;">0.031</td>
+<td style="text-align: right;">0.173</td>
+<td style="text-align: right;">0.033</td>
+<td style="text-align: right;">0.178</td>
+<td style="text-align: right;">0.002</td>
+<td style="text-align: right;">0.277</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PACE</td>
+<td style="text-align: right;">0.104</td>
+<td style="text-align: right;">0.305</td>
+<td style="text-align: right;">0.103</td>
+<td style="text-align: right;">0.303</td>
+<td style="text-align: right;">-0.001</td>
+<td style="text-align: right;">0.590</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Took PDT 2022</td>
+<td style="text-align: right;">0.209</td>
+<td style="text-align: right;">0.407</td>
+<td style="text-align: right;">0.205</td>
+<td style="text-align: right;">0.404</td>
+<td style="text-align: right;">-0.004</td>
+<td style="text-align: right;">0.228</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Took PAES 2022</td>
+<td style="text-align: right;">1.199</td>
+<td style="text-align: right;">0.569</td>
+<td style="text-align: right;">1.195</td>
+<td style="text-align: right;">0.565</td>
+<td style="text-align: right;">-0.004</td>
+<td style="text-align: right;">0.358</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Diff 1st pref cutoff and actual score</td>
+<td style="text-align: right;">107.953</td>
+<td style="text-align: right;">99.183</td>
+<td style="text-align: right;">107.910</td>
+<td style="text-align: right;">99.901</td>
+<td style="text-align: right;">-0.043</td>
+<td style="text-align: right;">0.960</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">GPA score</td>
+<td style="text-align: right;">666.782</td>
+<td style="text-align: right;">155.784</td>
+<td style="text-align: right;">668.180</td>
+<td style="text-align: right;">155.885</td>
+<td style="text-align: right;">1.399</td>
+<td style="text-align: right;">0.298</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ranking score</td>
+<td style="text-align: right;">683.970</td>
+<td style="text-align: right;">169.539</td>
+<td style="text-align: right;">685.517</td>
+<td style="text-align: right;">169.655</td>
+<td style="text-align: right;">1.547</td>
+<td style="text-align: right;">0.290</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Language score (max)</td>
+<td style="text-align: right;">627.435</td>
+<td style="text-align: right;">114.810</td>
+<td style="text-align: right;">627.398</td>
+<td style="text-align: right;">114.397</td>
+<td style="text-align: right;">-0.037</td>
+<td style="text-align: right;">0.970</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Math I score (max)</td>
+<td style="text-align: right;">526.762</td>
+<td style="text-align: right;">110.976</td>
+<td style="text-align: right;">527.757</td>
+<td style="text-align: right;">111.199</td>
+<td style="text-align: right;">0.995</td>
+<td style="text-align: right;">0.299</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Math II score (max)</td>
+<td style="text-align: right;">238.886</td>
+<td style="text-align: right;">220.126</td>
+<td style="text-align: right;">238.862</td>
+<td style="text-align: right;">220.730</td>
+<td style="text-align: right;">-0.024</td>
+<td style="text-align: right;">0.990</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Soc. Sciences score (max)</td>
+<td style="text-align: right;">242.491</td>
+<td style="text-align: right;">252.921</td>
+<td style="text-align: right;">245.528</td>
+<td style="text-align: right;">253.341</td>
+<td style="text-align: right;">3.037</td>
+<td style="text-align: right;">0.164</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Science score (max)</td>
+<td style="text-align: right;">373.842</td>
+<td style="text-align: right;">225.383</td>
+<td style="text-align: right;">371.553</td>
+<td style="text-align: right;">226.644</td>
+<td style="text-align: right;">-2.289</td>
+<td style="text-align: right;">0.240</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+
+
+</div>
+</div>
+</div>
+</section>
+<section id="applicants-without-recorded-preferences" class="level3">
+<h3 class="anchored" data-anchor-id="applicants-without-recorded-preferences">Applicants without recorded preferences</h3>
+<p>For applicant without recorded preferences, we use the same procedure, but create a different treatment variable. In this case, applicants cannot receive personalized information about their preferences, but for the treated group in this case, we include the customized search engine.</p>
+<div id="tbl-balance-2" class="cell tbl-parent quarto-layout-panel anchored">
+<div class="panel-caption table-caption">
+<p>Table&nbsp;2: Balance tables after randomization for groups without recorded preferences</p>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="tbl-balance-2-1" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-balance-2" style="flex-basis: 100.0%;justify-content: center;">
+<table class="table table-hover lightable-paper table-sm table-striped small" data-quarto-postprocess="true">
+<caption>(a) S2.1 Survey in progress</caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Control (N=1310)
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Treated NP (N=874)
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: right; empty-cells: hide; border-bottom: hidden;"></th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" style="text-align: left; background-color: white !important;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Mean</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Std. Dev.</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Mean</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Std. Dev.</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Diff. in Means</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Grad. year</td>
+<td style="text-align: right;">2021.479</td>
+<td style="text-align: right;">2.739</td>
+<td style="text-align: right;">2021.462</td>
+<td style="text-align: right;">2.603</td>
+<td style="text-align: right;">-0.017</td>
+<td style="text-align: right;">0.883</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">N Classmates (grade)</td>
+<td style="text-align: right;">48.236</td>
+<td style="text-align: right;">42.696</td>
+<td style="text-align: right;">48.237</td>
+<td style="text-align: right;">44.723</td>
+<td style="text-align: right;">0.001</td>
+<td style="text-align: right;">1.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Classmates (grade) miss</td>
+<td style="text-align: right;">0.079</td>
+<td style="text-align: right;">0.269</td>
+<td style="text-align: right;">0.073</td>
+<td style="text-align: right;">0.261</td>
+<td style="text-align: right;">-0.005</td>
+<td style="text-align: right;">0.640</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">N Classmates (class)</td>
+<td style="text-align: right;">14.180</td>
+<td style="text-align: right;">9.837</td>
+<td style="text-align: right;">13.611</td>
+<td style="text-align: right;">9.432</td>
+<td style="text-align: right;">-0.569</td>
+<td style="text-align: right;">0.175</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Classmates (class) miss</td>
+<td style="text-align: right;">0.079</td>
+<td style="text-align: right;">0.269</td>
+<td style="text-align: right;">0.073</td>
+<td style="text-align: right;">0.261</td>
+<td style="text-align: right;">-0.005</td>
+<td style="text-align: right;">0.640</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Family income (decile)</td>
+<td style="text-align: right;">25.425</td>
+<td style="text-align: right;">39.932</td>
+<td style="text-align: right;">23.467</td>
+<td style="text-align: right;">38.304</td>
+<td style="text-align: right;">-1.958</td>
+<td style="text-align: right;">0.250</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Family income (decile) miss</td>
+<td style="text-align: right;">0.227</td>
+<td style="text-align: right;">0.419</td>
+<td style="text-align: right;">0.204</td>
+<td style="text-align: right;">0.403</td>
+<td style="text-align: right;">-0.023</td>
+<td style="text-align: right;">0.197</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Age</td>
+<td style="text-align: right;">19.443</td>
+<td style="text-align: right;">5.440</td>
+<td style="text-align: right;">19.479</td>
+<td style="text-align: right;">5.397</td>
+<td style="text-align: right;">0.037</td>
+<td style="text-align: right;">0.877</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Public school</td>
+<td style="text-align: right;">0.038</td>
+<td style="text-align: right;">0.192</td>
+<td style="text-align: right;">0.041</td>
+<td style="text-align: right;">0.199</td>
+<td style="text-align: right;">0.003</td>
+<td style="text-align: right;">0.724</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Voucher school</td>
+<td style="text-align: right;">0.585</td>
+<td style="text-align: right;">0.493</td>
+<td style="text-align: right;">0.557</td>
+<td style="text-align: right;">0.497</td>
+<td style="text-align: right;">-0.028</td>
+<td style="text-align: right;">0.203</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Private school</td>
+<td style="text-align: right;">0.362</td>
+<td style="text-align: right;">0.481</td>
+<td style="text-align: right;">0.386</td>
+<td style="text-align: right;">0.487</td>
+<td style="text-align: right;">0.024</td>
+<td style="text-align: right;">0.262</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Humanist school</td>
+<td style="text-align: right;">0.632</td>
+<td style="text-align: right;">0.482</td>
+<td style="text-align: right;">0.636</td>
+<td style="text-align: right;">0.481</td>
+<td style="text-align: right;">0.004</td>
+<td style="text-align: right;">0.846</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Vocational school</td>
+<td style="text-align: right;">0.366</td>
+<td style="text-align: right;">0.482</td>
+<td style="text-align: right;">0.360</td>
+<td style="text-align: right;">0.480</td>
+<td style="text-align: right;">-0.005</td>
+<td style="text-align: right;">0.803</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BEA</td>
+<td style="text-align: right;">0.021</td>
+<td style="text-align: right;">0.142</td>
+<td style="text-align: right;">0.024</td>
+<td style="text-align: right;">0.153</td>
+<td style="text-align: right;">0.003</td>
+<td style="text-align: right;">0.599</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PACE</td>
+<td style="text-align: right;">0.185</td>
+<td style="text-align: right;">0.388</td>
+<td style="text-align: right;">0.200</td>
+<td style="text-align: right;">0.400</td>
+<td style="text-align: right;">0.015</td>
+<td style="text-align: right;">0.370</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Took PDT 2022</td>
+<td style="text-align: right;">0.044</td>
+<td style="text-align: right;">0.204</td>
+<td style="text-align: right;">0.025</td>
+<td style="text-align: right;">0.157</td>
+<td style="text-align: right;">-0.018*</td>
+<td style="text-align: right;">0.018</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Took PAES 2022</td>
+<td style="text-align: right;">1.075</td>
+<td style="text-align: right;">0.318</td>
+<td style="text-align: right;">1.058</td>
+<td style="text-align: right;">0.279</td>
+<td style="text-align: right;">-0.016</td>
+<td style="text-align: right;">0.202</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GPA score</td>
+<td style="text-align: right;">610.000</td>
+<td style="text-align: right;">172.967</td>
+<td style="text-align: right;">606.231</td>
+<td style="text-align: right;">167.794</td>
+<td style="text-align: right;">-3.769</td>
+<td style="text-align: right;">0.612</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ranking score</td>
+<td style="text-align: right;">625.721</td>
+<td style="text-align: right;">187.237</td>
+<td style="text-align: right;">621.778</td>
+<td style="text-align: right;">183.011</td>
+<td style="text-align: right;">-3.943</td>
+<td style="text-align: right;">0.625</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Language score (max)</td>
+<td style="text-align: right;">517.748</td>
+<td style="text-align: right;">173.517</td>
+<td style="text-align: right;">517.701</td>
+<td style="text-align: right;">172.210</td>
+<td style="text-align: right;">-0.047</td>
+<td style="text-align: right;">0.995</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Math I score (max)</td>
+<td style="text-align: right;">400.430</td>
+<td style="text-align: right;">215.504</td>
+<td style="text-align: right;">410.619</td>
+<td style="text-align: right;">208.966</td>
+<td style="text-align: right;">10.189</td>
+<td style="text-align: right;">0.270</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Math II score (max)</td>
+<td style="text-align: right;">193.979</td>
+<td style="text-align: right;">206.380</td>
+<td style="text-align: right;">178.245</td>
+<td style="text-align: right;">202.040</td>
+<td style="text-align: right;">-15.734+</td>
+<td style="text-align: right;">0.077</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Soc. Sciences score (max)</td>
+<td style="text-align: right;">223.663</td>
+<td style="text-align: right;">229.396</td>
+<td style="text-align: right;">214.079</td>
+<td style="text-align: right;">229.196</td>
+<td style="text-align: right;">-9.584</td>
+<td style="text-align: right;">0.339</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Science score (max)</td>
+<td style="text-align: right;">269.696</td>
+<td style="text-align: right;">231.496</td>
+<td style="text-align: right;">259.541</td>
+<td style="text-align: right;">228.208</td>
+<td style="text-align: right;">-10.155</td>
+<td style="text-align: right;">0.311</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Applied financial aid</td>
+<td style="text-align: right;">0.041</td>
+<td style="text-align: right;">0.199</td>
+<td style="text-align: right;">0.051</td>
+<td style="text-align: right;">0.221</td>
+<td style="text-align: right;">0.010</td>
+<td style="text-align: right;">0.269</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Eligible for financial aid</td>
+<td style="text-align: right;">0.055</td>
+<td style="text-align: right;">0.228</td>
+<td style="text-align: right;">0.074</td>
+<td style="text-align: right;">0.263</td>
+<td style="text-align: right;">0.019+</td>
+<td style="text-align: right;">0.075</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Enrolled if selected</td>
+<td style="text-align: right;">0.021</td>
+<td style="text-align: right;">0.142</td>
+<td style="text-align: right;">0.015</td>
+<td style="text-align: right;">0.121</td>
+<td style="text-align: right;">-0.006</td>
+<td style="text-align: right;">0.312</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Expected prob of acceptance (1st preference)</td>
+<td style="text-align: right;">65.299</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">65.299</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0.000NA</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Math score - greater than expected</td>
+<td style="text-align: right;">0.026</td>
+<td style="text-align: right;">0.159</td>
+<td style="text-align: right;">0.032</td>
+<td style="text-align: right;">0.176</td>
+<td style="text-align: right;">0.006</td>
+<td style="text-align: right;">0.412</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Math score - lower than expected</td>
+<td style="text-align: right;">0.043</td>
+<td style="text-align: right;">0.202</td>
+<td style="text-align: right;">0.041</td>
+<td style="text-align: right;">0.199</td>
+<td style="text-align: right;">-0.002</td>
+<td style="text-align: right;">0.859</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Math score - same as expected</td>
+<td style="text-align: right;">0.043</td>
+<td style="text-align: right;">0.202</td>
+<td style="text-align: right;">0.051</td>
+<td style="text-align: right;">0.221</td>
+<td style="text-align: right;">0.009</td>
+<td style="text-align: right;">0.349</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lang score - greater than expected</td>
+<td style="text-align: right;">0.027</td>
+<td style="text-align: right;">0.164</td>
+<td style="text-align: right;">0.041</td>
+<td style="text-align: right;">0.199</td>
+<td style="text-align: right;">0.014+</td>
+<td style="text-align: right;">0.091</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lang score - lower than expected</td>
+<td style="text-align: right;">0.047</td>
+<td style="text-align: right;">0.211</td>
+<td style="text-align: right;">0.039</td>
+<td style="text-align: right;">0.193</td>
+<td style="text-align: right;">-0.008</td>
+<td style="text-align: right;">0.382</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lang score - same as expected</td>
+<td style="text-align: right;">0.050</td>
+<td style="text-align: right;">0.219</td>
+<td style="text-align: right;">0.053</td>
+<td style="text-align: right;">0.223</td>
+<td style="text-align: right;">0.002</td>
+<td style="text-align: right;">0.816</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Would apply to technical HE</td>
+<td style="text-align: right;">0.029</td>
+<td style="text-align: right;">0.168</td>
+<td style="text-align: right;">0.027</td>
+<td style="text-align: right;">0.164</td>
+<td style="text-align: right;">-0.002</td>
+<td style="text-align: right;">0.830</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Math I - Expected score</td>
+<td style="text-align: right;">630.672</td>
+<td style="text-align: right;">184.444</td>
+<td style="text-align: right;">690.061</td>
+<td style="text-align: right;">138.095</td>
+<td style="text-align: right;">59.389+</td>
+<td style="text-align: right;">0.056</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lang - Expected score</td>
+<td style="text-align: right;">691.783</td>
+<td style="text-align: right;">155.551</td>
+<td style="text-align: right;">733.917</td>
+<td style="text-align: right;">162.164</td>
+<td style="text-align: right;">42.133</td>
+<td style="text-align: right;">0.175</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Expected salary</td>
+<td style="text-align: right;">1628192.500</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">1628192.500</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0.000NA</td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+
+
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="tbl-balance-2-2" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-balance-2" style="flex-basis: 100.0%;justify-content: center;">
+<table class="table table-hover lightable-paper table-sm table-striped small" data-quarto-postprocess="true">
+<caption>(b) S2.2 Survey not answered</caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Control (N=41651)
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Treated NP (N=27767)
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: right; empty-cells: hide; border-bottom: hidden;"></th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" style="text-align: left; background-color: white !important;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Mean</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Std. Dev.</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Mean</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Std. Dev.</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">Diff. in Means</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: white !important;">p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Grad. year</td>
+<td style="text-align: right;">2021.150</td>
+<td style="text-align: right;">2.991</td>
+<td style="text-align: right;">2021.112</td>
+<td style="text-align: right;">3.217</td>
+<td style="text-align: right;">-0.039</td>
+<td style="text-align: right;">0.111</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">N Classmates (grade)</td>
+<td style="text-align: right;">44.875</td>
+<td style="text-align: right;">43.539</td>
+<td style="text-align: right;">44.969</td>
+<td style="text-align: right;">43.314</td>
+<td style="text-align: right;">0.094</td>
+<td style="text-align: right;">0.779</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Classmates (grade) miss</td>
+<td style="text-align: right;">0.090</td>
+<td style="text-align: right;">0.286</td>
+<td style="text-align: right;">0.088</td>
+<td style="text-align: right;">0.283</td>
+<td style="text-align: right;">-0.002</td>
+<td style="text-align: right;">0.423</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">N Classmates (class)</td>
+<td style="text-align: right;">12.864</td>
+<td style="text-align: right;">9.577</td>
+<td style="text-align: right;">12.948</td>
+<td style="text-align: right;">9.492</td>
+<td style="text-align: right;">0.083</td>
+<td style="text-align: right;">0.259</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Classmates (class) miss</td>
+<td style="text-align: right;">0.090</td>
+<td style="text-align: right;">0.286</td>
+<td style="text-align: right;">0.088</td>
+<td style="text-align: right;">0.283</td>
+<td style="text-align: right;">-0.002</td>
+<td style="text-align: right;">0.423</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Family income (decile)</td>
+<td style="text-align: right;">26.643</td>
+<td style="text-align: right;">40.518</td>
+<td style="text-align: right;">26.669</td>
+<td style="text-align: right;">40.529</td>
+<td style="text-align: right;">0.027</td>
+<td style="text-align: right;">0.933</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Family income (decile) miss</td>
+<td style="text-align: right;">0.238</td>
+<td style="text-align: right;">0.426</td>
+<td style="text-align: right;">0.238</td>
+<td style="text-align: right;">0.426</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0.944</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Age</td>
+<td style="text-align: right;">19.653</td>
+<td style="text-align: right;">5.147</td>
+<td style="text-align: right;">19.746</td>
+<td style="text-align: right;">5.401</td>
+<td style="text-align: right;">0.093*</td>
+<td style="text-align: right;">0.024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Public school</td>
+<td style="text-align: right;">0.049</td>
+<td style="text-align: right;">0.217</td>
+<td style="text-align: right;">0.050</td>
+<td style="text-align: right;">0.218</td>
+<td style="text-align: right;">0.001</td>
+<td style="text-align: right;">0.737</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Voucher school</td>
+<td style="text-align: right;">0.576</td>
+<td style="text-align: right;">0.494</td>
+<td style="text-align: right;">0.573</td>
+<td style="text-align: right;">0.495</td>
+<td style="text-align: right;">-0.003</td>
+<td style="text-align: right;">0.447</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Private school</td>
+<td style="text-align: right;">0.365</td>
+<td style="text-align: right;">0.481</td>
+<td style="text-align: right;">0.367</td>
+<td style="text-align: right;">0.482</td>
+<td style="text-align: right;">0.001</td>
+<td style="text-align: right;">0.689</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Humanist school</td>
+<td style="text-align: right;">0.630</td>
+<td style="text-align: right;">0.483</td>
+<td style="text-align: right;">0.629</td>
+<td style="text-align: right;">0.483</td>
+<td style="text-align: right;">-0.001</td>
+<td style="text-align: right;">0.760</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Vocational school</td>
+<td style="text-align: right;">0.366</td>
+<td style="text-align: right;">0.482</td>
+<td style="text-align: right;">0.366</td>
+<td style="text-align: right;">0.482</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0.929</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BEA</td>
+<td style="text-align: right;">0.027</td>
+<td style="text-align: right;">0.163</td>
+<td style="text-align: right;">0.029</td>
+<td style="text-align: right;">0.169</td>
+<td style="text-align: right;">0.002</td>
+<td style="text-align: right;">0.116</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PACE</td>
+<td style="text-align: right;">0.181</td>
+<td style="text-align: right;">0.385</td>
+<td style="text-align: right;">0.183</td>
+<td style="text-align: right;">0.387</td>
+<td style="text-align: right;">0.002</td>
+<td style="text-align: right;">0.520</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Took PDT 2022</td>
+<td style="text-align: right;">0.078</td>
+<td style="text-align: right;">0.268</td>
+<td style="text-align: right;">0.077</td>
+<td style="text-align: right;">0.266</td>
+<td style="text-align: right;">-0.001</td>
+<td style="text-align: right;">0.676</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Took PAES 2022</td>
+<td style="text-align: right;">1.096</td>
+<td style="text-align: right;">0.365</td>
+<td style="text-align: right;">1.093</td>
+<td style="text-align: right;">0.361</td>
+<td style="text-align: right;">-0.002</td>
+<td style="text-align: right;">0.425</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GPA score</td>
+<td style="text-align: right;">620.721</td>
+<td style="text-align: right;">159.769</td>
+<td style="text-align: right;">618.419</td>
+<td style="text-align: right;">160.954</td>
+<td style="text-align: right;">-2.302+</td>
+<td style="text-align: right;">0.064</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ranking score</td>
+<td style="text-align: right;">637.907</td>
+<td style="text-align: right;">175.717</td>
+<td style="text-align: right;">635.561</td>
+<td style="text-align: right;">177.023</td>
+<td style="text-align: right;">-2.346+</td>
+<td style="text-align: right;">0.086</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Language score (max)</td>
+<td style="text-align: right;">542.205</td>
+<td style="text-align: right;">151.905</td>
+<td style="text-align: right;">542.032</td>
+<td style="text-align: right;">153.274</td>
+<td style="text-align: right;">-0.173</td>
+<td style="text-align: right;">0.884</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Math I score (max)</td>
+<td style="text-align: right;">465.103</td>
+<td style="text-align: right;">151.503</td>
+<td style="text-align: right;">465.038</td>
+<td style="text-align: right;">151.704</td>
+<td style="text-align: right;">-0.065</td>
+<td style="text-align: right;">0.956</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Math II score (max)</td>
+<td style="text-align: right;">198.647</td>
+<td style="text-align: right;">211.310</td>
+<td style="text-align: right;">197.204</td>
+<td style="text-align: right;">210.705</td>
+<td style="text-align: right;">-1.442</td>
+<td style="text-align: right;">0.377</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Soc. Sciences score (max)</td>
+<td style="text-align: right;">240.413</td>
+<td style="text-align: right;">233.263</td>
+<td style="text-align: right;">241.915</td>
+<td style="text-align: right;">233.821</td>
+<td style="text-align: right;">1.502</td>
+<td style="text-align: right;">0.407</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Science score (max)</td>
+<td style="text-align: right;">252.289</td>
+<td style="text-align: right;">233.689</td>
+<td style="text-align: right;">252.491</td>
+<td style="text-align: right;">233.935</td>
+<td style="text-align: right;">0.202</td>
+<td style="text-align: right;">0.911</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+
+
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>This information will be sent by Mineduc<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
