@@ -26,15 +26,15 @@ Access my {{% button href="https://slides.magdalenabennett.com" icon="fas fa-lin
 
 # ON-GOING PROJECTS AND WORKING PAPERS
 
-* **M. Bennett** (2022). "Differences-in-Differences using a Mixed-Integer Programming Matching Approach". Working Paper. (*Draft available soon*)
+* **M. Bennett** (2023). "Changes in School Attendance Zones over Time: The Effect of Segregation on Zoned-in and Zoned-out Areas". 
 
-* Allende, C. & **M. Bennett** (2022). "Biased Beliefs and the Dynamic Role of Information in College Choice".[{{% fontawesome file-arrow-down-solid32 %}}](http://www.magdalenabennett.com/abstracts#chile-rct/)(*Abstract*)
+* **M. Bennett** (2023). "Differences-in-Differences using a Mixed-Integer Programming Matching Approach". Working Paper. (*Draft available soon*)
 
-* **Bennett, M.**, C. Neilson, & N. Rojas (2021). "Beyond Exclusion: The Role of the Causal Effect of Testing on Attendance on the Day of the Test". Working Paper. [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/attendance/attendance_20220405/) (*Draft available soon*)
+* Allende, C. & **M. Bennett** (2023). "Biased Beliefs and the Dynamic Role of Information in College Choice".[{{% fontawesome file-arrow-down-solid32 %}}](http://www.magdalenabennett.com/abstracts#chile-rct/)(*Abstract*)
 
-* **Bennett, M.** (2020). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". Job Market Paper, Columbia University.[{{% fontawesome file-arrow-down-solid32 %}}](/files/sub/MBennett_GRD.pdf) [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/rd/rd_20210420/) 
+* **Bennett, M.**, C. Neilson, & N. Rojas (2023). "Beyond Exclusion: The Role of the Causal Effect of Testing on Attendance on the Day of the Test". Working Paper. [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/attendance/attendance_20220405/) (*Draft available soon*)
 
-* Tapia, J., J. Fabres, **M. Bennett**, G. Marshall, P. Mena, M. Escalante, D. Sabatelli, N. Dinerstein, D. Masoli, & J. Zubizarreta (2019). "Breastmilk and its effects in Bronchopulmonary Dysplasia and other major morbidities in Very Low Birthweight Infants". Working Paper.
+* **Bennett, M.** (2022). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". Job Market Paper, Columbia University.[{{% fontawesome file-arrow-down-solid32 %}}](/files/sub/MBennett_GRD.pdf) [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/rd/rd_20210420/) 
 
 
 # PREVIOUS RESEARCH
