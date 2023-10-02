@@ -12,6 +12,14 @@ Here I compile a list of some helpful resources/tips (created by me or others) t
 
 ## <a name="code"></a>Code
 
+##### That's a lot of data
+
+I'm sure everyone (?) has run into the problem of having a dataset that is too large to open in memory. Don't worry! There are many standard ways that you can solve this. [Here](https://github.com/maibennett/code/tree/master/ReadBigData) I show how to do this in Python. Nothing revolutionary, but it helps a lot when you have huge data and you only need to extract a specific chunk (e.g. state or year, or both). I illustrate this with the CoreLogic data, but you can adapt it as you wish. Just follow the comments in the script and you should be good to go!
+
+<p align="center">
+<img src="/images/python_bigdata.png" width="500">
+</p>
+
 ##### Who doesn't like stickers?
 
 Not me. I love stickers. Specially nerdy ones ([RedBubble](https://www.redbubble.com/) can attest to that). So, I decided to create some to keep my students motivated. I thought they were cool, so I am [putting them out in the world](https://github.com/maibennett/website_github/tree/master/exampleSite/content/files/Stickers). *Disclaimer: The jokes are not mine (I'm not that funny in English)*
