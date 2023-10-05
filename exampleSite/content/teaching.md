@@ -11,9 +11,9 @@ Here is a list of the courses I've taught, and some useful material I've created
 
 **STA 235H - Data Science for Business Applications (Honors)** :computer:
 
-You can check out all the course material, including the syllabus, slides, and assignments at [sta235.netlify.app](https://sta235.netlify.app)
+You can check out all the course material, including the syllabus, slides, and assignments at [sta235.com](https://sta235.com)
 
-<iframe src="https://sta235.netlify.app" width="100%" height="900px"></iframe>
+<iframe src="https://sta235.com" width="100%" height="900px"></iframe>
 
 # Past courses
 
