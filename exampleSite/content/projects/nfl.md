@@ -45,7 +45,7 @@ The position would be 10-15 hrs/week (paid), depending on availability, and the 
       <td>💡 <strong>If you want to apply</strong></td>
     </tr>
     <tr>
-      <td>Fill out the <a href="https://forms.gle/y7e72BNenAdP9qnZA">following form</a> by Dec 1st</td>
+      <td>Fill out the <a href="https://forms.gle/XL526xkoemJajk6b7">following form</a> by Dec 1st</td>
     </tr>
   </table>
 </div>
