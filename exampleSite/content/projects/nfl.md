@@ -36,7 +36,7 @@ A successful research assistant would be expected to have the following set of s
 - Proactivity and attention to detail.
 - Contextual knowledge about football and NFL functioning. Interest in the topic is considered a plus.
 
-The position would be 10-15 hrs/week (paid), depending on availability, and the ideal starting data would be Dec 12th (flexible depending on availability). *There would be a 1.5-2 wk break for the holidays*.
+The position would be 10-15 hrs/week (paid), depending on availability, and the ideal starting date would be Dec 12th (flexible depending on availability). *There would be a 1.5-2 wk break for the holidays*.
 
 {{% notice info %}}
 If you are interested in applying, **fill out the [following form](https://forms.gle/y7e72BNenAdP9qnZA) by Dec 1st**
