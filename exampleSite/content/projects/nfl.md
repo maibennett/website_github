@@ -38,6 +38,7 @@ A successful research assistant would be expected to have the following set of s
 
 The position would be 10-15 hrs/week (paid), depending on availability, and the ideal starting date would be Dec 12th (flexible depending on availability). *There would be a 1.5-2 wk break for the holidays*.
 
-{{% notice info %}}
-If you are interested in applying, **fill out the [following form](https://forms.gle/y7e72BNenAdP9qnZA) by Dec 1st**
-{{% /notice %}}
+|💡 **If you want to apply** |
+|:----------------------|
+|fill out the [following form](https://forms.gle/y7e72BNenAdP9qnZA) by Dec 1st |
+
