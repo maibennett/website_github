@@ -386,24 +386,24 @@ class: left, bottom, inverse
 Regressions
 ]
 ---
-# Insurance costs
+# Amazon prices
 
-In this question, we are looking at insurance costs. We have data on insurance premiums in addition to individual data from the customers:
+In this question, we are looking at luggage prices in Amazon US. We have data scraped from the website:
 
 ```{r, message=FALSE, warning=FALSE}
-insurance = read.csv("https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/files/data/insurance.csv")
+amz = read.csv("https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/files/data/amz_luggage.csv")
 
-head(insurance)
+amz %>% select(-title) %>% head(.)
 ```
 
-We want to find the relation between these covariates and the outcome (`charges`).
+We want to find the association between covariates and the outcome (`price`).
 
 ---
 # Question 1
 
 .small[
-```{r, echo = FALSE}
-lm1 = lm(charges ~ smoker*bmi, data = insurance)
+```{r}
+lm1 = lm(price ~ isBestSeller*stars, data = amz)
 
 summary(lm1)
 ```
@@ -414,7 +414,7 @@ summary(lm1)
 
 .small[
 ```{r}
-lm1 = lm(charges ~ smoker*bmi, data = insurance)
+lm1 = lm(price ~ isBestSeller*stars, data = amz)
 
 summary(lm1)
 ```
@@ -425,7 +425,7 @@ summary(lm1)
 
 .small[
 ```{r}
-lm1 = lm(charges ~ smoker*bmi, data = insurance)
+lm1 = lm(price ~ isBestSeller*stars, data = amz)
 
 summary(lm1)
 ```

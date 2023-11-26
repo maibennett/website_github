@@ -96,55 +96,61 @@ class: left, bottom, inverse
 Regressions
 ]
 ---
-# Insurance costs
+# Amazon prices
 
-In this question, we are looking at insurance costs. We have data on insurance premiums in addition to individual data from the customers:
+In this question, we are looking at luggage prices in Amazon US. We have data scraped from the website:
 
 
 ```r
-insurance = read.csv("https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/files/data/insurance.csv")
+amz = read.csv("https://raw.githubusercontent.com/maibennett/website_github/master/exampleSite/content/files/data/amz_luggage.csv")
 
-head(insurance)
+amz %&gt;% select(-title) %&gt;% head(.)
 ```
 
 ```
-##   age    sex    bmi children smoker    region   charges
-## 1  19 female 27.900        0    yes southwest 16884.924
-## 2  18   male 33.770        1     no southeast  1725.552
-## 3  28   male 33.000        3     no southeast  4449.462
-## 4  33   male 22.705        0     no northwest 21984.471
-## 5  32   male 28.880        0     no northwest  3866.855
-## 6  31 female 25.740        0     no southeast  3756.622
+##      uid       asin stars reviews boughtInLastMonth isBestSeller  price
+## 1 297768 B004DPRTSE   3.7     138                 0            0  67.90
+## 2 297745 B0BSBX2XPR   3.6     379               100            0 109.11
+## 3 295361 B0BG96C62P   4.7    2835                 0            0 100.42
+## 4 295069 B00NF9HISK   3.3     825                 0            0  57.56
+## 5 297025 B09VD9FGDH   2.5     221                 0            0  70.11
+## 6 296801 B0B3LZ9KNH   2.5    3368               200            0 102.42
 ```
 
-We want to find the relation between these covariates and the outcome (`charges`).
+We want to find the association between covariates and the outcome (`price`).
 
 ---
 # Question 1
 
 .small[
 
+```r
+lm1 = lm(price ~ isBestSeller*stars, data = amz)
+
+summary(lm1)
+```
+
 ```
 ## 
 ## Call:
-## lm(formula = charges ~ smoker * bmi, data = insurance)
+## lm(formula = price ~ isBestSeller * stars, data = amz)
 ## 
 ## Residuals:
 ##      Min       1Q   Median       3Q      Max 
-## -19768.0  -4400.7   -869.5   2957.7  31055.9 
+## -115.054  -26.893   -1.386   25.022  137.700 
 ## 
 ## Coefficients:
-##                Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)     5879.42     976.87   6.019 2.27e-09 ***
-## smokeryes     -19066.00    2092.03  -9.114  &lt; 2e-16 ***
-## bmi               83.35      31.27   2.666  0.00778 ** 
-## smokeryes:bmi   1389.76      66.78  20.810  &lt; 2e-16 ***
+##                    Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)         99.3724     1.8165  54.707   &lt;2e-16 ***
+## isBestSeller        29.4236    17.1668   1.714   0.0866 .  
+## stars                4.9546     0.5299   9.350   &lt;2e-16 ***
+## isBestSeller:stars  11.5092     4.9535   2.323   0.0202 *  
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 6161 on 1334 degrees of freedom
-## Multiple R-squared:  0.7418,	Adjusted R-squared:  0.7412 
-## F-statistic:  1277 on 3 and 1334 DF,  p-value: &lt; 2.2e-16
+## Residual standard error: 38.4 on 4037 degrees of freedom
+## Multiple R-squared:  0.0586,	Adjusted R-squared:  0.0579 
+## F-statistic: 83.77 on 3 and 4037 DF,  p-value: &lt; 2.2e-16
 ```
 ]
 
@@ -154,7 +160,7 @@ We want to find the relation between these covariates and the outcome (`charges`
 .small[
 
 ```r
-lm1 = lm(charges ~ smoker*bmi, data = insurance)
+lm1 = lm(price ~ isBestSeller*stars, data = amz)
 
 summary(lm1)
 ```
@@ -162,24 +168,24 @@ summary(lm1)
 ```
 ## 
 ## Call:
-## lm(formula = charges ~ smoker * bmi, data = insurance)
+## lm(formula = price ~ isBestSeller * stars, data = amz)
 ## 
 ## Residuals:
 ##      Min       1Q   Median       3Q      Max 
-## -19768.0  -4400.7   -869.5   2957.7  31055.9 
+## -115.054  -26.893   -1.386   25.022  137.700 
 ## 
 ## Coefficients:
-##                Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)     5879.42     976.87   6.019 2.27e-09 ***
-## smokeryes     -19066.00    2092.03  -9.114  &lt; 2e-16 ***
-## bmi               83.35      31.27   2.666  0.00778 ** 
-## smokeryes:bmi   1389.76      66.78  20.810  &lt; 2e-16 ***
+##                    Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)         99.3724     1.8165  54.707   &lt;2e-16 ***
+## isBestSeller        29.4236    17.1668   1.714   0.0866 .  
+## stars                4.9546     0.5299   9.350   &lt;2e-16 ***
+## isBestSeller:stars  11.5092     4.9535   2.323   0.0202 *  
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 6161 on 1334 degrees of freedom
-## Multiple R-squared:  0.7418,	Adjusted R-squared:  0.7412 
-## F-statistic:  1277 on 3 and 1334 DF,  p-value: &lt; 2.2e-16
+## Residual standard error: 38.4 on 4037 degrees of freedom
+## Multiple R-squared:  0.0586,	Adjusted R-squared:  0.0579 
+## F-statistic: 83.77 on 3 and 4037 DF,  p-value: &lt; 2.2e-16
 ```
 ]
 
@@ -189,7 +195,7 @@ summary(lm1)
 .small[
 
 ```r
-lm1 = lm(charges ~ smoker*bmi, data = insurance)
+lm1 = lm(price ~ isBestSeller*stars, data = amz)
 
 summary(lm1)
 ```
@@ -197,24 +203,24 @@ summary(lm1)
 ```
 ## 
 ## Call:
-## lm(formula = charges ~ smoker * bmi, data = insurance)
+## lm(formula = price ~ isBestSeller * stars, data = amz)
 ## 
 ## Residuals:
 ##      Min       1Q   Median       3Q      Max 
-## -19768.0  -4400.7   -869.5   2957.7  31055.9 
+## -115.054  -26.893   -1.386   25.022  137.700 
 ## 
 ## Coefficients:
-##                Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)     5879.42     976.87   6.019 2.27e-09 ***
-## smokeryes     -19066.00    2092.03  -9.114  &lt; 2e-16 ***
-## bmi               83.35      31.27   2.666  0.00778 ** 
-## smokeryes:bmi   1389.76      66.78  20.810  &lt; 2e-16 ***
+##                    Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)         99.3724     1.8165  54.707   &lt;2e-16 ***
+## isBestSeller        29.4236    17.1668   1.714   0.0866 .  
+## stars                4.9546     0.5299   9.350   &lt;2e-16 ***
+## isBestSeller:stars  11.5092     4.9535   2.323   0.0202 *  
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 6161 on 1334 degrees of freedom
-## Multiple R-squared:  0.7418,	Adjusted R-squared:  0.7412 
-## F-statistic:  1277 on 3 and 1334 DF,  p-value: &lt; 2.2e-16
+## Residual standard error: 38.4 on 4037 degrees of freedom
+## Multiple R-squared:  0.0586,	Adjusted R-squared:  0.0579 
+## F-statistic: 83.77 on 3 and 4037 DF,  p-value: &lt; 2.2e-16
 ```
 ]
 
