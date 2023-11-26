@@ -4,6 +4,7 @@ subtitle: "Fall 2023"
 author: "McCombs School of Business, UT Austin"
 output:
   xaringan::moon_reader:
+    self_contained: true
     css: [xaringan-themer.css]
     lib_dir: libs
     nature:
