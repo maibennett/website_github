@@ -1,0 +1,14 @@
+Variable,Description
+person_id,ID
+treatment,Whether the person got selected in the lottery or not
+race_bl,Race
+birthyear_bl,Birth year
+female_bl,Whether the person is female or not
+health_gen_bl,General health score (1 to 5)
+employ_bl,Whether the person is employed or not
+hhinc_cat_bl,Household income (aprox) in dollars
+edu_bl,Education (aprox) in years
+hhsize_bl,Number of people that live in their household
+health_gen_fu,General health score (1 to 5) (follow up)
+employ_fu,Whether the person is employed or not (follow up)
+hhinc_cat_fu,Household income (aprox) in dollars (follow up)
