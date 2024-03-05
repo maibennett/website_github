@@ -93,7 +93,7 @@ If you ever needed to go from lat/lon to addresses (or vice versa), then this co
 
 ##### Send a message to your phone when your code is done!
 
-**UPDATE:** As of January 2024, I feel like Twilio has become quite cumbersome for a small project like this, so I've changed my system to now send me a push notification to my phone. If you still want to send a text message, read the following section where I show how to do this with Twilio.
+**UPDATE:** As of January 2024, I feel like Twilio has become quite cumbersome for a small project like this, so I've changed my system to now send me a push notification to my phone. If you still want to send a text message, read the second sub-section her, where I show how to do this with Twilio.
 
 ##### Push notification
 
@@ -116,7 +116,7 @@ pushme <- function(){
   msg = sample(msg_list,1)
   
   # Now we can send away!
-  pushover(message = msg)
+  pushover(message = msg, priority = 1, sound = "tugboat")
   
 }
 ```
@@ -132,7 +132,7 @@ library(emo)
 dancer <- emo::ji("dancer") 
 ```
 
-And voilà! It's done. You just write `pushme()` at the end of your R Code (or wherever you want to be notified), and that's it. You get pretty push notifications when you're done like this one:
+And voilà! It's done. You just write `pushme()` at the end of your R Code (or wherever you want to be notified), and that's it. You get pretty push notifications when you're done, like this one:
 
 <p align="center">
 <img src="/images/push_notification.jpg" width="400">
@@ -170,7 +170,7 @@ textme <- function(){
 }
 ```
 
-And voilà! (PS: You will get the ugly "free trial" message ahead of your own customized message, but you can get rid of that by, you know, paying money).
+And that's it! (PS: You will get the ugly "free trial" message ahead of your own customized message, but you can get rid of that by, you know, paying money).
 
 <p align="center">
 <img src="/images/text_message.jpg" width="400">
