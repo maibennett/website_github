@@ -91,9 +91,38 @@ If you ever needed to go from lat/lon to addresses (or vice versa), then this co
 
 *PS: You can also easily adapt this code to use Open Street Map (OSM) instead of the Google API, if you want. However, keep in mind that OSM does cap the number of requests significantly compared to Google.*
 
-##### Send a text message to your phone when your code is done!
+##### Send a message to your phone when your code is done!
 
-This is some code that [@RichPauloo](https://twitter.com/RichPauloo) created and tweeted about, and you can find [here](https://richpauloo.github.io/2019-09-11-Using-Twilio-to-text-myself-after-long-running-jobs/). If you have ever been running code that takes forever (e.g. a **lot** of simulations), you might have dreamt of something like this. I implemented it as soon as he tweeted about it: It works great, and its super easy to incorporate to your R code. You will have to set up a Twilio account, but it's no fuzz. For changing the emojis, I found useful to install the `emo` package:
+**UPDATE:** As of January 2024, I feel like Twilio has become quite cumbersome for a small project like this, so I've changed my system to now send me a push notification to my phone. If you still want to send a text message, read the following section where I show how to do this with Twilio.
+
+##### Push notification
+
+Using the `pushover` app on your phone, you can easily send push notifications when you're done, and it's basically free (PS: You do have to pay a one-time license fee of $4.99, but I feel it's worth it). So how do we do this? Download the app `pushover` on your phone, and create an application (it's super intuitive, but use a name that makes sense for the notification -- e.g. "RCode"). When you have that, you can retreive the Pushover User Key and Token Key (for the application), and add it to the following code using the [`pushoverr`](https://github.com/briandconnelly/pushoverr) package for R:
+
+```{r}
+library(pushoverr)
+library(emo)
+
+set_pushover_user(user = "USER_KEY")
+set_pushover_app(token = "APPLICATION_TOKEN")
+
+pushme <- function(){
+
+  #messages:
+  msg_list = c(paste(emo::ji("dancer"),"Woohoo! Dreams are not dead! Code is done!.",emo::ji("celebrate")),
+               paste(emo::ji("flower"),"You smell like flowers",emo::ji("flower"),"Now get to work, because your code is done!",emo::ji("sparkles")),
+               paste(emo::ji("alarm"),"C'mon, get moving! Code is DONE!", emo::ji("boom")))
+  
+  msg = sample(msg_list,1)
+  
+  # Now we can send away!
+  pushover(message = msg)
+  
+}
+```
+
+Here, I use the `emo` package to get pretty messages. You can install it like this:
+
 ```{r}
 # install.packages("devtools")
 devtools::install_github("hadley/emo")
@@ -102,6 +131,18 @@ library(emo)
 # Dancer emoji (of course)
 dancer <- emo::ji("dancer") 
 ```
+
+And voilà! It's done. You just write `pushme()` at the end of your R Code (or wherever you want to be notified), and that's it. You get pretty push notifications when you're done like this one:
+
+<p align="center">
+<img src="/images/push_notification.jpg" width="400">
+</p>
+
+
+##### Text message
+
+This is some code that [@RichPauloo](https://twitter.com/RichPauloo) created and tweeted about, and you can find [here](https://richpauloo.github.io/2019-09-11-Using-Twilio-to-text-myself-after-long-running-jobs/). If you have ever been running code that takes forever (e.g. a **lot** of simulations), you might have dreamt of something like this. I implemented it as soon as he tweeted about it: It works great, and its super easy to incorporate to your R code. You will have to set up a Twilio account, but it's no fuzz. For changing the emojis, I found useful to install the `emo` package (see code above to install it).
+
 I also randomized different messages you could get, just because I thought it was more fun :). Here's a brief example:
 
 ```{r}
