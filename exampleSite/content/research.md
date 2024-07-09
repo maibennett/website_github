@@ -9,6 +9,10 @@ slug = "research"
 
 Access my {{% button href="https://slides.magdalenabennett.com" icon="fas fa-line-chart" icon-position="right" %}}repository of presentations{{% /button %}} 
 
+# PORTFOLIO
+
+You can see a summary of some of my projects in my {{% button href="https://projects.magdalenabennett.com/portfolio" icon="fas fa-person-chalkboard" icon-position="right" %}}research portfolio{{% /button %}} 
+
 # PUBLICATIONS
 
 * Behrens, M. I., **M. Bennett**, R. Castillo, D. Ponce, N. Rogers, & R. Vergara (2022). "Cancer History is Associated with Slower Speed of Cognitive Decline in Patients with Amnestic Cognitive Impairment". *Journal of Alzheimer's Disease. Forthcoming.*[{{% fontawesome file-arrow-down-solid32 %}}](https://pubmed.ncbi.nlm.nih.gov/35491784/#:~:text=This%20study%20suggests%20that%20a,accelerated%20deterioration%20at%20follow%2Dup)
