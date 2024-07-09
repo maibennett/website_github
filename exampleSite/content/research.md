@@ -11,6 +11,8 @@ Access my {{% button href="https://slides.magdalenabennett.com" icon="fas fa-lin
 
 # PORTFOLIO
 
+You can see a summary of some of my projects in my [{{% fontawesome person-chalkboard-solid32 %}} research portfolio](https://projects.magdalenabennett.com/portfolio) 
+
 You can see a summary of some of my projects in my {{% button href="https://projects.magdalenabennett.com/portfolio" icon="fas fa-person-chalkboard" icon-position="right" %}}research portfolio{{% /button %}} 
 
 # PUBLICATIONS
