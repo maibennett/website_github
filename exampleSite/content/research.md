@@ -11,7 +11,7 @@ Access my [{{% fontawesome person-chalkboard-solid32 %}} repository of presentat
 
 # PORTFOLIO
 
-You can see a summary of some of my projects in my [{{% fontawesome chart-line-solid %}} research portfolio](https://projects.magdalenabennett.com/portfolio) 
+You can see a summary of some of my projects in my [{{% fontawesome chart-line-solid32 %}} research portfolio](https://projects.magdalenabennett.com/portfolio) 
 
 
 # PUBLICATIONS
