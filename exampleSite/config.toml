@@ -28,7 +28,7 @@ enableEmoji = true
     # Google Analytics 4
     googleAnalyticsID = "G-NG7M9GM96S"
 
-    dateformat = "2024-15-07"
+    dateformat = "2024-07-15"
 
     hideCredits = false
     hideCopyright = false

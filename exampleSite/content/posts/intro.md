@@ -1,5 +1,5 @@
 +++
-date = "July 15, 2024"
+date = "2024-07-15"
 title = "Testing, testing"
 description = "Testing potential posts"
 images = ["/images/so-many-ideas.png"]
