@@ -1,10 +1,10 @@
 +++
-date = "07-15-2024"
+date = "July 15, 2024"
 title = "Testing, testing"
 description = "Testing potential posts"
 images = ["/images/so-many-ideas.png"]
 math = "true"
-series = ["Posts", "Test"]
+series = ["Test"]
 +++
 
 ## Testing, testing
@@ -13,4 +13,6 @@ series = ["Posts", "Test"]
 
 ---
 
+<center>
 {{< figure src="/images/so-many-ideas.png" caption="(Source: Poorly Drawn Lines)" >}}
+</center>
