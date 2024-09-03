@@ -1725,14 +1725,12 @@ Figure 1. Variable Importance in Cluster Formation
 <div id="characteristics-by-cluster" class="section level1">
 <h1>Characteristics by cluster</h1>
 <p>In this section, we compare different characteristics by clusters, as
-previously defined. We can see that clients in both clusters have
-similar loan characteristics, but they differ in the self-reported
-performance of their business. Individuals in cluster 1 are also more
-likely to invest more in their business, and appear to be more
-risk-takers. However, both groups are similar in terms of other measures
-of loss and risk aversion, as well as dishonesty. Finally, individuals
-in cluster 1 are more likely to be female and higher educated compared
-to cluster 2.</p>
+previously defined. We can see that clients in Cluster 2 have better
+loan characteristics and business performance, but they have otherwise
+similar characteristics in terms of risk and loss aversion and
+investment decisions. Surprisingly, individuals in Cluster 2 have lower
+education compared to Cluster 1, and are more likely to be the main
+providers for their households.</p>
 <table class="table table-hover lightable-paper" style="margin-left: auto; margin-right: auto; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;">
 <caption>
 Table 2. Balance table across clients’ characteristics according to
@@ -1756,16 +1754,16 @@ Diff. in Means
 <tbody>
 <tr>
 <td style="text-align:left;">
-First loan (SD)
+1st loan amount
 </td>
 <td style="text-align:left;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 166, 0, 0.5) !important;">-0.007</span>
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 166, 0, 0.5) !important;">-0.027</span>
 </td>
 <td style="text-align:left;">
-<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 166, 0, 0.5) !important;">0.219</span>
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 166, 0, 0.5) !important;">0.189</span>
 </td>
 <td style="text-align:left;">
-0.226***
+0.216***
 </td>
 </tr>
 <tr>
@@ -2270,6 +2268,617 @@ levels</span>
 </tr>
 </tfoot>
 </table>
+</div>
+<div id="balancing-business-performance" class="section level1">
+<h1>Balancing Business Performance</h1>
+<p>We are also interested in analyzing whether the definitions of
+success for each individual are mainly mediated by the performance of
+their own business. For that reason, we follow Chattopadhyay, Hase, and
+Zubizarreta (2020) for building stable weights that approximately
+balance the empirical distribution of business’ performance with a
+tolerance of 0.05 SD, using the distribution of performance for cluster
+2 as the target.</p>
+<table class="table table-hover lightable-paper" style="margin-left: auto; margin-right: auto; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;background-color: white !important;">
+</th>
+<th style="text-align:center;background-color: white !important;">
+Cluster 2
+</th>
+<th style="text-align:center;background-color: white !important;">
+Cluster 1
+</th>
+<th style="text-align:center;background-color: white !important;">
+Target
+</th>
+<th style="text-align:center;background-color: white !important;">
+Diff in Means (SD)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Surplus (SD) (first loan)
+</td>
+<td style="text-align:center;">
+0.17
+</td>
+<td style="text-align:center;">
+0.13
+</td>
+<td style="text-align:center;">
+0.17
+</td>
+<td style="text-align:center;">
+0.050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Surplus (SD) (first loan) - missing
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+<td style="text-align:center;">
+0.050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Surplus (SD) (last loan)
+</td>
+<td style="text-align:center;">
+0.17
+</td>
+<td style="text-align:center;">
+0.12
+</td>
+<td style="text-align:center;">
+0.17
+</td>
+<td style="text-align:center;">
+0.050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Surplus (SD) (last loan) - missing
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+<td style="text-align:center;">
+0.010
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Loan amount (SD) (first loan)
+</td>
+<td style="text-align:center;">
+0.19
+</td>
+<td style="text-align:center;">
+0.14
+</td>
+<td style="text-align:center;">
+0.19
+</td>
+<td style="text-align:center;">
+0.050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Loan amount (SD) (first loan) - missing
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.029
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Loan amount (SD) (last loan)
+</td>
+<td style="text-align:center;">
+0.19
+</td>
+<td style="text-align:center;">
+0.14
+</td>
+<td style="text-align:center;">
+0.19
+</td>
+<td style="text-align:center;">
+0.050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Loan amount (SD) (last loan) - missing
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.029
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Assets (SD) (first loan)
+</td>
+<td style="text-align:center;">
+0.06
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.06
+</td>
+<td style="text-align:center;">
+0.010
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Assets (SD) (first loan) - missing
+</td>
+<td style="text-align:center;">
+0.21
+</td>
+<td style="text-align:center;">
+0.23
+</td>
+<td style="text-align:center;">
+0.21
+</td>
+<td style="text-align:center;">
+0.050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Assets (SD) (last loan)
+</td>
+<td style="text-align:center;">
+0.13
+</td>
+<td style="text-align:center;">
+0.08
+</td>
+<td style="text-align:center;">
+0.13
+</td>
+<td style="text-align:center;">
+0.050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Assets (SD) (last loan) - missing
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+0.050
+</td>
+</tr>
+</tbody>
+</table>
+<p>Looking at the other variables, here are the differences between
+Cluster 2 and Cluster 1 after re-weighting by business performance:</p>
+<table class="table table-hover lightable-paper" style="margin-left: auto; margin-right: auto; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;background-color: white !important;">
+</th>
+<th style="text-align:center;background-color: white !important;">
+Estimate
+</th>
+<th style="text-align:center;background-color: white !important;">
+p-value
+</th>
+<th style="text-align:center;background-color: white !important;">
+LB - CI
+</th>
+<th style="text-align:center;background-color: white !important;">
+UB - CI
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+If you received $4,000, you would use that money for growing your
+business
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+<td style="text-align:center;">
+0.49
+</td>
+<td style="text-align:center;">
+-2.63
+</td>
+<td style="text-align:center;">
+2.66
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+When you have gains from your business, you usually invest in growing
+your business
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+0.49
+</td>
+<td style="text-align:center;">
+-2.63
+</td>
+<td style="text-align:center;">
+2.70
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What size would your business be in 5 years? - Much larger/larger
+</td>
+<td style="text-align:center;">
+-0.03
+</td>
+<td style="text-align:center;">
+0.49
+</td>
+<td style="text-align:center;">
+-2.69
+</td>
+<td style="text-align:center;">
+2.64
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Expected number of workers
+</td>
+<td style="text-align:center;">
+1.19
+</td>
+<td style="text-align:center;">
+0.18
+</td>
+<td style="text-align:center;">
+-1.40
+</td>
+<td style="text-align:center;">
+3.79
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Loss aversion (-)
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+0.45
+</td>
+<td style="text-align:center;">
+-2.31
+</td>
+<td style="text-align:center;">
+2.61
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Risk aversion (-)
+</td>
+<td style="text-align:center;">
+-0.10
+</td>
+<td style="text-align:center;">
+0.47
+</td>
+<td style="text-align:center;">
+-2.63
+</td>
+<td style="text-align:center;">
+2.44
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Dishonesty (proxy)
+</td>
+<td style="text-align:center;">
+-0.01
+</td>
+<td style="text-align:center;">
+0.50
+</td>
+<td style="text-align:center;">
+-2.63
+</td>
+<td style="text-align:center;">
+2.60
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+If you get presented with an opportunity, you think of: In the potential
+to increase their income.
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+0.49
+</td>
+<td style="text-align:center;">
+-2.63
+</td>
+<td style="text-align:center;">
+2.69
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+If you get presented with an opportunity, you think of: In the possible
+risks.
+</td>
+<td style="text-align:center;">
+-0.01
+</td>
+<td style="text-align:center;">
+0.50
+</td>
+<td style="text-align:center;">
+-2.71
+</td>
+<td style="text-align:center;">
+2.70
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+With which phrase do you identify the most? Nothing ventured, nothing
+gained
+</td>
+<td style="text-align:center;">
+-0.03
+</td>
+<td style="text-align:center;">
+0.49
+</td>
+<td style="text-align:center;">
+-2.71
+</td>
+<td style="text-align:center;">
+2.64
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+With which phrase do you identify the most? A bird in the hand is worth
+two in the bush
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.48
+</td>
+<td style="text-align:center;">
+-2.65
+</td>
+<td style="text-align:center;">
+2.76
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Regarding the first year of activity of your business, the annual sales
+of your business are - They are much higher
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+<td style="text-align:center;">
+0.48
+</td>
+<td style="text-align:center;">
+-2.61
+</td>
+<td style="text-align:center;">
+2.76
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Regarding the first year of activity of your business, the annual sales
+of your business are - They are higher, but not by much.
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.50
+</td>
+<td style="text-align:center;">
+-2.68
+</td>
+<td style="text-align:center;">
+2.67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Regarding the first year of activity of your business, the annual sales
+of your business are - They are the same.
+</td>
+<td style="text-align:center;">
+-0.03
+</td>
+<td style="text-align:center;">
+0.49
+</td>
+<td style="text-align:center;">
+-2.74
+</td>
+<td style="text-align:center;">
+2.68
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Regarding the first year of activity of your business, the annual sales
+of your business are - They are lower.
+</td>
+<td style="text-align:center;">
+-0.02
+</td>
+<td style="text-align:center;">
+0.49
+</td>
+<td style="text-align:center;">
+-2.73
+</td>
+<td style="text-align:center;">
+2.68
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Regarding the first year of activity of your business, the annual sales
+of your business are - I’ve had my business for less than a year
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.50
+</td>
+<td style="text-align:center;">
+-2.72
+</td>
+<td style="text-align:center;">
+2.71
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Household income - Contribute more than 50%
+</td>
+<td style="text-align:center;">
+0.06
+</td>
+<td style="text-align:center;">
+0.48
+</td>
+<td style="text-align:center;">
+-2.61
+</td>
+<td style="text-align:center;">
+2.73
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gender - Female
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.50
+</td>
+<td style="text-align:center;">
+-2.67
+</td>
+<td style="text-align:center;">
+2.67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Uses WhatsApp Yes
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.50
+</td>
+<td style="text-align:center;">
+-2.64
+</td>
+<td style="text-align:center;">
+2.65
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Secondary education or more - Yes
+</td>
+<td style="text-align:center;">
+-0.08
+</td>
+<td style="text-align:center;">
+0.48
+</td>
+<td style="text-align:center;">
+-2.76
+</td>
+<td style="text-align:center;">
+2.59
+</td>
+</tr>
+</tbody>
+</table>
 <!-- ```{r opt_clusters, echo = FALSE, dev='svg', fig.cap = capFig("Optimal number of clusters"), warning=FALSE, message=FALSE, fig.align = "center"} -->
 <!-- set.seed(123) -->
 <!-- d_clus2 = d_clus %>% dplyr::select(-cluster) -->
@@ -2312,6 +2921,8 @@ levels</span>
        </ul></li>
        <li><a href="#characteristics-by-cluster" id="toc-characteristics-by-cluster">Characteristics by
        cluster</a></li>
+       <li><a href="#balancing-business-performance" id="toc-balancing-business-performance">Balancing Business
+       Performance</a></li>
        </ul>
      </div>
         </div>
