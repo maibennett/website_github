@@ -1082,7 +1082,7 @@ margin-left: 0 !important;
          <h4 class="author"><em>Magdalena Bennett<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></em></h4>
             <h4 class="author"><em>William Fuchs<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></em></h4>
             <h4 class="author"><em>Jaime Millán<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></em></h4>
-            <h4 class="date"><em>September 2nd, 2024</em></h4>
+            <h4 class="date"><em>September 3rd, 2024</em></h4>
       
       
    
@@ -2273,255 +2273,1401 @@ levels</span>
 <h1>Balancing Business Performance</h1>
 <p>We are also interested in analyzing whether the definitions of
 success for each individual are mainly mediated by the performance of
-their own business. For that reason, we follow Chattopadhyay, Hase, and
-Zubizarreta (2020) for building stable weights that approximately
-balance the empirical distribution of business’ performance with a
-tolerance of 0.05 SD, using the distribution of performance for cluster
-2 as the target.</p>
+their own business. For that reason, we match observations in Cluster 2
+to Cluster 1 to balance the means of business’ performance with a
+tolerance of 0.025 SD. We are able to match 100% of the observations in
+Cluster 2, obtaining the following pre- and post-matching
+differences:</p>
 <table class="table table-hover lightable-paper" style="margin-left: auto; margin-right: auto; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<caption>
+Table 7. Balance of business performance before and after matching
+</caption>
 <thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Pre-matching
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Post-matching
+</div>
+</th>
+</tr>
 <tr>
 <th style="text-align:left;background-color: white !important;">
 </th>
-<th style="text-align:center;background-color: white !important;">
-Cluster 2
+<th style="text-align:left;background-color: white !important;">
+Mean Cluster 2
 </th>
-<th style="text-align:center;background-color: white !important;">
-Cluster 1
+<th style="text-align:left;background-color: white !important;">
+Mean Cluster 1
 </th>
-<th style="text-align:center;background-color: white !important;">
-Target
+<th style="text-align:left;background-color: white !important;">
+Diff (SD)
 </th>
-<th style="text-align:center;background-color: white !important;">
-Diff in Means (SD)
+<th style="text-align:left;background-color: white !important;">
+Mean Cluster 2
+</th>
+<th style="text-align:left;background-color: white !important;">
+Mean Cluster 1
+</th>
+<th style="text-align:left;background-color: white !important;">
+Diff (SD)
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left;">
-Surplus (SD) (first loan)
+Surplus - first loan
 </td>
-<td style="text-align:center;">
-0.17
+<td style="text-align:left;">
+0.172
 </td>
-<td style="text-align:center;">
-0.13
+<td style="text-align:left;">
+-0.014
 </td>
-<td style="text-align:center;">
-0.17
+<td style="text-align:left;">
+0.187***
 </td>
-<td style="text-align:center;">
-0.050
+<td style="text-align:left;">
+0.172
+</td>
+<td style="text-align:left;">
+0.148
+</td>
+<td style="text-align:left;">
+0.022
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Surplus (SD) (first loan) - missing
+Surplus - first loan (missing)
 </td>
-<td style="text-align:center;">
-0.02
+<td style="text-align:left;">
+0.022
 </td>
-<td style="text-align:center;">
+<td style="text-align:left;">
+0.031
+</td>
+<td style="text-align:left;">
+-0.059
+</td>
+<td style="text-align:left;">
+0.022
+</td>
+<td style="text-align:left;">
+0.024
+</td>
+<td style="text-align:left;">
+-0.015
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Surplus - last loan
+</td>
+<td style="text-align:left;">
+0.174
+</td>
+<td style="text-align:left;">
+0.007
+</td>
+<td style="text-align:left;">
+0.164***
+</td>
+<td style="text-align:left;">
+0.174
+</td>
+<td style="text-align:left;">
+0.153
+</td>
+<td style="text-align:left;">
+0.019
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Surplus - last loan (missing)
+</td>
+<td style="text-align:left;">
+0.069
+</td>
+<td style="text-align:left;">
+0.063
+</td>
+<td style="text-align:left;">
+0.025
+</td>
+<td style="text-align:left;">
+0.069
+</td>
+<td style="text-align:left;">
+0.065
+</td>
+<td style="text-align:left;">
+0.017
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Amount - first loan
+</td>
+<td style="text-align:left;">
+0.189
+</td>
+<td style="text-align:left;">
+-0.027
+</td>
+<td style="text-align:left;">
+0.194***
+</td>
+<td style="text-align:left;">
+0.189
+</td>
+<td style="text-align:left;">
+0.17
+</td>
+<td style="text-align:left;">
+0.015
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Amount - first loan (missing)
+</td>
+<td style="text-align:left;">
+0.004
+</td>
+<td style="text-align:left;">
+0.011
+</td>
+<td style="text-align:left;">
+-0.076
+</td>
+<td style="text-align:left;">
+0.004
+</td>
+<td style="text-align:left;">
+0.004
+</td>
+<td style="text-align:left;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Amount - last loan
+</td>
+<td style="text-align:left;">
+0.194
+</td>
+<td style="text-align:left;">
+0.005
+</td>
+<td style="text-align:left;">
+0.176***
+</td>
+<td style="text-align:left;">
+0.194
+</td>
+<td style="text-align:left;">
+0.185
+</td>
+<td style="text-align:left;">
+0.008
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Amount - last loan (missing)
+</td>
+<td style="text-align:left;">
+0.004
+</td>
+<td style="text-align:left;">
+0.011
+</td>
+<td style="text-align:left;">
+-0.076
+</td>
+<td style="text-align:left;">
+0.004
+</td>
+<td style="text-align:left;">
+0.004
+</td>
+<td style="text-align:left;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Assets - first loan
+</td>
+<td style="text-align:left;">
+0.062
+</td>
+<td style="text-align:left;">
+-0.021
+</td>
+<td style="text-align:left;">
+0.089
+</td>
+<td style="text-align:left;">
+0.062
+</td>
+<td style="text-align:left;">
+0.069
+</td>
+<td style="text-align:left;">
+-0.008
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Assets - first loan (missing)
+</td>
+<td style="text-align:left;">
+0.208
+</td>
+<td style="text-align:left;">
+0.275
+</td>
+<td style="text-align:left;">
+-0.157***
+</td>
+<td style="text-align:left;">
+0.208
+</td>
+<td style="text-align:left;">
+0.217
+</td>
+<td style="text-align:left;">
+-0.021
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Assets - last loan
+</td>
+<td style="text-align:left;">
+0.128
+</td>
+<td style="text-align:left;">
+-0.031
+</td>
+<td style="text-align:left;">
+0.156***
+</td>
+<td style="text-align:left;">
+0.128
+</td>
+<td style="text-align:left;">
+0.118
+</td>
+<td style="text-align:left;">
+0.009
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Assets - last loan (missing)
+</td>
+<td style="text-align:left;">
+0.035
+</td>
+<td style="text-align:left;">
+0.061
+</td>
+<td style="text-align:left;">
+-0.125**
+</td>
+<td style="text-align:left;">
+0.035
+</td>
+<td style="text-align:left;">
 0.03
 </td>
-<td style="text-align:center;">
-0.02
-</td>
-<td style="text-align:center;">
-0.050
-</td>
-</tr>
-<tr>
 <td style="text-align:left;">
-Surplus (SD) (last loan)
-</td>
-<td style="text-align:center;">
-0.17
-</td>
-<td style="text-align:center;">
-0.12
-</td>
-<td style="text-align:center;">
-0.17
-</td>
-<td style="text-align:center;">
-0.050
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Surplus (SD) (last loan) - missing
-</td>
-<td style="text-align:center;">
-0.07
-</td>
-<td style="text-align:center;">
-0.07
-</td>
-<td style="text-align:center;">
-0.07
-</td>
-<td style="text-align:center;">
-0.010
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Loan amount (SD) (first loan)
-</td>
-<td style="text-align:center;">
-0.19
-</td>
-<td style="text-align:center;">
-0.14
-</td>
-<td style="text-align:center;">
-0.19
-</td>
-<td style="text-align:center;">
-0.050
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Loan amount (SD) (first loan) - missing
-</td>
-<td style="text-align:center;">
-0.00
-</td>
-<td style="text-align:center;">
-0.01
-</td>
-<td style="text-align:center;">
-0.00
-</td>
-<td style="text-align:center;">
-0.029
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Loan amount (SD) (last loan)
-</td>
-<td style="text-align:center;">
-0.19
-</td>
-<td style="text-align:center;">
-0.14
-</td>
-<td style="text-align:center;">
-0.19
-</td>
-<td style="text-align:center;">
-0.050
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Loan amount (SD) (last loan) - missing
-</td>
-<td style="text-align:center;">
-0.00
-</td>
-<td style="text-align:center;">
-0.01
-</td>
-<td style="text-align:center;">
-0.00
-</td>
-<td style="text-align:center;">
-0.029
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Assets (SD) (first loan)
-</td>
-<td style="text-align:center;">
-0.06
-</td>
-<td style="text-align:center;">
-0.05
-</td>
-<td style="text-align:center;">
-0.06
-</td>
-<td style="text-align:center;">
-0.010
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Assets (SD) (first loan) - missing
-</td>
-<td style="text-align:center;">
-0.21
-</td>
-<td style="text-align:center;">
-0.23
-</td>
-<td style="text-align:center;">
-0.21
-</td>
-<td style="text-align:center;">
-0.050
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Assets (SD) (last loan)
-</td>
-<td style="text-align:center;">
-0.13
-</td>
-<td style="text-align:center;">
-0.08
-</td>
-<td style="text-align:center;">
-0.13
-</td>
-<td style="text-align:center;">
-0.050
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Assets (SD) (last loan) - missing
-</td>
-<td style="text-align:center;">
-0.03
-</td>
-<td style="text-align:center;">
-0.05
-</td>
-<td style="text-align:center;">
-0.03
-</td>
-<td style="text-align:center;">
-0.050
+0.024
 </td>
 </tr>
 </tbody>
 </table>
-<p>Looking at the other variables, here are the differences between
-Cluster 2 and Cluster 1 after re-weighting by business performance:</p>
-<table class="table table-hover lightable-paper" style="margin-left: auto; margin-right: auto; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<p>Analyzing now the differences between the matched observations, we
+can see that there are still significant differences between Cluster 1
+and Cluster 2 in terms of their perspectives on success, even after
+adjusting by business performance:</p>
+<table class="table table table-hover lightable-paper" style="width: auto !important; margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<caption>
+Table 6. Balance table across clients’ responses according to clusters -
+After matching
+</caption>
 <thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Cluster 1 (N=461)
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Cluster 2 (N=461)
+</div>
+</th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="2">
+</th>
+</tr>
 <tr>
 <th style="text-align:left;background-color: white !important;">
 </th>
-<th style="text-align:center;background-color: white !important;">
-Estimate
+<th style="text-align:right;background-color: white !important;">
+Mean
 </th>
-<th style="text-align:center;background-color: white !important;">
-p-value
+<th style="text-align:right;background-color: white !important;">
+Std. Dev.
 </th>
-<th style="text-align:center;background-color: white !important;">
-LB - CI
+<th style="text-align:right;background-color: white !important;">
+Mean
 </th>
-<th style="text-align:center;background-color: white !important;">
-UB - CI
+<th style="text-align:right;background-color: white !important;">
+Std. Dev.
+</th>
+<th style="text-align:right;background-color: white !important;">
+Diff. in Means
+</th>
+<th style="text-align:right;background-color: white !important;">
+p
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+What makes you successful? - business
+</td>
+<td style="text-align:right;">
+0.117
+</td>
+<td style="text-align:right;">
+0.322
+</td>
+<td style="text-align:right;">
+0.158
+</td>
+<td style="text-align:right;">
+0.365
+</td>
+<td style="text-align:right;">
+0.041+
+</td>
+<td style="text-align:right;">
+0.070
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What makes you successful? - family
+</td>
+<td style="text-align:right;">
+0.020
+</td>
+<td style="text-align:right;">
+0.139
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+<td style="text-align:right;">
+-0.020**
+</td>
+<td style="text-align:right;">
+0.003
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful person: Is recognized by the community
+</td>
+<td style="text-align:right;">
+0.195
+</td>
+<td style="text-align:right;">
+0.397
+</td>
+<td style="text-align:right;">
+0.007
+</td>
+<td style="text-align:right;">
+0.080
+</td>
+<td style="text-align:right;">
+-0.189***
+</td>
+<td style="text-align:right;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful person: Has stability in her home
+</td>
+<td style="text-align:right;">
+0.399
+</td>
+<td style="text-align:right;">
+0.490
+</td>
+<td style="text-align:right;">
+0.449
+</td>
+<td style="text-align:right;">
+0.498
+</td>
+<td style="text-align:right;">
+0.050
+</td>
+<td style="text-align:right;">
+0.126
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful person: Has stability in her business
+</td>
+<td style="text-align:right;">
+0.406
+</td>
+<td style="text-align:right;">
+0.492
+</td>
+<td style="text-align:right;">
+0.544
+</td>
+<td style="text-align:right;">
+0.499
+</td>
+<td style="text-align:right;">
+0.139***
+</td>
+<td style="text-align:right;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful business: Has managed to grow
+</td>
+<td style="text-align:right;">
+0.347
+</td>
+<td style="text-align:right;">
+0.477
+</td>
+<td style="text-align:right;">
+0.360
+</td>
+<td style="text-align:right;">
+0.481
+</td>
+<td style="text-align:right;">
+0.013
+</td>
+<td style="text-align:right;">
+0.680
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful business: Has managed to sustain
+</td>
+<td style="text-align:right;">
+0.232
+</td>
+<td style="text-align:right;">
+0.423
+</td>
+<td style="text-align:right;">
+0.260
+</td>
+<td style="text-align:right;">
+0.439
+</td>
+<td style="text-align:right;">
+0.028
+</td>
+<td style="text-align:right;">
+0.321
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful business: Has generated employment
+</td>
+<td style="text-align:right;">
+0.139
+</td>
+<td style="text-align:right;">
+0.346
+</td>
+<td style="text-align:right;">
+0.174
+</td>
+<td style="text-align:right;">
+0.379
+</td>
+<td style="text-align:right;">
+0.035
+</td>
+<td style="text-align:right;">
+0.147
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful business: Has brought about a positive change in the
+community
+</td>
+<td style="text-align:right;">
+0.117
+</td>
+<td style="text-align:right;">
+0.322
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+<td style="text-align:right;">
+-0.117***
+</td>
+<td style="text-align:right;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful business: Covers the household needs
+</td>
+<td style="text-align:right;">
+0.165
+</td>
+<td style="text-align:right;">
+0.371
+</td>
+<td style="text-align:right;">
+0.206
+</td>
+<td style="text-align:right;">
+0.405
+</td>
+<td style="text-align:right;">
+0.041
+</td>
+<td style="text-align:right;">
+0.108
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Business would be much larger
+</td>
+<td style="text-align:right;">
+0.625
+</td>
+<td style="text-align:right;">
+0.485
+</td>
+<td style="text-align:right;">
+0.577
+</td>
+<td style="text-align:right;">
+0.495
+</td>
+<td style="text-align:right;">
+-0.048
+</td>
+<td style="text-align:right;">
+0.139
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Business would be equal/smaller
+</td>
+<td style="text-align:right;">
+0.375
+</td>
+<td style="text-align:right;">
+0.485
+</td>
+<td style="text-align:right;">
+0.423
+</td>
+<td style="text-align:right;">
+0.495
+</td>
+<td style="text-align:right;">
+0.048
+</td>
+<td style="text-align:right;">
+0.139
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+How many workers would you have? (prop. over current workers)
+</td>
+<td style="text-align:right;">
+3.423
+</td>
+<td style="text-align:right;">
+3.634
+</td>
+<td style="text-align:right;">
+3.579
+</td>
+<td style="text-align:right;">
+4.152
+</td>
+<td style="text-align:right;">
+0.155
+</td>
+<td style="text-align:right;">
+0.546
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+If offered a job: Accept and keep
+</td>
+<td style="text-align:right;">
+0.794
+</td>
+<td style="text-align:right;">
+0.405
+</td>
+<td style="text-align:right;">
+0.061
+</td>
+<td style="text-align:right;">
+0.239
+</td>
+<td style="text-align:right;">
+-0.733***
+</td>
+<td style="text-align:right;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+If offered a job: Not accept
+</td>
+<td style="text-align:right;">
+0.206
+</td>
+<td style="text-align:right;">
+0.405
+</td>
+<td style="text-align:right;">
+0.939
+</td>
+<td style="text-align:right;">
+0.239
+</td>
+<td style="text-align:right;">
+0.733***
+</td>
+<td style="text-align:right;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What amount of money would a job have to pay? (1,000 US$)
+</td>
+<td style="text-align:right;">
+5.366
+</td>
+<td style="text-align:right;">
+5.474
+</td>
+<td style="text-align:right;">
+11.976
+</td>
+<td style="text-align:right;">
+0.535
+</td>
+<td style="text-align:right;">
+6.610***
+</td>
+<td style="text-align:right;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What amount of money would a job have to pay? (No amount)
+</td>
+<td style="text-align:right;">
+0.401
+</td>
+<td style="text-align:right;">
+0.491
+</td>
+<td style="text-align:right;">
+0.998
+</td>
+<td style="text-align:right;">
+0.047
+</td>
+<td style="text-align:right;">
+0.597***
+</td>
+<td style="text-align:right;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+You would like your children: Were entrepreneurs and had their own
+business
+</td>
+<td style="text-align:right;">
+0.577
+</td>
+<td style="text-align:right;">
+0.495
+</td>
+<td style="text-align:right;">
+0.644
+</td>
+<td style="text-align:right;">
+0.479
+</td>
+<td style="text-align:right;">
+0.067*
+</td>
+<td style="text-align:right;">
+0.036
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+You would like your children: Took charge of the family business (their
+business)
+</td>
+<td style="text-align:right;">
+0.241
+</td>
+<td style="text-align:right;">
+0.428
+</td>
+<td style="text-align:right;">
+0.356
+</td>
+<td style="text-align:right;">
+0.479
+</td>
+<td style="text-align:right;">
+0.115***
+</td>
+<td style="text-align:right;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+You would like your children: Had a secure job
+</td>
+<td style="text-align:right;">
+0.182
+</td>
+<td style="text-align:right;">
+0.386
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+<td style="text-align:right;">
+-0.182***
+</td>
+<td style="text-align:right;">
+&lt;0.001
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table table-hover lightable-paper" style="width: auto !important; margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<caption>
+Table 8. Balance table between Cluster 1 before and after matching
+</caption>
+<thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Original (N=1188)
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Matched (N=461)
+</div>
+</th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="2">
+</th>
+</tr>
+<tr>
+<th style="text-align:left;background-color: white !important;">
+</th>
+<th style="text-align:right;background-color: white !important;">
+Mean
+</th>
+<th style="text-align:right;background-color: white !important;">
+Std. Dev.
+</th>
+<th style="text-align:right;background-color: white !important;">
+Mean
+</th>
+<th style="text-align:right;background-color: white !important;">
+Std. Dev.
+</th>
+<th style="text-align:right;background-color: white !important;">
+Diff. in Means
+</th>
+<th style="text-align:right;background-color: white !important;">
+p
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+What makes you successful? - business
+</td>
+<td style="text-align:right;">
+0.121
+</td>
+<td style="text-align:right;">
+0.327
+</td>
+<td style="text-align:right;">
+0.117
+</td>
+<td style="text-align:right;">
+0.322
+</td>
+<td style="text-align:right;">
+-0.004
+</td>
+<td style="text-align:right;">
+0.818
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What makes you successful? - family
+</td>
+<td style="text-align:right;">
+0.024
+</td>
+<td style="text-align:right;">
+0.152
+</td>
+<td style="text-align:right;">
+0.020
+</td>
+<td style="text-align:right;">
+0.139
+</td>
+<td style="text-align:right;">
+-0.004
+</td>
+<td style="text-align:right;">
+0.605
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful person: Is recognized by the community
+</td>
+<td style="text-align:right;">
+0.200
+</td>
+<td style="text-align:right;">
+0.400
+</td>
+<td style="text-align:right;">
+0.195
+</td>
+<td style="text-align:right;">
+0.397
+</td>
+<td style="text-align:right;">
+-0.005
+</td>
+<td style="text-align:right;">
+0.815
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful person: Has stability in her home
+</td>
+<td style="text-align:right;">
+0.383
+</td>
+<td style="text-align:right;">
+0.486
+</td>
+<td style="text-align:right;">
+0.399
+</td>
+<td style="text-align:right;">
+0.490
+</td>
+<td style="text-align:right;">
+0.016
+</td>
+<td style="text-align:right;">
+0.548
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful person: Has stability in her business
+</td>
+<td style="text-align:right;">
+0.417
+</td>
+<td style="text-align:right;">
+0.493
+</td>
+<td style="text-align:right;">
+0.406
+</td>
+<td style="text-align:right;">
+0.492
+</td>
+<td style="text-align:right;">
+-0.011
+</td>
+<td style="text-align:right;">
+0.683
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful business: Has managed to grow
+</td>
+<td style="text-align:right;">
+0.355
+</td>
+<td style="text-align:right;">
+0.479
+</td>
+<td style="text-align:right;">
+0.347
+</td>
+<td style="text-align:right;">
+0.477
+</td>
+<td style="text-align:right;">
+-0.008
+</td>
+<td style="text-align:right;">
+0.756
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful business: Has managed to sustain
+</td>
+<td style="text-align:right;">
+0.216
+</td>
+<td style="text-align:right;">
+0.412
+</td>
+<td style="text-align:right;">
+0.232
+</td>
+<td style="text-align:right;">
+0.423
+</td>
+<td style="text-align:right;">
+0.016
+</td>
+<td style="text-align:right;">
+0.494
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful business: Has generated employment
+</td>
+<td style="text-align:right;">
+0.136
+</td>
+<td style="text-align:right;">
+0.343
+</td>
+<td style="text-align:right;">
+0.139
+</td>
+<td style="text-align:right;">
+0.346
+</td>
+<td style="text-align:right;">
+0.002
+</td>
+<td style="text-align:right;">
+0.897
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful business: Has brought about a positive change in the
+community
+</td>
+<td style="text-align:right;">
+0.102
+</td>
+<td style="text-align:right;">
+0.303
+</td>
+<td style="text-align:right;">
+0.117
+</td>
+<td style="text-align:right;">
+0.322
+</td>
+<td style="text-align:right;">
+0.015
+</td>
+<td style="text-align:right;">
+0.379
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A successful business: Covers the household needs
+</td>
+<td style="text-align:right;">
+0.190
+</td>
+<td style="text-align:right;">
+0.393
+</td>
+<td style="text-align:right;">
+0.165
+</td>
+<td style="text-align:right;">
+0.371
+</td>
+<td style="text-align:right;">
+-0.025
+</td>
+<td style="text-align:right;">
+0.221
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Business would be much larger
+</td>
+<td style="text-align:right;">
+0.608
+</td>
+<td style="text-align:right;">
+0.488
+</td>
+<td style="text-align:right;">
+0.625
+</td>
+<td style="text-align:right;">
+0.485
+</td>
+<td style="text-align:right;">
+0.017
+</td>
+<td style="text-align:right;">
+0.524
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Business would be equal/smaller
+</td>
+<td style="text-align:right;">
+0.392
+</td>
+<td style="text-align:right;">
+0.488
+</td>
+<td style="text-align:right;">
+0.375
+</td>
+<td style="text-align:right;">
+0.485
+</td>
+<td style="text-align:right;">
+-0.017
+</td>
+<td style="text-align:right;">
+0.524
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+How many workers would you have? (prop. over current workers)
+</td>
+<td style="text-align:right;">
+3.421
+</td>
+<td style="text-align:right;">
+3.515
+</td>
+<td style="text-align:right;">
+3.423
+</td>
+<td style="text-align:right;">
+3.634
+</td>
+<td style="text-align:right;">
+0.002
+</td>
+<td style="text-align:right;">
+0.992
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+If offered a job: Accept and keep
+</td>
+<td style="text-align:right;">
+0.788
+</td>
+<td style="text-align:right;">
+0.409
+</td>
+<td style="text-align:right;">
+0.794
+</td>
+<td style="text-align:right;">
+0.405
+</td>
+<td style="text-align:right;">
+0.006
+</td>
+<td style="text-align:right;">
+0.786
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+If offered a job: Not accept
+</td>
+<td style="text-align:right;">
+0.212
+</td>
+<td style="text-align:right;">
+0.409
+</td>
+<td style="text-align:right;">
+0.206
+</td>
+<td style="text-align:right;">
+0.405
+</td>
+<td style="text-align:right;">
+-0.006
+</td>
+<td style="text-align:right;">
+0.786
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What amount of money would a job have to pay? (1,000 US$)
+</td>
+<td style="text-align:right;">
+5.187
+</td>
+<td style="text-align:right;">
+5.439
+</td>
+<td style="text-align:right;">
+5.366
+</td>
+<td style="text-align:right;">
+5.474
+</td>
+<td style="text-align:right;">
+0.179
+</td>
+<td style="text-align:right;">
+0.551
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What amount of money would a job have to pay? (No amount)
+</td>
+<td style="text-align:right;">
+0.385
+</td>
+<td style="text-align:right;">
+0.487
+</td>
+<td style="text-align:right;">
+0.401
+</td>
+<td style="text-align:right;">
+0.491
+</td>
+<td style="text-align:right;">
+0.017
+</td>
+<td style="text-align:right;">
+0.536
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+You would like your children: Were entrepreneurs and had their own
+business
+</td>
+<td style="text-align:right;">
+0.573
+</td>
+<td style="text-align:right;">
+0.495
+</td>
+<td style="text-align:right;">
+0.577
+</td>
+<td style="text-align:right;">
+0.495
+</td>
+<td style="text-align:right;">
+0.004
+</td>
+<td style="text-align:right;">
+0.889
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+You would like your children: Took charge of the family business (their
+business)
+</td>
+<td style="text-align:right;">
+0.238
+</td>
+<td style="text-align:right;">
+0.426
+</td>
+<td style="text-align:right;">
+0.241
+</td>
+<td style="text-align:right;">
+0.428
+</td>
+<td style="text-align:right;">
+0.003
+</td>
+<td style="text-align:right;">
+0.913
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+You would like your children: Had a secure job
+</td>
+<td style="text-align:right;">
+0.189
+</td>
+<td style="text-align:right;">
+0.391
+</td>
+<td style="text-align:right;">
+0.182
+</td>
+<td style="text-align:right;">
+0.386
+</td>
+<td style="text-align:right;">
+-0.006
+</td>
+<td style="text-align:right;">
+0.766
+</td>
+</tr>
+</tbody>
+</table>
+<p>Analyzing potential differences in other outcomes, we obtain the
+following results after matching:</p>
+<table class="table table table-hover lightable-paper" style="width: auto !important; margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<caption>
+Table 9. Difference in characteristics between Cluster 1 and Cluster 2 -
+After Matching
+</caption>
+<thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Cluster 1 (N=461)
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Cluster 2 (N=461)
+</div>
+</th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="2">
+</th>
+</tr>
+<tr>
+<th style="text-align:left;background-color: white !important;">
+</th>
+<th style="text-align:right;background-color: white !important;">
+Mean
+</th>
+<th style="text-align:right;background-color: white !important;">
+Std. Dev.
+</th>
+<th style="text-align:right;background-color: white !important;">
+Mean
+</th>
+<th style="text-align:right;background-color: white !important;">
+Std. Dev.
+</th>
+<th style="text-align:right;background-color: white !important;">
+Diff. in Means
+</th>
+<th style="text-align:right;background-color: white !important;">
+p
 </th>
 </tr>
 </thead>
@@ -2531,17 +3677,23 @@ UB - CI
 If you received $4,000, you would use that money for growing your
 business
 </td>
-<td style="text-align:center;">
-0.02
+<td style="text-align:right;">
+0.794
 </td>
-<td style="text-align:center;">
-0.49
+<td style="text-align:right;">
+0.405
 </td>
-<td style="text-align:center;">
--2.63
+<td style="text-align:right;">
+0.826
 </td>
-<td style="text-align:center;">
-2.66
+<td style="text-align:right;">
+0.379
+</td>
+<td style="text-align:right;">
+0.033
+</td>
+<td style="text-align:right;">
+0.208
 </td>
 </tr>
 <tr>
@@ -2549,102 +3701,138 @@ business
 When you have gains from your business, you usually invest in growing
 your business
 </td>
-<td style="text-align:center;">
-0.03
+<td style="text-align:right;">
+0.512
 </td>
-<td style="text-align:center;">
-0.49
+<td style="text-align:right;">
+0.500
 </td>
-<td style="text-align:center;">
--2.63
+<td style="text-align:right;">
+0.562
 </td>
-<td style="text-align:center;">
-2.70
+<td style="text-align:right;">
+0.497
+</td>
+<td style="text-align:right;">
+0.050
+</td>
+<td style="text-align:right;">
+0.129
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 What size would your business be in 5 years? - Much larger/larger
 </td>
-<td style="text-align:center;">
--0.03
+<td style="text-align:right;">
+0.625
 </td>
-<td style="text-align:center;">
-0.49
+<td style="text-align:right;">
+0.485
 </td>
-<td style="text-align:center;">
--2.69
+<td style="text-align:right;">
+0.577
 </td>
-<td style="text-align:center;">
-2.64
+<td style="text-align:right;">
+0.495
+</td>
+<td style="text-align:right;">
+-0.048
+</td>
+<td style="text-align:right;">
+0.139
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Expected number of workers
 </td>
-<td style="text-align:center;">
-1.19
+<td style="text-align:right;">
+6.855
 </td>
-<td style="text-align:center;">
-0.18
+<td style="text-align:right;">
+7.901
 </td>
-<td style="text-align:center;">
--1.40
+<td style="text-align:right;">
+8.197
 </td>
-<td style="text-align:center;">
-3.79
+<td style="text-align:right;">
+16.473
+</td>
+<td style="text-align:right;">
+1.343
+</td>
+<td style="text-align:right;">
+0.115
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Loss aversion (-)
 </td>
-<td style="text-align:center;">
-0.15
+<td style="text-align:right;">
+3.074
 </td>
-<td style="text-align:center;">
-0.45
+<td style="text-align:right;">
+2.109
 </td>
-<td style="text-align:center;">
--2.31
+<td style="text-align:right;">
+3.239
 </td>
-<td style="text-align:center;">
-2.61
+<td style="text-align:right;">
+2.123
+</td>
+<td style="text-align:right;">
+0.165
+</td>
+<td style="text-align:right;">
+0.237
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Risk aversion (-)
 </td>
-<td style="text-align:center;">
--0.10
+<td style="text-align:right;">
+2.204
 </td>
-<td style="text-align:center;">
-0.47
+<td style="text-align:right;">
+1.885
 </td>
-<td style="text-align:center;">
--2.63
+<td style="text-align:right;">
+2.174
 </td>
-<td style="text-align:center;">
-2.44
+<td style="text-align:right;">
+1.985
+</td>
+<td style="text-align:right;">
+-0.030
+</td>
+<td style="text-align:right;">
+0.812
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Dishonesty (proxy)
 </td>
-<td style="text-align:center;">
--0.01
+<td style="text-align:right;">
+1.158
 </td>
-<td style="text-align:center;">
-0.50
+<td style="text-align:right;">
+1.073
 </td>
-<td style="text-align:center;">
--2.63
+<td style="text-align:right;">
+1.215
 </td>
-<td style="text-align:center;">
-2.60
+<td style="text-align:right;">
+1.065
+</td>
+<td style="text-align:right;">
+0.056
+</td>
+<td style="text-align:right;">
+0.423
 </td>
 </tr>
 <tr>
@@ -2652,17 +3840,23 @@ Dishonesty (proxy)
 If you get presented with an opportunity, you think of: In the potential
 to increase their income.
 </td>
-<td style="text-align:center;">
-0.03
+<td style="text-align:right;">
+0.625
 </td>
-<td style="text-align:center;">
-0.49
+<td style="text-align:right;">
+0.485
 </td>
-<td style="text-align:center;">
--2.63
+<td style="text-align:right;">
+0.677
 </td>
-<td style="text-align:center;">
-2.69
+<td style="text-align:right;">
+0.468
+</td>
+<td style="text-align:right;">
+0.052+
+</td>
+<td style="text-align:right;">
+0.098
 </td>
 </tr>
 <tr>
@@ -2670,17 +3864,23 @@ to increase their income.
 If you get presented with an opportunity, you think of: In the possible
 risks.
 </td>
-<td style="text-align:center;">
--0.01
+<td style="text-align:right;">
+0.124
 </td>
-<td style="text-align:center;">
-0.50
+<td style="text-align:right;">
+0.330
 </td>
-<td style="text-align:center;">
--2.71
+<td style="text-align:right;">
+0.100
 </td>
-<td style="text-align:center;">
-2.70
+<td style="text-align:right;">
+0.300
+</td>
+<td style="text-align:right;">
+-0.024
+</td>
+<td style="text-align:right;">
+0.251
 </td>
 </tr>
 <tr>
@@ -2688,17 +3888,23 @@ risks.
 With which phrase do you identify the most? Nothing ventured, nothing
 gained
 </td>
-<td style="text-align:center;">
--0.03
+<td style="text-align:right;">
+0.453
 </td>
-<td style="text-align:center;">
-0.49
+<td style="text-align:right;">
+0.498
 </td>
-<td style="text-align:center;">
--2.71
+<td style="text-align:right;">
+0.464
 </td>
-<td style="text-align:center;">
-2.64
+<td style="text-align:right;">
+0.499
+</td>
+<td style="text-align:right;">
+0.011
+</td>
+<td style="text-align:right;">
+0.741
 </td>
 </tr>
 <tr>
@@ -2706,17 +3912,23 @@ gained
 With which phrase do you identify the most? A bird in the hand is worth
 two in the bush
 </td>
-<td style="text-align:center;">
-0.05
+<td style="text-align:right;">
+0.119
 </td>
-<td style="text-align:center;">
-0.48
+<td style="text-align:right;">
+0.325
 </td>
-<td style="text-align:center;">
--2.65
+<td style="text-align:right;">
+0.167
 </td>
-<td style="text-align:center;">
-2.76
+<td style="text-align:right;">
+0.373
+</td>
+<td style="text-align:right;">
+0.048*
+</td>
+<td style="text-align:right;">
+0.039
 </td>
 </tr>
 <tr>
@@ -2724,17 +3936,23 @@ two in the bush
 Regarding the first year of activity of your business, the annual sales
 of your business are - They are much higher
 </td>
-<td style="text-align:center;">
-0.07
+<td style="text-align:right;">
+0.249
 </td>
-<td style="text-align:center;">
-0.48
+<td style="text-align:right;">
+0.433
 </td>
-<td style="text-align:center;">
--2.61
+<td style="text-align:right;">
+0.315
 </td>
-<td style="text-align:center;">
-2.76
+<td style="text-align:right;">
+0.465
+</td>
+<td style="text-align:right;">
+0.065*
+</td>
+<td style="text-align:right;">
+0.028
 </td>
 </tr>
 <tr>
@@ -2742,17 +3960,23 @@ of your business are - They are much higher
 Regarding the first year of activity of your business, the annual sales
 of your business are - They are higher, but not by much.
 </td>
-<td style="text-align:center;">
-0.00
+<td style="text-align:right;">
+0.434
 </td>
-<td style="text-align:center;">
-0.50
+<td style="text-align:right;">
+0.496
 </td>
-<td style="text-align:center;">
--2.68
+<td style="text-align:right;">
+0.430
 </td>
-<td style="text-align:center;">
-2.67
+<td style="text-align:right;">
+0.496
+</td>
+<td style="text-align:right;">
+-0.004
+</td>
+<td style="text-align:right;">
+0.894
 </td>
 </tr>
 <tr>
@@ -2760,17 +3984,23 @@ of your business are - They are higher, but not by much.
 Regarding the first year of activity of your business, the annual sales
 of your business are - They are the same.
 </td>
-<td style="text-align:center;">
--0.03
+<td style="text-align:right;">
+0.087
 </td>
-<td style="text-align:center;">
-0.49
+<td style="text-align:right;">
+0.282
 </td>
-<td style="text-align:center;">
--2.74
+<td style="text-align:right;">
+0.080
 </td>
-<td style="text-align:center;">
-2.68
+<td style="text-align:right;">
+0.272
+</td>
+<td style="text-align:right;">
+-0.007
+</td>
+<td style="text-align:right;">
+0.721
 </td>
 </tr>
 <tr>
@@ -2778,17 +4008,23 @@ of your business are - They are the same.
 Regarding the first year of activity of your business, the annual sales
 of your business are - They are lower.
 </td>
-<td style="text-align:center;">
--0.02
+<td style="text-align:right;">
+0.182
 </td>
-<td style="text-align:center;">
-0.49
+<td style="text-align:right;">
+0.386
 </td>
-<td style="text-align:center;">
--2.73
+<td style="text-align:right;">
+0.143
 </td>
-<td style="text-align:center;">
-2.68
+<td style="text-align:right;">
+0.351
+</td>
+<td style="text-align:right;">
+-0.039
+</td>
+<td style="text-align:right;">
+0.108
 </td>
 </tr>
 <tr>
@@ -2796,107 +4032,195 @@ of your business are - They are lower.
 Regarding the first year of activity of your business, the annual sales
 of your business are - I’ve had my business for less than a year
 </td>
-<td style="text-align:center;">
-0.00
+<td style="text-align:right;">
+0.004
 </td>
-<td style="text-align:center;">
-0.50
+<td style="text-align:right;">
+0.066
 </td>
-<td style="text-align:center;">
--2.72
+<td style="text-align:right;">
+0.007
 </td>
-<td style="text-align:center;">
-2.71
+<td style="text-align:right;">
+0.080
+</td>
+<td style="text-align:right;">
+0.002
+</td>
+<td style="text-align:right;">
+0.654
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Household income - Contribute more than 50%
 </td>
-<td style="text-align:center;">
-0.06
+<td style="text-align:right;">
+0.495
 </td>
-<td style="text-align:center;">
-0.48
+<td style="text-align:right;">
+0.501
 </td>
-<td style="text-align:center;">
--2.61
+<td style="text-align:right;">
+0.549
 </td>
-<td style="text-align:center;">
-2.73
+<td style="text-align:right;">
+0.498
+</td>
+<td style="text-align:right;">
+0.054+
+</td>
+<td style="text-align:right;">
+0.100
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Gender - Female
 </td>
-<td style="text-align:center;">
-0.00
+<td style="text-align:right;">
+0.570
 </td>
-<td style="text-align:center;">
-0.50
+<td style="text-align:right;">
+0.496
 </td>
-<td style="text-align:center;">
--2.67
+<td style="text-align:right;">
+0.570
 </td>
-<td style="text-align:center;">
-2.67
+<td style="text-align:right;">
+0.496
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+<td style="text-align:right;">
+1.000
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Uses WhatsApp Yes
 </td>
-<td style="text-align:center;">
-0.01
+<td style="text-align:right;">
+0.861
 </td>
-<td style="text-align:center;">
-0.50
+<td style="text-align:right;">
+0.346
 </td>
-<td style="text-align:center;">
--2.64
+<td style="text-align:right;">
+0.866
 </td>
-<td style="text-align:center;">
-2.65
+<td style="text-align:right;">
+0.342
+</td>
+<td style="text-align:right;">
+0.004
+</td>
+<td style="text-align:right;">
+0.848
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Secondary education or more - Yes
 </td>
-<td style="text-align:center;">
--0.08
+<td style="text-align:right;">
+0.508
 </td>
-<td style="text-align:center;">
-0.48
+<td style="text-align:right;">
+0.500
 </td>
-<td style="text-align:center;">
--2.76
+<td style="text-align:right;">
+0.449
 </td>
-<td style="text-align:center;">
-2.59
+<td style="text-align:right;">
+0.498
+</td>
+<td style="text-align:right;">
+-0.059+
+</td>
+<td style="text-align:right;">
+0.075
 </td>
 </tr>
 </tbody>
 </table>
-<!-- ```{r opt_clusters, echo = FALSE, dev='svg', fig.cap = capFig("Optimal number of clusters"), warning=FALSE, message=FALSE, fig.align = "center"} -->
-<!-- set.seed(123) -->
-<!-- d_clus2 = d_clus %>% dplyr::select(-cluster) -->
-<!-- d_clus2 = scale(d_clus2) -->
-<!-- opt_clus = fviz_nbclust(d_clus2, kmeans, method = "wss", linecolor = cols[4]) -->
-<!-- opt_clus + -->
-<!--   scale_color_manual(values = cols[4]) + -->
-<!--   scale_fill_manual(values = alpha(cols[4], 0.3)) + -->
-<!--   theme_ipsum_fsc() + ggtitle("") + -->
-<!--   theme(axis.title.x = element_text(size=18),#margin = margin(t = 10, r = 0, b = 0, l = 0)), -->
-<!--         axis.text.x = element_text(size=14), -->
-<!--         axis.title.y = element_text(size=18),#margin = margin(t = 0, r = 10, b = 0, l = 0)), -->
-<!--         axis.text.y = element_text(size=14),legend.position=c(0.1,0.9), -->
-<!--         legend.title = element_blank(), -->
-<!--         legend.text = element_text(size=15), -->
-<!--         legend.background = element_rect(fill="white",colour ="white"), -->
-<!--         title = element_text(size=14)) -->
+<!-- # Balancing Business Performance -->
+<!-- We are also interested in analyzing whether the definitions of success for each individual are mainly mediated by the performance of their own business. For that reason, we follow Chattopadhyay, Hase, and Zubizarreta (2020) for building stable weights that approximately balance the empirical distribution of business' performance with a tolerance of 0.01 SD, using the distribution of performance for cluster 2 as the target. -->
+<!-- ```{r, echo = FALSE, warning = FALSE, message=FALSE} -->
+<!-- library(sbw) -->
+<!-- hush=function(code){ -->
+<!--   sink("NUL") # use /dev/null in UNIX -->
+<!--   tmp = code -->
+<!--   sink() -->
+<!--   return(tmp) -->
+<!-- } -->
+<!-- d2 = d %>% filter(!is.na(cluster)) -->
+<!-- t_ind = as.numeric(d2$cluster == "Cluster 2") -->
+<!-- bal_cov = d2 %>% dplyr::select(excedente0, excedente0_miss, excedente1, excedente1_miss,  -->
+<!--                                monto_desemb0, monto_desemb0_miss, monto_desemb1, monto_desemb1_miss,  -->
+<!--                                activos0, activos0_miss, activos1, activos1_miss) %>% as.data.frame() -->
+<!-- #bal_cov = d2 %>% dplyr::select(excedente1, excedente1_miss,  -->
+<!-- #                               monto_desemb1, monto_desemb1_miss,  -->
+<!-- #                               activos1, activos1_miss) %>% as.data.frame() -->
+<!-- #bal_cov = fastDummies::dummy_columns(bal_cov, select_columns = c("Pais"), -->
+<!-- #                                     remove_selected_columns = TRUE, remove_first_dummy = FALSE) -->
+<!-- d_results = d2 %>% dplyr::select(q573_bin, q574_bin, q575_adap, q576_bin,  -->
+<!--                             trabajadores_esperados, q578, q601_adap, aporte_ingreso50, -->
+<!--                             q714_loss, -->
+<!--                             q712_risk, honest, q685, q687_adap, educ_secundaria) -->
+<!-- d_results = d_results %>% mutate(across(where(is.factor), droplevels)) -->
+<!-- d_results = fastDummies::dummy_columns(d_results, select_columns = c("q575_adap", "q578","q601_adap", "aporte_ingreso50", -->
+<!--                                                             "q685", "q687_adap", "educ_secundaria"), -->
+<!--                                   remove_selected_columns = TRUE, remove_first_dummy = TRUE) -->
+<!-- d_results2 = d_clus %>% dplyr::select(-cluster) -->
+<!-- df = as.data.frame(cbind(t_ind, bal_cov, d_results2)) -->
+<!-- df = df %>% na.omit() -->
+<!-- # moment covariates -->
+<!-- bal = list() -->
+<!-- bal$bal_cov = names(bal_cov) -->
+<!-- # Set tolerances -->
+<!-- bal$bal_tol = 0.01 -->
+<!-- bal$bal_std = "group" -->
+<!-- # Solve for the Average Treatment Effect on the Treated, ATT (default) -->
+<!-- bal$bal_alg = FALSE -->
+<!-- sbwatt_object = hush(sbw(dat = df, ind = "t_ind", out = names(d_results2), -->
+<!--                          bal = bal, -->
+<!--                     par = list(par_est = "att", par_tar = NULL))) -->
+<!-- obj = hush(sbw::summarize(sbwatt_object)) -->
+<!-- est = hush(sbw::estimate(sbwatt_object, out = names(d_results2))) -->
 <!-- ``` -->
+<!-- ```{r, echo = FALSE, warning = FALSE, message=FALSE, fig.topcaption=TRUE} -->
+<!-- #| label: tbl-hssbw -->
+<!-- #| tbl-cap: "Average business performance charactersitics between individuals in Cluster 1 (household-oriented) and Cluster 2 (business-oriented) after Stable Balance Weighting" -->
+<!-- variables = rownames(obj$balance_table$mean_after) -->
+<!-- bal_table_sbw = as.data.frame(obj$balance_table$mean_after) %>% round(.,3) -->
+<!-- bal_table_sbw$` ` = variables -->
+<!-- bal_table_sbw = bal_table_sbw[,c(4,1:3)] -->
+<!-- bal_table_sbw$`Diff in Means (SD)` = round(obj$balance_table$TASDM_after[,2],3) -->
+<!-- bal_table_sbw$` ` = str_replace_all(bal_table_sbw$` `, "excedente", "Surplus (SD)") -->
+<!-- bal_table_sbw$` ` = str_replace_all(bal_table_sbw$` `, "activos", "Assets (SD)") -->
+<!-- bal_table_sbw$` ` = str_replace_all(bal_table_sbw$` `, "_miss", " - missing") -->
+<!-- bal_table_sbw$` ` = str_replace_all(bal_table_sbw$` `, "monto_desemb", "Loan amount (SD)") -->
+<!-- bal_table_sbw$` ` = str_replace_all(bal_table_sbw$` `, "0", " (first loan)") -->
+<!-- bal_table_sbw$` ` = str_replace_all(bal_table_sbw$` `, "1", " (last loan)") -->
+<!-- bal_table_sbw$` ` = str_replace_all(bal_table_sbw$` `, "Pais_", "") -->
+<!-- names(bal_table_sbw) = c(" ","Cluster 2", "Cluster 1", "Target", "Diff in Means (SD)") -->
+<!-- kable(bal_table_sbw, row.names = FALSE, align=c('l',rep('c', 4))) %>%  -->
+<!--   kable_styling(kable_input = ., bootstrap_options = c("hover")) %>% kable_paper() %>% row_spec(0, background = "white") -->
+<!-- ``` -->
+<!-- Looking at the other variables, here are the differences between Cluster 2 and Cluster 1 after re-weighting by business performance: -->
+<!-- ```{r, echo = FALSE, message=FALSE, warning=FALSE} -->
+<!-- #| label: tbl-hssbw_outcomes -->
+<!-- #| tbl-cap: "Average outcomes between individuals in Cluster 1 (household-oriented) and Cluster 2 (business-oriented) after Stable Balance Weighting" -->
+<!-- variables = rownames(est$cau_table) -->
+<!-- out_table_sbw = as.data.frame(est$cau_table[,c(1,4,5,6)]) %>% round(.,3) -->
+<!-- out_table_sbw$` ` = variables -->
+<!-- names(out_table_sbw) = c("Estimate","p-value","LB - CI","UB - CI"," ") -->
+<!-- out_table_sbw = out_table_sbw[,c(ncol(out_table_sbw),1:(ncol(out_table_sbw)-1))] -->
+<!-- #source("C:/Users/mc72574/Dropbox/UT/UT Research/Success/BBVA_Exito_Shared/reports/labels_balance_sbw_out.R", encoding = "UTF-8") -->
+<!-- kable(out_table_sbw, row.names = FALSE, align=c('l',rep('c', 4))) %>%  -->
+<!--   kable_styling(kable_input = ., bootstrap_options = c("hover")) %>% kable_paper() %>% row_spec(0, background = "white") -->
 </div>
 <div class="footnotes footnotes-end-of-document">
 <hr />
