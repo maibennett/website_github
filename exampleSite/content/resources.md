@@ -99,7 +99,7 @@ If you ever needed to go from lat/lon to addresses (or vice versa), then this co
 
 Using the `pushover` app on your phone, you can easily send push notifications when you're done, and it's basically free (PS: You do have to pay a one-time license fee of $4.99, but I feel it's worth it). So how do we do this? Download the app `pushover` on your phone, and create an application (it's super intuitive, but use a name that makes sense for the notification -- e.g. "RCode"). When you have that, you can retreive the Pushover User Key and Token Key (for the application).
 
-To make this easier, I created the R package [`pushme`](https://github.com/maibennett/pushme) -- which is a wrapper package for [`pushoverr`](https://github.com/briandconnelly/pushoverr) -- to send random, upbeat messages about your code. Go check out the GitHub repo for detailed instructions, but basically, you will be able to customize your messages depending on the usage (e.g. if it's an error, if you want to add additional information, etc.) using the main function `pushme()`.
+To make this easier, I created the R package [`pushme`](https://github.com/maibennett/pushme) -- which is a wrapper package for [`pushoverr`](https://github.com/briandconnelly/pushoverr) -- to send random, upbeat messages about your code. Go check out the [GitHub repo](https://github.com/maibennett/pushme) for detailed instructions, but basically, you will be able to customize your messages depending on the usage (e.g. if it's an error, if you want to add additional information, etc.) using the main function `pushme()`.
 
 Some examples of the messages that you can create are the following:
 
