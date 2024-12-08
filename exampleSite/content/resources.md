@@ -97,45 +97,14 @@ If you ever needed to go from lat/lon to addresses (or vice versa), then this co
 
 ##### Push notification
 
-Using the `pushover` app on your phone, you can easily send push notifications when you're done, and it's basically free (PS: You do have to pay a one-time license fee of $4.99, but I feel it's worth it). So how do we do this? Download the app `pushover` on your phone, and create an application (it's super intuitive, but use a name that makes sense for the notification -- e.g. "RCode"). When you have that, you can retreive the Pushover User Key and Token Key (for the application), and add it to the following code using the [`pushoverr`](https://github.com/briandconnelly/pushoverr) package for R:
+Using the `pushover` app on your phone, you can easily send push notifications when you're done, and it's basically free (PS: You do have to pay a one-time license fee of $4.99, but I feel it's worth it). So how do we do this? Download the app `pushover` on your phone, and create an application (it's super intuitive, but use a name that makes sense for the notification -- e.g. "RCode"). When you have that, you can retreive the Pushover User Key and Token Key (for the application).
 
-```{r}
-library(pushoverr)
-library(emo)
+To make this easier, I created the R package [`pushme`](https://github.com/maibennett/pushme) -- which is a wrapper package for [`pushoverr`](https://github.com/briandconnelly/pushoverr) -- to send random, upbeat messages about your code. Go check out the GitHub repo for detailed instructions, but basically, you will be able to customize your messages depending on the usage (e.g. if it's an error, if you want to add additional information, etc.) using the main function `pushme()`.
 
-set_pushover_user(user = "USER_KEY")
-set_pushover_app(token = "APPLICATION_TOKEN")
-
-pushme <- function(){
-
-  #messages:
-  msg_list = c(paste(emo::ji("dancer"),"Woohoo! Dreams are not dead! Code is done!.",emo::ji("celebrate")),
-               paste(emo::ji("flower"),"You smell like flowers",emo::ji("flower"),"Now get to work, because your code is done!",emo::ji("sparkles")),
-               paste(emo::ji("alarm"),"C'mon, get moving! Code is DONE!", emo::ji("boom")))
-  
-  msg = sample(msg_list,1)
-  
-  # Now we can send away!
-  pushover(message = msg, priority = 1, sound = "tugboat")
-  
-}
-```
-
-Here, I use the `emo` package to get pretty messages. You can install it like this:
-
-```{r}
-# install.packages("devtools")
-devtools::install_github("hadley/emo")
-library(emo)
-
-# Dancer emoji (of course)
-dancer <- emo::ji("dancer") 
-```
-
-And voilà! It's done. You just write `pushme()` at the end of your R Code (or wherever you want to be notified), and that's it. You get pretty push notifications when you're done, like this one:
+Some examples of the messages that you can create are the following:
 
 <p align="center">
-<img src="/images/push_notification.jpg" width="400">
+<img src="/images/push_notification2.png" width="400">
 </p>
 
 
