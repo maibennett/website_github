@@ -31,13 +31,17 @@ You can see a summary of some of my projects in my [{{% fontawesome chart-line-s
 
 # ON-GOING PROJECTS AND WORKING PAPERS
 
-* **M. Bennett** (2023). "Changes in School Attendance Zones over Time: The Effect of Segregation on Zoned-in and Zoned-out Areas". 
+* **M. Bennett** (2024). "QB or not QB: Measuring Discrimination in Football Labor Markets". *Working Paper*. [{{% fontawesome file-arrow-down-solid32 %}}](/files/mbennett_nfl.pdf)
 
-* **M. Bennett** (2023). "Differences-in-Differences using a Mixed-Integer Programming Matching Approach". Working Paper. (*Draft available soon*)
+* **M. Bennett** (2024). "Changes in School Attendance Zones over Time: The Effect of Segregation on Zoned-in and Zoned-out Areas". *On-going project*.
+
+* **M. Bennett**, W. Fuchs, & J. Millan (2024). "Determinants of Success in the Context of Microcredits". *On-going observational study and field experiment*.
+
+* **M. Bennett** (2024). "Differences-in-Differences using a Mixed-Integer Programming Matching Approach". *Working Paper*. (*Draft available soon*)
+
+* **Bennett, M.**, C. Neilson, & N. Rojas (2024). "Beyond Exclusion: The Role of the Causal Effect of Testing on Attendance on the Day of the Test". Working Paper. [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/attendance/attendance_20220405/)
 
 * Allende, C. & **M. Bennett** (2023). "Biased Beliefs and the Dynamic Role of Information in College Choice".[{{% fontawesome file-arrow-down-solid32 %}}](http://www.magdalenabennett.com/abstracts#chile-rct/)(*Abstract*)
-
-* **Bennett, M.**, C. Neilson, & N. Rojas (2023). "Beyond Exclusion: The Role of the Causal Effect of Testing on Attendance on the Day of the Test". Working Paper. [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/attendance/attendance_20220405/) (*Draft available soon*)
 
 * **Bennett, M.** (2022). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". Job Market Paper, Columbia University.[{{% fontawesome file-arrow-down-solid32 %}}](/files/sub/MBennett_GRD.pdf) [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/rd/rd_20210420/) 
 
