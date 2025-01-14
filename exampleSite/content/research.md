@@ -14,7 +14,7 @@ Access my [{{% fontawesome person-chalkboard-solid32 %}} repository of presentat
 You can see a summary of some of my projects in my [{{% fontawesome chart-line-solid32 %}} research portfolio](https://projects.magdalenabennett.com/portfolio) 
 
 
-# PUBLICATIONS
+# <a name="publications"></a>PUBLICATIONS
 
 * Behrens, M. I., **M. Bennett**, R. Castillo, D. Ponce, N. Rogers, & R. Vergara (2022). "Cancer History is Associated with Slower Speed of Cognitive Decline in Patients with Amnestic Cognitive Impairment". *Journal of Alzheimer's Disease. Forthcoming.*[{{% fontawesome file-arrow-down-solid32 %}}](https://pubmed.ncbi.nlm.nih.gov/35491784/#:~:text=This%20study%20suggests%20that%20a,accelerated%20deterioration%20at%20follow%2Dup)
 
@@ -29,7 +29,7 @@ You can see a summary of some of my projects in my [{{% fontawesome chart-line-s
 * Claro, F., R. Paredes, F. Wilson y **M. Bennett** (2013). “Incentivos a Estudiar Pedagogía: El Caso de la Beca Vocación de Profesor” (“Incentives for studying teaching: The case of the vocational scholarship”), Estudios Publicos N°131, Centro de Estudios Públicos. [{{% fontawesome file-arrow-down-solid32 %}}](https://www.cepchile.cl/cep/site/artic/20160304/asocfile/20160304100405/rev131_FClaro-RParedes-MBennett-TWilson.pdf)
 
 
-# ON-GOING PROJECTS AND WORKING PAPERS
+# <a name="projects"></a>ON-GOING PROJECTS AND WORKING PAPERS
 
 * **M. Bennett** (2024). "QB or not QB: Measuring Discrimination in Football Labor Markets". *Working Paper*. [{{% fontawesome file-arrow-down-solid32 %}}](/files/mbennett_nfl.pdf)
 
@@ -39,14 +39,14 @@ You can see a summary of some of my projects in my [{{% fontawesome chart-line-s
 
 * **M. Bennett** (2024). "Differences-in-Differences using a Mixed-Integer Programming Matching Approach". *Working Paper*. (*Draft available soon*)
 
-* **Bennett, M.**, C. Neilson, & N. Rojas (2024). "Beyond Exclusion: The Role of the Causal Effect of Testing on Attendance on the Day of the Test". Working Paper. [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/attendance/attendance_20220405/)
+* **Bennett, M.**, C. Neilson, & N. Rojas (2024). "Beyond Exclusion: The Role of the Causal Effect of Testing on Attendance on the Day of the Test". *Working Paper*. [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/attendance/attendance_20220405/)
 
 * Allende, C. & **M. Bennett** (2023). "Biased Beliefs and the Dynamic Role of Information in College Choice".[{{% fontawesome file-arrow-down-solid32 %}}](http://www.magdalenabennett.com/abstracts#chile-rct/)(*Abstract*)
 
-* **Bennett, M.** (2022). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". Job Market Paper, Columbia University.[{{% fontawesome file-arrow-down-solid32 %}}](/files/sub/MBennett_GRD.pdf) [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/rd/rd_20210420/) 
+* **Bennett, M.** (2022). "How Far is Too Far? Estimation of an Interval for Generalization of a Regression Discontinuity Design Away from the Cutoff". *Job Market Paper*, Columbia University.[{{% fontawesome file-arrow-down-solid32 %}}](/files/sub/MBennett_GRD.pdf) [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/rd/rd_20210420/) 
 
 
-# PREVIOUS RESEARCH
+# <a name="previos_research"></a> PREVIOUS RESEARCH
 
 * **Bennett, M.** (2014). “Socioeconomic Diversity within Schools: The Impact of a Preferential Voucher Scheme in Chile”, Master Dissertation, London School of Economics.
 
