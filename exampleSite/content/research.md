@@ -37,7 +37,7 @@ You can see a summary of some of my projects in my [{{% fontawesome chart-line-s
 
 * **M. Bennett**, W. Fuchs, & J. Millan (2024). "Determinants of Success in the Context of Microcredits". *On-going observational study and field experiment*.
 
-* **M. Bennett** (2024). "Differences-in-Differences using a Mixed-Integer Programming Matching Approach". *Working Paper*. (*Draft available soon*)
+* **M. Bennett** (2024). "Differences-in-Differences using a Mixed-Integer Programming Matching Approach". *Working Paper*. [{{% fontawesome file-arrow-down-solid32 %}}](/files/mbennett_ddmatch.pdf)
 
 * **Bennett, M.**, C. Neilson, & N. Rojas (2024). "Beyond Exclusion: The Role of the Causal Effect of Testing on Attendance on the Day of the Test". *Working Paper*. [{{% fontawesome person-chalkboard-solid32 %}}](https://slides.magdalenabennett.com/docs/attendance/attendance_20220405/)
 
