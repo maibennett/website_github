@@ -61,8 +61,8 @@ enableEmoji = true
     weight = 2
     url = "https://open.spotify.com/user/11120745477?si=qLO1ptujQ2Wm78B8_NCMww"
 [[params.social]]
-    name = "BlueSky"
-    icon = "fab fa-bluesky"
+    name = "Twitter"
+    icon = "fab fa-twitter"
     weight = 3
     url = "https://bsky.app/profile/maibennett.com"
 [[params.social]]
