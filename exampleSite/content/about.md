@@ -3,7 +3,7 @@ title = "About Magdalena"
 slug = "about"
 +++
 
-I am an Assistant Professor at the **IROM department (Statistics Group), McCombs School of Business at the University of Texas at Austin**, and a research affiliate at **Learning Collider** and the **Population Research Center** at UT Austin. My research interests relate to developing and improving **statistical methods for causal inference** in observational and experimental studies. I also focus on **relevant policy questions in education**, such as socioeconomic segregation and school choice.
+I am a Research Scientist at the **Demography and Survey Science Team @ Meta**, and a research affiliate at **Learning Collider**. My research interests relate to developing and improving **statistical methods for causal inference** in observational and experimental studies. I also focus on **relevant policy questions in education**, such as socioeconomic segregation and school choice.
 
 **Some of the projects I am currently working on:**
 
