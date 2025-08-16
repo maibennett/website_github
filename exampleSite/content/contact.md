@@ -3,7 +3,7 @@ title = "Contact"
 slug = "contact"
 +++
 
-{{% fontawesome paper-plane-regular32 %}} You can email me at **m.bennett@austin.utexas.edu**
+{{% fontawesome paper-plane-regular32 %}} You can email me at **me@maibennett.com**
 
 {{% fontawesome bluesky-brands-solid32 %}} Or follow me at <a href="https://bsky.app/profile/maibennett.com"><strong>@maibennett.com</strong></a>
 
